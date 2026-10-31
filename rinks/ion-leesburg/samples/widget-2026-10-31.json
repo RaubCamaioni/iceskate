@@ -1,0 +1,1124 @@
+{
+  "2026-10-31": [
+    {
+      "ts": "07:50",
+      "te": "08:50",
+      "title": "LKHC 8U (Both Teams) vs. Bowie (NL)",
+      "desc": "LKHC Mites",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "Bowie",
+          "room": "LR 5 & 8",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 8U (Both Teams)",
+          "room": "Specialty Training Room ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "08:00",
+      "te": "09:15",
+      "title": "WLC 2015 vs. Jr. Canes",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "Jr Canes",
+          "room": "LKHC 2 and 3",
+          "home": false
+        },
+        {
+          "tenant": "2015",
+          "room": "WLC 1",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "09:00",
+      "te": "10:30",
+      "title": "LKHC 12U Wales vs. Caps Academy (CBHL)",
+      "desc": "LKHC Game",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "Caps Academy",
+          "room": "LR 6 & 7",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 12U Wales",
+          "room": "LKHC ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "09:25",
+      "te": "10:40",
+      "title": "WLC 2014 vs. Jr Canes",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "Jr Canes",
+          "room": "LR 3 & 4",
+          "home": false
+        },
+        {
+          "tenant": "2014",
+          "room": "LR 1 & 2",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "10:50",
+      "te": "12:20",
+      "title": "LKHC 12U AA vs. Ashburn Xtreme (CBHL)",
+      "desc": "LKHC Game",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "Ashburn Xtreme",
+          "room": "LR 5 & 8",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 12U AA ",
+          "room": "Specialty Training Room ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "10:50",
+      "te": "12:05",
+      "title": "WLC 2015 vs. Jr. Canes",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "Jr Canes",
+          "room": "LKHC 2 and 3",
+          "home": false
+        },
+        {
+          "tenant": "2015",
+          "room": "WLC 1",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "12:15",
+      "te": "13:30",
+      "title": "WLC 2014 Practice",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "2014",
+          "room": "LR 1 & 2",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "12:30",
+      "te": "14:00",
+      "title": "LKHC 16U LA vs. NOVA Ice Dogs (CBHL)",
+      "desc": "LKHC Game",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "NOVA Ice Dogs",
+          "room": "LR 6 & 7",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 16U LA",
+          "room": "LKHC ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "13:40",
+      "te": "15:35",
+      "title": "Learn to Skate",
+      "type": "Learn To Skate",
+      "style": "#00ccff",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "14:20",
+      "te": "15:50",
+      "title": "LKHC 16U AA American vs. Navy (CBHL)",
+      "desc": "LKHC Game",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "Navy",
+          "room": "LR 5 & 8",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 16U AMR",
+          "room": "Specialty Training Room ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "15:50",
+      "te": "17:20",
+      "title": "WLC 2013 vs. Queen City",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "Queen City",
+          "room": "LKHC 2 and 3",
+          "home": false
+        },
+        {
+          "tenant": "2013",
+          "room": "WLC 1",
+          "home": false
+        }
+      ]
+    },
+    {
+      "ts": "16:00",
+      "te": "17:30",
+      "title": "LKHC 16U AA National vs. Navy (CBHL)",
+      "desc": "LKHC Game",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "Navy",
+          "room": "LR 6 & 7",
+          "home": false
+        },
+        {
+          "tenant": "16U AA NAT",
+          "room": "LKHC ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "19:35",
+      "te": "21:05",
+      "title": "WLC 2013 vs. Queen City",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Arena"
+    }
+  ],
+  "2026-11-01": [
+    {
+      "ts": "07:00",
+      "te": "08:00",
+      "title": "Adult Hockey 40+",
+      "type": "Adult Hockey 40+",
+      "style": "#7f7f7f",
+      "rink": "Arena"
+    },
+    {
+      "ts": "07:00",
+      "te": "07:30",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "07:30",
+      "te": "08:00",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "08:00",
+      "te": "08:30",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "08:10",
+      "te": "09:55",
+      "title": "LKHC 10U LA vs. Frederick (CBHL)",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "Frederick Freeze",
+          "room": "LR 5 & 8",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 10U LA",
+          "room": "Specialty Training Room ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "08:40",
+      "te": "09:40",
+      "title": "Dance Academy",
+      "type": "Dance Academy",
+      "style": "#fa00ff",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "08:40",
+      "te": "09:40",
+      "title": "Future Champs",
+      "type": "Future Champs & Ice Prodigies",
+      "style": "#ff00e1",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "09:55",
+      "te": "11:20",
+      "title": "LKHC 14U LA vs. Quakers (EJEPL)",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "Quakers",
+          "room": "LR 1 & 2",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 14U LA",
+          "room": "WLC 1",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "10:20",
+      "te": "11:50",
+      "title": "WLC 2013 vs. Queen City",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Arena"
+    },
+    {
+      "ts": "11:50",
+      "te": "12:50",
+      "title": "Developmental Academy",
+      "type": "Developmental Academy",
+      "style": "#c42cc8",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "11:50",
+      "te": "12:50",
+      "title": "Ice Prodigies",
+      "type": "Future Champs & Ice Prodigies",
+      "style": "#ff00e1",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "12:00",
+      "te": "13:30",
+      "title": "LKHC 12U AA vs. STJ (CBHL)",
+      "desc": "LKHC Game",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "STJ",
+          "room": "LR 6 & 7",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 12U AA",
+          "room": "LKHC ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "13:00",
+      "te": "13:30",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "13:30",
+      "te": "14:00",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "13:40",
+      "te": "15:10",
+      "title": "LKHC 14U AA vs STJ (CBHL)",
+      "desc": "LKHC Game",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "STJ",
+          "room": "LR 5 & 8",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 14U Aa",
+          "room": "Specialty Training Room ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "14:00",
+      "te": "14:30",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "14:30",
+      "te": "15:00",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "15:10",
+      "te": "15:40",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "15:20",
+      "te": "16:50",
+      "title": "LKHC 14U LA vs. Quakers (EJEPL)",
+      "desc": "LKHC Game",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "Quakers",
+          "room": "LR 6 & 7",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 14U LA",
+          "room": "LKHC ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "15:40",
+      "te": "16:10",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "16:10",
+      "te": "16:40",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "16:40",
+      "te": "17:10",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "17:00",
+      "te": "18:30",
+      "title": "LKHC 16U AA vs. STJ (CBHL)",
+      "desc": "LKHC Game",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "STJ",
+          "room": "LR 5 & 8",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 16U NAT",
+          "room": "Specialty Training Room ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "18:40",
+      "te": "20:10",
+      "title": "LKHC 16U LA vs. STJ (CBHL)",
+      "desc": "LKHC Game",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "STJ",
+          "room": "LR 6 & 7",
+          "home": false
+        },
+        {
+          "tenant": "LKHC 16U LA",
+          "room": "LKHC ",
+          "home": true
+        }
+      ]
+    },
+    {
+      "ts": "19:30",
+      "te": "21:30",
+      "title": "Curling League",
+      "type": "Curling League",
+      "style": "#4b9fed",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "",
+          "room": "LR 6 & 7",
+          "home": false
+        }
+      ]
+    },
+    {
+      "ts": "20:20",
+      "te": "21:40",
+      "title": "Rob Vierya",
+      "type": "Adult Hockey",
+      "style": "#7f7f7f",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "",
+          "room": "LR 5 & 8",
+          "home": false
+        },
+        {
+          "tenant": "",
+          "room": "LKHC ",
+          "home": false
+        }
+      ]
+    }
+  ],
+  "2026-11-02": [
+    {
+      "ts": "07:00",
+      "te": "07:30",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "07:30",
+      "te": "08:00",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "08:00",
+      "te": "08:30",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "08:30",
+      "te": "09:00",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "09:10",
+      "te": "09:40",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "09:40",
+      "te": "10:10",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "09:40",
+      "te": "10:40",
+      "title": "TPH/23 Hockey Scoring & Skills Clinic - All Ages",
+      "type": "TPH/23 Hockey",
+      "style": "#add3f5",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "",
+          "room": "LR 3 & 4",
+          "home": false
+        },
+        {
+          "tenant": "",
+          "room": "LR 1 & 2",
+          "home": false
+        }
+      ]
+    },
+    {
+      "ts": "10:50",
+      "te": "11:50",
+      "title": "TPH/23 Hockey Scoring & Skills Clinic -All Ages",
+      "type": "TPH/23 Hockey",
+      "style": "#add3f5",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "",
+          "room": "LR 5 & 8",
+          "home": false
+        },
+        {
+          "tenant": "",
+          "room": "LR 6 & 7",
+          "home": false
+        }
+      ]
+    },
+    {
+      "ts": "12:00",
+      "te": "13:00",
+      "title": "Pick Up Hockey",
+      "type": "Pick-Up Hockey",
+      "style": "#e8ec2a",
+      "rink": "Arena"
+    },
+    {
+      "ts": "12:30",
+      "te": "14:30",
+      "title": "Public Skate",
+      "type": "Public Skate",
+      "style": "#0cff00",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "14:20",
+      "te": "14:50",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "14:50",
+      "te": "15:20",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "15:00",
+      "te": "16:00",
+      "title": "WLC 2010 On Ice Skills",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "15:20",
+      "te": "15:50",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "15:50",
+      "te": "16:20",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "16:30",
+      "te": "17:30",
+      "title": "Learn To Skate",
+      "type": "Learn To Skate",
+      "style": "#00ccff",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "16:30",
+      "te": "17:00",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "17:00",
+      "te": "17:30",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "17:30",
+      "te": "18:00",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "17:40",
+      "te": "18:40",
+      "title": "LKHC 8U Practice",
+      "desc": "LKHC 8U Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "17:40",
+      "te": "18:40",
+      "title": "LKHC 10U LA Practice",
+      "desc": "LKHC 10U LA Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "LKHC 10U LA",
+          "room": "LR 3 & 4",
+          "home": false
+        }
+      ]
+    },
+    {
+      "ts": "18:10",
+      "te": "19:10",
+      "title": "LKHC 10U AA Practice",
+      "desc": "LKHC 10U AA Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena"
+    },
+    {
+      "ts": "18:10",
+      "te": "19:10",
+      "title": "LKHC 12U LA Practice",
+      "desc": "LKHC 12U LA Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena"
+    },
+    {
+      "ts": "18:50",
+      "te": "19:50",
+      "title": "LKHC 12U AA Practice",
+      "desc": "LKHC 12U AA Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "19:20",
+      "te": "20:20",
+      "title": "LKHC 12U UA Practice",
+      "desc": "LKHC 12U UA Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena"
+    },
+    {
+      "ts": "19:20",
+      "te": "20:20",
+      "title": "LKHC 12U Girls Practice",
+      "desc": "LKHC 12U Girls Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena"
+    },
+    {
+      "ts": "20:00",
+      "te": "21:00",
+      "title": "LKHC 14U AA Practice",
+      "desc": "LKHC 14U AA Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "20:30",
+      "te": "21:30",
+      "title": "LKHC 14U LA Practice",
+      "desc": "LKHC 14U LA Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena"
+    },
+    {
+      "ts": "20:30",
+      "te": "21:30",
+      "title": "LKHC 14U UA Practice",
+      "desc": "LKHC 14U UA Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena"
+    },
+    {
+      "ts": "21:10",
+      "te": "22:10",
+      "title": "LKHC 16U American Practice",
+      "desc": "LKHC 16U American Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "21:40",
+      "te": "22:40",
+      "title": "LKHC 16U LA Practice",
+      "desc": "LKHC 16U LA Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Arena"
+    }
+  ],
+  "2026-11-03": [
+    {
+      "ts": "06:00",
+      "te": "08:00",
+      "title": "Academy TPH",
+      "type": "Academy TPH",
+      "style": "#0453f2",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "",
+          "room": "LR 3 & 4",
+          "home": false
+        },
+        {
+          "tenant": "",
+          "room": "LR 1 & 2",
+          "home": false
+        }
+      ]
+    },
+    {
+      "ts": "07:00",
+      "te": "07:30",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "07:30",
+      "te": "08:00",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "08:00",
+      "te": "08:30",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "08:30",
+      "te": "09:00",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "08:30",
+      "te": "09:30",
+      "title": "WLC 2010 On Ice Skills",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "",
+          "room": "WLC 16U",
+          "home": false
+        }
+      ]
+    },
+    {
+      "ts": "09:10",
+      "te": "09:40",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "09:40",
+      "te": "10:10",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "09:45",
+      "te": "10:45",
+      "title": "TPH Academy Group 1 On Ice Training",
+      "type": "Academy TPH",
+      "style": "#0453f2",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "",
+          "room": "LR 3 & 4",
+          "home": false
+        },
+        {
+          "tenant": "",
+          "room": "LR 1 & 2",
+          "home": false
+        }
+      ]
+    },
+    {
+      "ts": "10:30",
+      "te": "11:30",
+      "title": "TPH/23 Hockey Scoring & Skills -All Ages",
+      "type": "TPH/23 Hockey",
+      "style": "#add3f5",
+      "rink": "Arena",
+      "locker": [
+        {
+          "tenant": "",
+          "room": "LKHC ",
+          "home": false
+        }
+      ]
+    },
+    {
+      "ts": "11:00",
+      "te": "12:00",
+      "title": "TPH Academy Group 2 On Ice Training",
+      "type": "Academy TPH",
+      "style": "#0453f2",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "12:00",
+      "te": "13:00",
+      "title": "Pick Up Hockey",
+      "type": "Pick-Up Hockey",
+      "style": "#e8ec2a",
+      "rink": "Arena"
+    },
+    {
+      "ts": "12:30",
+      "te": "14:30",
+      "title": "Public Skate",
+      "type": "Public Skate",
+      "style": "#0cff00",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "14:30",
+      "te": "15:00",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "15:00",
+      "te": "15:30",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "15:30",
+      "te": "16:00",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "16:00",
+      "te": "17:00",
+      "title": "WLC 2010 ",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Ion Rink",
+      "locker": [
+        {
+          "tenant": "",
+          "room": "WLC 16U",
+          "home": false
+        }
+      ]
+    },
+    {
+      "ts": "16:10",
+      "te": "16:40",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "16:40",
+      "te": "17:10",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "17:10",
+      "te": "18:10",
+      "title": "Developmental Academy",
+      "type": "Developmental Academy",
+      "style": "#c42cc8",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "17:10",
+      "te": "17:40",
+      "title": "Freestyle/Dance",
+      "type": "Freestyle/Dance",
+      "style": "#ff000c",
+      "rink": "Arena"
+    },
+    {
+      "ts": "17:10",
+      "te": "18:10",
+      "title": "Future Champs",
+      "type": "Future Champs & Ice Prodigies",
+      "style": "#ff00e1",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "17:50",
+      "te": "19:00",
+      "title": "WLC 2015/2016",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Arena"
+    },
+    {
+      "ts": "18:30",
+      "te": "19:30",
+      "title": "LKHC 16U AA National Practice",
+      "desc": "LKHC 16U AA National Practice",
+      "type": "Loudoun Knights Hockey Club",
+      "style": "#febf04",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "19:10",
+      "te": "20:50",
+      "title": "WLC 2014/2013 Practice",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Arena"
+    },
+    {
+      "ts": "19:40",
+      "te": "20:40",
+      "title": "WLC 2011 Practice",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "20:50",
+      "te": "21:50",
+      "title": "WLC 18U Practice",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Ion Rink"
+    },
+    {
+      "ts": "21:00",
+      "te": "22:00",
+      "title": "WLC 2012 Practice",
+      "type": "WLC",
+      "style": "#0800ff",
+      "rink": "Arena"
+    }
+  ]
+}

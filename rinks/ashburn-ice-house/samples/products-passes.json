@@ -1,0 +1,6253 @@
+{
+  "request": "/products?company=ashburn&page[size]=500 (filtered by name)",
+  "data": [
+    {
+      "type": "products",
+      "id": "4",
+      "attributes": {
+        "name": "Public Skate - Skate Rental",
+        "price": 5,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 5,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 5,
+        "local_price": 5,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/4"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "5",
+      "attributes": {
+        "name": "Public Skate (practice pass) LTS Fall",
+        "price": 20,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 20,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 20,
+        "local_price": 20,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/5"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "7",
+      "attributes": {
+        "name": "Xtreme Event Rental",
+        "price": 520,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 520,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 520,
+        "local_price": 520,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/7"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "13",
+      "attributes": {
+        "name": "HS Team Ice Rental",
+        "price": 558,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 558,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 558,
+        "local_price": 558,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/13"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "15",
+      "attributes": {
+        "name": "Single Use Ice Rental",
+        "price": 520,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 520,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 520,
+        "local_price": 520,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/15"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "16",
+      "attributes": {
+        "name": "Public Skate/POI - Holiday Deal",
+        "price": 12.5,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 12.5,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 12.5,
+        "local_price": 12.5,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/16"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "17",
+      "attributes": {
+        "name": "Public Skate-Child",
+        "price": 8,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 8,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 8,
+        "local_price": 8,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/17"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "18",
+      "attributes": {
+        "name": "Public Skate-Group",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/18"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "19",
+      "attributes": {
+        "name": "Public Skate-Senior",
+        "price": 5,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 5,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 5,
+        "local_price": 5,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/19"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "21",
+      "attributes": {
+        "name": "Stick n Shoot",
+        "price": 20,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 20,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 20,
+        "local_price": 20,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/21"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "22",
+      "attributes": {
+        "name": "Pick Up Hockey",
+        "price": 20,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 20,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 20,
+        "local_price": 20,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/22"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "23",
+      "attributes": {
+        "name": "Pick Up Police",
+        "price": 6,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 6,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 6,
+        "local_price": 6,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/23"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "25",
+      "attributes": {
+        "name": "11 Session Public Skate Pass",
+        "price": 72,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 72,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 72,
+        "local_price": 72,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/25"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "26",
+      "attributes": {
+        "name": "22 Session Public Skate Pass ",
+        "price": 120,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 120,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 120,
+        "local_price": 120,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/26"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "33",
+      "attributes": {
+        "name": "Party- Mezzanine Rental",
+        "price": 100,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 100,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 100,
+        "local_price": 100,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/33"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "35",
+      "attributes": {
+        "name": "Party- Mozz. Sticks Tray",
+        "price": 30,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 30,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 30,
+        "local_price": 30,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/35"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "55",
+      "attributes": {
+        "name": "Hockey Pass",
+        "price": 18,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 18,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 18,
+        "local_price": 18,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/55"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "57",
+      "attributes": {
+        "name": "LTS Make-up Pass",
+        "price": 21,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 21,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 21,
+        "local_price": 21,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/57"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "66",
+      "attributes": {
+        "name": "Stick n Shoot Goalie",
+        "price": 0,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 0,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 0,
+        "local_price": 0,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/66"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "71",
+      "attributes": {
+        "name": "Private Hockey Rental",
+        "price": 520,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 520,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 520,
+        "local_price": 520,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/71"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "97",
+      "attributes": {
+        "name": "low freestyle camp half day",
+        "price": 48,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 48,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 48,
+        "local_price": 48,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/97"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "104",
+      "attributes": {
+        "name": "Public Skate - General ",
+        "price": 15,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 15,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 15,
+        "local_price": 15,
+        "has_location_pricing": false,
+        "icon_defaulted": "fal fa-ice-skate",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/104"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "105",
+      "attributes": {
+        "name": "Public Skate Pass- Maxgalaxy",
+        "price": 12,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 12,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 12,
+        "local_price": 12,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/105"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "106",
+      "attributes": {
+        "name": "Public Skate Pass Promotion",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/106"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "108",
+      "attributes": {
+        "name": "Public Skate - Non Family Member Skater",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": true,
+        "icon_defaulted": "fal fa-ice-skate",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/108"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "111",
+      "attributes": {
+        "name": "Stick n Shoot Mini  ",
+        "price": 20,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 20,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 20,
+        "local_price": 20,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/111"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "127",
+      "attributes": {
+        "name": "Learn to Skate Practice Pass-Public Skate",
+        "price": 0,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 0,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 0,
+        "local_price": 0,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/127"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "133",
+      "attributes": {
+        "name": "Teacher Appreciation Pass",
+        "price": 0,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 0,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 0,
+        "local_price": 0,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/133"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "144",
+      "attributes": {
+        "name": "Power Ice Lesson Pass",
+        "price": 18,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 18,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 18,
+        "local_price": 18,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/144"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "151",
+      "attributes": {
+        "name": "Frequent Skater Public Skate Pass",
+        "price": 12,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 12,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 12,
+        "local_price": 12,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/151"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "152",
+      "attributes": {
+        "name": "Happy Birthday Skate Pass",
+        "price": 0,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 0,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 0,
+        "local_price": 0,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/152"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "158",
+      "attributes": {
+        "name": "Private Ice Rental",
+        "price": 520,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 520,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 520,
+        "local_price": 520,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/158"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "164",
+      "attributes": {
+        "name": "Public Skate-Holiday Deal ",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": false,
+        "icon_defaulted": "fal fa-ice-skate",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/164"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "170",
+      "attributes": {
+        "name": "Drop in hockey pass",
+        "price": 20,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 20,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 20,
+        "local_price": 20,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/170"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "171",
+      "attributes": {
+        "name": "Coach Commission Day Pass",
+        "price": 24,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 24,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 24,
+        "local_price": 24,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/171"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "181",
+      "attributes": {
+        "name": "Drop-in Holiday Ice Show Rehearsals",
+        "price": 15,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 15,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 15,
+        "local_price": 15,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/181"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "184",
+      "attributes": {
+        "name": "Studio Rental",
+        "price": 40,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 40,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 40,
+        "local_price": 40,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/184"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "186",
+      "attributes": {
+        "name": "Guest Coach Day Pass",
+        "price": 30,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 30,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": null,
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 30,
+        "local_price": 30,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/186"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "193",
+      "attributes": {
+        "name": "Public Pass Package",
+        "price": 12,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 12,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 12,
+        "local_price": 12,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/193"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "194",
+      "attributes": {
+        "name": "Competitive Freestyle Summer Camp",
+        "price": 92,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 92,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 92,
+        "local_price": 92,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/194"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "195",
+      "attributes": {
+        "name": "Throwback Public",
+        "price": 5,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 5,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 5,
+        "local_price": 5,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/195"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "197",
+      "attributes": {
+        "name": "25 Year Pass Package",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/197"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "198",
+      "attributes": {
+        "name": "Public Skate Package",
+        "price": 15,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 15,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 15,
+        "local_price": 15,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/198"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "199",
+      "attributes": {
+        "name": "Freestyle Single Session",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/199"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "201",
+      "attributes": {
+        "name": "Freestyle Punch Pass- 20",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": false,
+        "icon_defaulted": "fal fa-ice-skate",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/201"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "202",
+      "attributes": {
+        "name": "Freestyle Punch Pass- 40",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": false,
+        "icon_defaulted": "fal fa-ice-skate",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/202"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "203",
+      "attributes": {
+        "name": "Freestyle Punch Pass- 60",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": false,
+        "icon_defaulted": "fal fa-ice-skate",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/203"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "204",
+      "attributes": {
+        "name": "Freestyle Punch Pass- 80",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": false,
+        "icon_defaulted": "fal fa-ice-skate",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/204"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "205",
+      "attributes": {
+        "name": "Freestyle Punch Pass- 100",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": false,
+        "icon_defaulted": "fal fa-ice-skate",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/205"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "207",
+      "attributes": {
+        "name": "ACE Class Punch Pass-8",
+        "price": 18,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 18,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 18,
+        "local_price": 18,
+        "has_location_pricing": false,
+        "icon_defaulted": "fal fa-ice-skate",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/207"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "208",
+      "attributes": {
+        "name": "ACE Class Punch Pass-12",
+        "price": 18,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 18,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 18,
+        "local_price": 18,
+        "has_location_pricing": false,
+        "icon_defaulted": "fal fa-ice-skate",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/208"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "209",
+      "attributes": {
+        "name": "ACE Class Punch Pass-24",
+        "price": 18,
+        "allow_end_user_cancel": false,
+        "hide_quantity": true,
+        "non_resident_price": 18,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 18,
+        "local_price": 18,
+        "has_location_pricing": false,
+        "icon_defaulted": "fal fa-ice-skate",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/209"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "216",
+      "attributes": {
+        "name": "IE Semi Private 10 Punch Pass",
+        "price": 50,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 50,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 50,
+        "local_price": 50,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/216"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "231",
+      "attributes": {
+        "name": "IE- ACE Drop in Class",
+        "price": 18,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 18,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 18,
+        "local_price": 18,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/231"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "240",
+      "attributes": {
+        "name": "Playground on Ice - Themed ",
+        "price": 20,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 20,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 20,
+        "local_price": 20,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/240"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "243",
+      "attributes": {
+        "name": "Happy Birthday SNS Pass",
+        "price": 0,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 0,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 0,
+        "local_price": 0,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/243"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "244",
+      "attributes": {
+        "name": "Playground on Ice NEW",
+        "price": 18,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 18,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 18,
+        "local_price": 18,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/244"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "247",
+      "attributes": {
+        "name": "IE Small Group 30 Punch Pass",
+        "price": 20,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 20,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 20,
+        "local_price": 20,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/247"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "248",
+      "attributes": {
+        "name": "IE SGT Drop In",
+        "price": 0,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 0,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 0,
+        "local_price": 0,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/248"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "263",
+      "attributes": {
+        "name": "Public Skating Crew Membership",
+        "price": 50,
+        "allow_end_user_cancel": true,
+        "hide_quantity": true,
+        "non_resident_price": 50,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 50,
+        "local_price": 50,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/263"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "265",
+      "attributes": {
+        "name": "Public Skate-Walk in ",
+        "price": 15,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 15,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 15,
+        "local_price": 15,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/265"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "266",
+      "attributes": {
+        "name": "Playground on Ice - Walk in ",
+        "price": 18,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 18,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 18,
+        "local_price": 18,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/266"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "268",
+      "attributes": {
+        "name": "Pick Up Hockey - Walk in ",
+        "price": 20,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 20,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 20,
+        "local_price": 20,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/268"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "299",
+      "attributes": {
+        "name": "HS Pickup Hockey",
+        "price": 20,
+        "allow_end_user_cancel": true,
+        "hide_quantity": false,
+        "non_resident_price": 20,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 20,
+        "local_price": 20,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/299"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "304",
+      "attributes": {
+        "name": "Family Pick Up Hockey ",
+        "price": 20,
+        "allow_end_user_cancel": true,
+        "hide_quantity": false,
+        "non_resident_price": 20,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 20,
+        "local_price": 20,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/304"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "326",
+      "attributes": {
+        "name": "Priority Bypass Membership",
+        "price": 0,
+        "allow_end_user_cancel": true,
+        "hide_quantity": false,
+        "non_resident_price": 0,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 0,
+        "local_price": 0,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/326"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "327",
+      "attributes": {
+        "name": "Pick Up Hockey - Holiday Deal",
+        "price": 17.5,
+        "allow_end_user_cancel": true,
+        "hide_quantity": false,
+        "non_resident_price": 17.5,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 17.5,
+        "local_price": 17.5,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/327"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "328",
+      "attributes": {
+        "name": "Stick n Shoot - Holiday Deal",
+        "price": 17.5,
+        "allow_end_user_cancel": true,
+        "hide_quantity": false,
+        "non_resident_price": 17.5,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 17.5,
+        "local_price": 17.5,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/328"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "330",
+      "attributes": {
+        "name": "Playground on Ice Holiday Deal",
+        "price": 15.5,
+        "allow_end_user_cancel": true,
+        "hide_quantity": false,
+        "non_resident_price": 15.5,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 15.5,
+        "local_price": 15.5,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/330"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "336",
+      "attributes": {
+        "name": "Xtreme Gym Season Pass",
+        "price": 6500,
+        "allow_end_user_cancel": true,
+        "hide_quantity": false,
+        "non_resident_price": 6500,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 6500,
+        "local_price": 6500,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/336"
+      },
+      "meta": null
+    },
+    {
+      "type": "products",
+      "id": "337",
+      "attributes": {
+        "name": "Freestyle Single Session 2026",
+        "price": 10,
+        "allow_end_user_cancel": false,
+        "hide_quantity": false,
+        "non_resident_price": 10,
+        "image_url": null,
+        "billing_cycle_length": null,
+        "billing_cycle_period": "0",
+        "external_membership_type": null,
+        "hide_membership_online": 0,
+        "actual_price": 10,
+        "local_price": 10,
+        "has_location_pricing": false,
+        "icon_defaulted": "far fa-badge-dollar",
+        "image_url_default": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+        "billing_cycle_description": ""
+      },
+      "relationships": {
+        "teams": {
+          "data": null
+        },
+        "facilities": {
+          "data": null
+        },
+        "locations": {
+          "data": null
+        },
+        "program": {
+          "data": null
+        },
+        "availableAddons": {
+          "data": null
+        },
+        "defaultAddons": {
+          "data": null
+        },
+        "modifications": {
+          "data": null
+        },
+        "requiredMemberships": {
+          "data": null
+        },
+        "productAddons": {
+          "data": null
+        },
+        "taxes": {
+          "data": null
+        },
+        "taxedBy": {
+          "data": null
+        },
+        "generalLedgerAccount": {
+          "data": null
+        },
+        "category": {
+          "data": null
+        },
+        "subCategory": {
+          "data": null
+        },
+        "invoiceItems": {
+          "data": null
+        },
+        "size": {
+          "data": null
+        },
+        "color": {
+          "data": null
+        },
+        "sex": {
+          "data": null
+        },
+        "manufacturer": {
+          "data": null
+        },
+        "fulfillment": {
+          "data": null
+        }
+      },
+      "links": {
+        "self": "http://apps.daysmartrecreation.com/api/v1/products/337"
+      },
+      "meta": null
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+:root {
+  --bg: #f4f6f9;
+  --surface: #ffffff;
+  --text: #16202a;
+  --muted: #5b6b7b;
+  --line: #dde3ea;
+  --accent: #1d6fb8;
+  --now: #fff4d6;
+  --nowline: #e53935;
+  --cat-public_skate: #1b9e5a;
+  --cat-freestyle: #c2185b;
+  --cat-stick_and_puck: #ef6c00;
+  --cat-pickup_hockey: #6a1b9a;
+  --cat-learn_to_skate: #0288d1;
+  --cat-hockey: #455a64;
+  --cat-figure_skating: #8e24aa;
+  --cat-other: #78909c;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1419; --surface: #18202a; --text: #e8edf2; --muted: #93a3b3; --line: #2a3542; --now: #3a2f10;
+  }
+}
+:root[data-theme="dark"] { --bg: #0f1419; --surface: #18202a; --text: #e8edf2; --muted: #93a3b3; --line: #2a3542; --now: #3a2f10; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--accent); }
+
+.top { background: var(--accent); color: #fff; padding: 18px 0 14px; }
+.top h1 { margin: 0; font-size: 1.5rem; letter-spacing: .2px; }
+.tagline { margin: 4px 0 0; opacity: .9; font-size: .95rem; }
+
+/* ---------- controls: three filter cards ---------- */
+.controls { padding: 16px 16px 4px; }
+.panels { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.panel {
+  margin: 0; min-width: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
+  padding: 10px 14px 12px; display: flex; flex-direction: column; gap: 10px;
+}
+.panel legend { padding: 0 6px; margin-left: -6px; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); }
+.group { display: flex; flex-wrap: wrap; gap: 6px; }
+button, .chip {
+  border: 1px solid var(--line); background: var(--bg); color: var(--text);
+  border-radius: 999px; padding: 6px 12px; font: inherit; font-size: .95rem; cursor: pointer; line-height: 1.2;
+}
+button.on, .chip.on { background: var(--chip, var(--accent)); border-color: var(--chip, var(--accent)); color: #fff; }
+button:not(.on):hover, .chip:not(.on):hover { border-color: var(--chip, var(--accent)); }
+button:focus-visible, .chip:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.hint { color: var(--muted); font-size: .82rem; margin: 0; }
+.when-row { justify-content: space-between; }
+/* Toggle switch styled like the chips */
+.switch { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-size: .95rem; user-select: none; margin-left: auto; }
+.switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+.switch .track {
+  position: relative; width: 44px; height: 24px; border-radius: 999px; flex: none;
+  background: var(--bg); border: 1px solid var(--line); transition: background .15s, border-color .15s;
+}
+.switch .track::after {
+  content: ""; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%;
+  background: var(--muted); transition: transform .15s, background .15s;
+}
+.switch input:checked + .track { background: var(--accent); border-color: var(--accent); }
+.switch input:checked + .track::after { transform: translateX(20px); background: #fff; }
+.switch input:focus-visible + .track { outline: 2px solid var(--accent); outline-offset: 2px; }
+.switch:hover .track { border-color: var(--accent); }
+.row { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.meta { color: var(--muted); font-size: .9rem; padding: 10px 2px 0; }
+
+main { padding-bottom: 32px; }
+
+/* ---------- cards ---------- */
+.day { margin: 18px 0 8px; display: flex; align-items: baseline; gap: 10px; position: sticky; top: 0; background: var(--bg); padding: 6px 0; z-index: 2; }
+.day h2 { margin: 0; font-size: 1.15rem; }
+.day .count { color: var(--muted); font-size: .9rem; }
+
+/* Card anatomy: [rink colour block] \ [session-type colour block] | title + details | time */
+.event {
+  --slash: 28px;    /* overlap of the type block over the rink block; room for the diagonal on tall cards */
+  --rink-w: 166px;  /* fixed so the diagonal lines up on every card */
+  --cat-w: 140px;
+  --time-w: 292px;
+  display: grid; grid-template-columns: var(--rink-w) var(--cat-w) 1fr auto; align-items: stretch;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+  margin-bottom: 6px; min-height: 52px;
+}
+.event { --mid: var(--surface); }
+.event.past { filter: grayscale(1); opacity: .55; }
+/* "Now" divider inside today's group: finished sessions above, upcoming below. */
+.nowmark { display: flex; align-items: center; gap: 10px; margin: 10px 0; color: var(--nowline); font-weight: 800; font-size: .9rem; text-transform: uppercase; letter-spacing: .6px; }
+.nowmark::before, .nowmark::after { content: ""; flex: 1; height: 2px; background: var(--nowline); border-radius: 2px; }
+.nowmark .nowtime { font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--text); }
+/* Every card is the same thickness; the middle stays empty (details are in the tooltip). */
+.event { height: 68px; }
+.rink {
+  display: flex; flex-direction: column; justify-content: center; gap: 2px; text-decoration: none;
+  background: var(--rink, var(--muted)); color: #fff; padding: 8px 10px 8px 12px; width: var(--rink-w); min-width: 0;
+  font-size: .95rem; font-weight: 700; line-height: 1.2; white-space: nowrap;
+}
+.rink .rink-text, .rink .sheet { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.rink:hover, .rink:focus-visible { filter: brightness(1.12); }
+.rink:hover .rink-text, .rink:focus-visible .rink-text { text-decoration: underline; }
+.rink-name { display: inline-flex; align-items: center; gap: 5px; }
+.rink .pin { width: 12px; height: 12px; fill: currentColor; flex: none; }
+.rink .sheet { font-weight: 500; opacity: .9; font-size: .85rem; }
+/* The type block overlaps the rink block by --slash; its colour is painted by two layers:
+   a skewed strip (constant 15° diagonal regardless of card height) and a plain rectangle. */
+.cat {
+  position: relative; isolation: isolate;
+  display: flex; align-items: center; color: #fff;
+  font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; white-space: nowrap;
+  margin-left: calc(var(--slash) * -1); padding: 8px 8px 8px calc(var(--slash) + 10px);
+  width: calc(var(--cat-w) + var(--slash)); overflow: hidden; text-overflow: ellipsis;
+}
+.cat::before, .cat::after { content: ""; position: absolute; top: 0; bottom: 0; background: var(--cat, var(--muted)); z-index: -1; }
+/* Diagonal: top corner sits exactly at the rink block's right edge, bottom corner leans left by height·tan(15°). */
+.cat::before { left: var(--slash); width: 96px; transform: skewX(-15deg); transform-origin: top left; }
+.cat::after { left: calc(var(--slash) + 24px); right: 0; border-radius: 0 10px 10px 0; }
+.body {
+  background: var(--mid);
+}
+/* Right side: "In N days" badge, then the time tile */
+.right { display: flex; align-items: center; gap: 12px; padding: 6px 8px 6px 0; background: var(--mid); }
+.days { font-size: .8rem; font-weight: 700; color: var(--muted); white-space: nowrap; text-transform: uppercase; letter-spacing: .4px; }
+.event.now .days { color: var(--nowline); }
+/* The time is its own little card inside the card. */
+/* Horizontal: Start | Duration | End, each labelled */
+.time {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; text-align: center;
+  font-variant-numeric: tabular-nums; width: var(--time-w); max-width: 100%; margin: 0; padding: 3px 4px;
+  background: var(--mid); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,.12);
+  line-height: 1.1; white-space: nowrap;
+}
+.time .t { display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 0 4px; }
+.time .t + .t { border-left: 1px solid var(--line); }
+.time .lbl { font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+.time .start, .time .end { font-size: 1.12rem; font-weight: 700; color: var(--text); }
+.time .dur { font-size: 1.02rem; font-weight: 700; color: var(--accent); }
+
+.event { background: var(--mid); }
+
+.empty, .error { padding: 28px 12px; text-align: center; color: var(--muted); }
+.error { color: #b00020; padding: 10px 12px; }
+
+.rinklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.rinklist li {
+  display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; gap: 14px; font-size: .9rem;
+  background: var(--bg); border: 1px solid var(--line); border-left: 5px solid var(--rink, var(--line)); border-radius: 8px; padding: 8px 12px;
+}
+.rl-links { display: flex; gap: 6px; }
+.rl-switch { margin: 0; gap: 0; }
+.rinklist li.off { opacity: .55; }
+.rinklist li.off .rl-name { text-decoration: line-through; }
+.rl-name { font-weight: 700; color: var(--text); white-space: nowrap; }
+.rl-info { display: flex; flex-wrap: wrap; gap: 4px 14px; color: var(--muted); }
+.rl-phone { font-weight: 600; text-decoration: none; }
+.rl-web { font-weight: 700; text-decoration: none; border: 1px solid var(--accent); border-radius: 6px; padding: 5px 12px; white-space: nowrap; }
+.rl-web:hover { background: var(--accent); color: #fff; }
+@media (max-width: 560px) { .rinklist li { grid-template-columns: auto 1fr; } .rl-info, .rl-links { grid-column: 1 / -1; } .rl-links { justify-content: flex-start; } }
+.foot { color: var(--muted); font-size: .85rem; padding: 12px 16px 32px; border-top: 1px solid var(--line); }
+
+@media (max-width: 560px) {
+  .event { --slash: 20px; --rink-w: 104px; --cat-w: 84px; --time-w: 200px; }
+  .time .start, .time .end { font-size: .82rem; }
+  .time .dur { font-size: .78rem; }
+  .time .lbl { font-size: .52rem; }
+  .rink { padding: 6px 6px 6px 8px; font-size: .76rem; }
+  .cat { font-size: .6rem; padding-right: 6px; letter-spacing: .3px; }
+  .body { padding: 6px 8px; }
+  .time { padding: 2px 2px; margin: 0; }
+  .right { gap: 6px; padding-right: 5px; }
+  .days { font-size: .62rem; }
+  .time .t { padding: 0 2px; }
+  .event { height: 60px; }
+}

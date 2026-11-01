@@ -156,6 +156,12 @@ main { padding-bottom: 32px; }
 .body {
   background: var(--mid); display: flex; align-items: center; padding: 0 14px; min-width: 0;
 }
+/* "Cost: $9" from the rink's list; hover for which price and the fine print */
+.fee {
+  display: inline-flex; align-items: center; font-size: .9rem; font-weight: 800; color: var(--text); white-space: nowrap;
+  background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px;
+}
+.fee.unknown { color: var(--muted); font-weight: 600; }
 /* Drive time from the chosen starting point */
 .drive {
   display: inline-flex; align-items: center; gap: 6px; font-size: .9rem; font-weight: 700; color: var(--text);
@@ -286,6 +292,7 @@ main { padding-bottom: 32px; }
   .details { padding: 8px 10px 10px; font-size: .82rem; }
   .body { padding: 6px 6px; gap: 5px; flex-wrap: wrap; overflow: hidden; align-content: center; }
   .who { font-size: .66rem; padding: 2px 7px; }
+  .fee { font-size: .7rem; padding: 2px 7px; }
   .drive { font-size: .7rem; padding: 2px 7px; }
   .time { padding: 2px 2px; margin: 0; }
   .right { gap: 6px; padding-right: 5px; }

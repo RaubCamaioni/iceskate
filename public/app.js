@@ -404,8 +404,11 @@ function fillCard(node, e, now) {
     whoEl.title = who.restricted ? `${who.text}. Tap for details.` : 'Open to all ages. Tap for details.';
     whoEl.addEventListener('click', (ev) => { ev.stopPropagation(); toggleWhoPop(whoEl, e, who, rink); });
   }
-  // The session's price from the rink's published list; shown only in the expanded details row.
-  const price = priceFor(e, rink.prices);
+  // "Cost: $9" from the rink's published list (named variant, weekday/weekend, or plain), or "Cost: unknown".
+  const price = priceFor(e, rink.prices), feeEl = $('.fee', node);
+  feeEl.textContent = `Cost: ${price ? price.price : 'unknown'}`;
+  feeEl.classList.toggle('unknown', !price);
+  feeEl.title = price ? `${price.label}${price.note ? `: ${price.note}` : ''}` : 'The rink does not publish a per-session price for this type; check its website.';
   $('.cat-name', node).textContent = catShort[e.category] || e.category;
   $('.cat', node).title = catLabel[e.category] || e.category;
   // The rink's own name for the session sits under the type; overflowing names glide (see renderList).

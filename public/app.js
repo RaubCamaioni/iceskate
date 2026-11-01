@@ -12,7 +12,8 @@ const CATEGORIES = [
   ['other', 'Other', false],
 ];
 const REFRESH_MS = 5 * 60 * 1000;
-const STORAGE_KEY = 'nova-ice-filters-v2'; // bumped so the new public-skate-only default applies once to existing visitors
+// v3: rinks are stored as the ones switched OFF, so a rink added later shows up for returning visitors.
+const STORAGE_KEY = 'nova-ice-filters-v3';
 // Rinks publish some sessions (notably freestyle) as many back-to-back 30-minute slots.
 // Consecutive slots of the same session on the same sheet are merged; a gap up to this many
 // minutes (a resurface) still counts as consecutive.
@@ -40,7 +41,7 @@ const catShort = { ...catLabel, hockey: 'Hockey', figure_skating: 'Figure skatin
 const catColor = (k) => getComputedStyle(document.documentElement).getPropertyValue(`--cat-${k}`).trim();
 const mapsUrl = (r) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ? `${r.name}, ${r.address}` : r.name)}`;
 
-let state = { days: 14, rinks: null, categories: null, hidePast: false };
+let state = { days: 14, offRinks: [], categories: null, hidePast: false };
 let data = { rinks: [], events: [], errors: [] };
 let rinkInfo = {};
 let timer = null;
@@ -48,6 +49,7 @@ let timer = null;
 function loadState() {
   try { state = { ...state, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') }; } catch { /* ignore */ }
   if (![1, 7, 14, 30].includes(state.days)) state.days = 14;
+  if (!Array.isArray(state.offRinks)) state.offRinks = [];
 }
 function saveState() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch { /* ignore */ }
@@ -86,7 +88,6 @@ function chip(label, on, color, onClick) {
 }
 
 function renderFilters() {
-  if (!state.rinks) state.rinks = data.rinks.map((r) => r.slug);
   renderRinkRows();
   const cf = $('#category-filters');
   cf.replaceChildren();
@@ -102,7 +103,7 @@ function renderFilters() {
 }
 
 function matches(e, now) {
-  if (!state.rinks.includes(e.rink)) return false;
+  if (state.offRinks.includes(e.rink)) return false;
   if (!state.categories.includes(e.category)) return false;
   if (state.hidePast && parseLocal(e.end) < now) return false;
   return true;
@@ -111,7 +112,7 @@ function matches(e, now) {
 // One row per rink in the Location card: a switch, the name, phone, address, and links.
 function renderRinkRows() {
   $('#sources').replaceChildren(...data.rinks.map((r) => {
-    const on = state.rinks.includes(r.slug);
+    const on = !state.offRinks.includes(r.slug);
     const li = document.createElement('li');
     li.style.setProperty('--rink', r.color || '');
     li.classList.toggle('off', !on);
@@ -120,7 +121,7 @@ function renderRinkRows() {
     const input = sw.querySelector('input');
     input.checked = on;
     input.addEventListener('change', () => {
-      state.rinks = input.checked ? [...new Set([...state.rinks, r.slug])] : state.rinks.filter((s) => s !== r.slug);
+      state.offRinks = input.checked ? state.offRinks.filter((s) => s !== r.slug) : [...new Set([...state.offRinks, r.slug])];
       saveState(); renderRinkRows(); renderList();
     });
     const name = document.createElement('span'); name.className = 'rl-name'; name.textContent = r.name;

@@ -1,0 +1,5 @@
+NoVAIce.xcodeproj/
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/

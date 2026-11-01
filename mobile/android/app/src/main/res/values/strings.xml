@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NoVA Ice</string>
+    <string name="offline">The schedule could not be loaded. Check your connection and try again.</string>
+    <string name="retry">Try again</string>
+</resources>

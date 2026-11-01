@@ -40,10 +40,11 @@ a { color: var(--accent); }
 .layout { display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 22px; align-items: start; padding-top: 16px; }
 /* The column scrolls with the page (no nested scrolling); one filter group shows at a time, picked by the tabs */
 .sidebar { min-width: 0; }
-.sidebar-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+/* The column and the phone drawer share one look: a full-width tab bar, thumb-sized chips and switches */
+.sidebar-head { display: flex; align-items: center; margin-bottom: 12px; }
 .sidebar-head .done { display: none; }
-.tabs { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
-.tab { border: 0; background: transparent; color: var(--muted); font: inherit; font-weight: 700; padding: 7px 16px; border-radius: 999px; cursor: pointer; }
+.tabs { display: flex; flex: 1 1 100%; gap: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 4px; }
+.tab { flex: 1 1 0; min-height: 50px; border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 1.08rem; font-weight: 700; padding: 10px 6px; border-radius: 999px; cursor: pointer; }
 .tab[aria-selected="true"] { background: var(--accent); color: #fff; }
 .tab:hover:not([aria-selected="true"]) { color: var(--text); }
 .panel[hidden] { display: none; }
@@ -65,47 +66,31 @@ a { color: var(--accent); }
   }
   .sidebar.open { transform: none; }
   .sidebar-head .done { display: inline-flex; }
-  /* Phone layout: full-width tab bar at the top, the panel scrolls in the middle (the only scroller
-     while the drawer is open), full-width Done button pinned at the bottom */
+  /* Phone layout: tab bar at the top, the panel scrolls in the middle (the only scroller while the
+     drawer is open, no visible scrollbar), full-width Done button pinned at the bottom */
   .sidebar { display: flex; flex-direction: column; gap: 12px; }
   .sidebar-head { display: contents; }
-  .sidebar-head .tabs { order: 0; flex: none; gap: 6px; padding: 4px; }
-  .sidebar-head .tab { flex: 1 1 0; min-height: 50px; padding: 10px 6px; font-size: 1.08rem; }
-  .sidebar .panels { order: 1; flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .sidebar-head .tabs { order: 0; flex: none; }
+  .sidebar .panels { order: 1; flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .sidebar .panels::-webkit-scrollbar { display: none; }
   .sidebar-head .done {
     order: 2; flex: none; width: 100%; min-height: 52px; justify-content: center; align-items: center;
     font-size: 1.08rem; font-weight: 700; background: var(--accent); border-color: var(--accent); color: #fff;
     margin-bottom: env(safe-area-inset-bottom, 0);
   }
-  /* No browser scrollbar on the drawer's scroller (it scrolls by touch) */
-  .sidebar .panels { scrollbar-width: none; }
-  .sidebar .panels::-webkit-scrollbar { display: none; }
-  /* Every rink is listed in the drawer; the "Show all" button is only for the desktop column */
-  .sidebar .rinklist li.more { display: grid; }
-  .sidebar .rinks-more { display: none; }
-  /* Thumb-sized controls: session and day chips, range buttons, rink rows and switches */
-  .sidebar .group { gap: 8px; }
-  .sidebar .chip, .sidebar .panel button:not(.tab):not(.done) { min-height: 46px; padding: 10px 16px; font-size: 1.02rem; }
-  .sidebar .rinklist li { padding: 10px 12px; font-size: .95rem; gap: 6px 12px; }
-  .sidebar .rinklist { gap: 8px; }
-  .sidebar .switch { font-size: 1.02rem; }
-  .sidebar .switch .track { width: 54px; height: 30px; }
-  .sidebar .switch .track::after { width: 24px; height: 24px; }
-  .sidebar .switch input:checked + .track::after { transform: translateX(24px); }
-  .sidebar .panel { padding: 12px 14px 14px; gap: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { .sidebar { transition: none; } }
 body.drawer-open { overflow: hidden; }
 .panels { display: grid; grid-template-columns: 1fr; gap: 12px; }
 .panel {
   margin: 0; min-width: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
-  padding: 10px 14px 12px; display: flex; flex-direction: column; gap: 10px;
+  padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 12px;
 }
 .panel legend { padding: 0 6px; margin-left: -6px; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); }
-.group { display: flex; flex-wrap: wrap; gap: 6px; }
+.group { display: flex; flex-wrap: wrap; gap: 8px; }
 button, .chip {
   border: 1px solid var(--line); background: var(--bg); color: var(--text);
-  border-radius: 999px; padding: 6px 12px; font: inherit; font-size: .95rem; cursor: pointer; line-height: 1.2;
+  border-radius: 999px; padding: 10px 16px; min-height: 46px; font: inherit; font-size: 1.02rem; cursor: pointer; line-height: 1.2;
 }
 button.on, .chip.on { background: var(--chip, var(--accent)); border-color: var(--chip, var(--accent)); color: #fff; }
 button:not(.on):hover, .chip:not(.on):hover { border-color: var(--chip, var(--accent)); }
@@ -127,18 +112,18 @@ button:focus-visible, .chip:focus-visible, input:focus-visible { outline: 2px so
 .glossary-body dd { margin: 0 0 2px; color: var(--muted); }
 .when-row { justify-content: space-between; }
 /* Toggle switch styled like the chips */
-.switch { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-size: .95rem; user-select: none; margin-left: auto; }
+.switch { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-size: 1.02rem; user-select: none; margin-left: auto; }
 .switch input { position: absolute; opacity: 0; width: 0; height: 0; }
 .switch .track {
-  position: relative; width: 44px; height: 24px; border-radius: 999px; flex: none;
+  position: relative; width: 54px; height: 30px; border-radius: 999px; flex: none;
   background: var(--bg); border: 1px solid var(--line); transition: background .15s, border-color .15s;
 }
 .switch .track::after {
-  content: ""; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%;
+  content: ""; position: absolute; top: 2px; left: 2px; width: 24px; height: 24px; border-radius: 50%;
   background: var(--muted); transition: transform .15s, background .15s;
 }
 .switch input:checked + .track { background: var(--accent); border-color: var(--accent); }
-.switch input:checked + .track::after { transform: translateX(20px); background: #fff; }
+.switch input:checked + .track::after { transform: translateX(24px); background: #fff; }
 .switch input:focus-visible + .track { outline: 2px solid var(--accent); outline-offset: 2px; }
 .switch:hover .track { border-color: var(--accent); }
 .row { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
@@ -249,6 +234,7 @@ main { padding-bottom: 32px; }
 .who.open::before { content: "✓"; }
 .who.demo { font-size: .78rem; padding: 1px 8px; vertical-align: 1px; cursor: default; }
 .who[hidden] { display: none; }
+.who, .who-pop .wp-close { min-height: 0; } /* buttons, but not thumb-sized filter chips */
 /* Popover opened by the tag */
 .who-pop {
   position: absolute; z-index: 1000; background: var(--surface); color: var(--text); border: 1px solid var(--line);
@@ -322,15 +308,13 @@ main { padding-bottom: 32px; }
 .rl-drive { font-weight: 700; color: var(--text); white-space: nowrap; }
 .rl-drive::before { content: "🚗"; font-size: .85em; margin-right: 4px; }
 /* Five rinks are listed; the rest appear behind a "Show all" button rather than an inner scrollbar */
-.rinklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
-.rinklist li.more { display: none; }
-.rinks-more { align-self: flex-start; }
+.rinklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .rink-mode { margin: 0 0 6px; }
 .rink-mode a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 /* Rows live in the narrow left column: switch | name | website, then the drive/phone/address and prices lines */
 .rinklist li {
-  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 4px 10px; font-size: .88rem;
-  background: var(--bg); border: 1px solid var(--line); border-left: 5px solid var(--rink, var(--line)); border-radius: 8px; padding: 7px 10px;
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 6px 12px; font-size: .95rem;
+  background: var(--bg); border: 1px solid var(--line); border-left: 5px solid var(--rink, var(--line)); border-radius: 8px; padding: 10px 12px;
 }
 .rl-links { display: flex; gap: 6px; }
 .rl-switch { margin: 0; gap: 0; }
@@ -387,9 +371,11 @@ main { padding-bottom: 32px; }
   .cat { font-size: .6rem; }
   .cat-sub { font-size: .6rem; }
   .details { padding: 8px 10px 10px; font-size: .82rem; }
-  .body { padding: 0; }
-  .body > * { display: none; }
-  .event.restricted .cat-name::before { content: "\26A0  "; color: #fecaca; }
+  /* Cost and drive time move into the expanded row; the red restriction marker (icon only) stays
+     in its usual place after the type block, the green all-ages tag goes */
+  .body { padding: 0 4px; }
+  .fee, .drive, .who.open { display: none; }
+  .who { padding: 3px 6px; }
   .time { padding: 2px 6px; margin: 0; grid-template-columns: 1fr; }
   .time .t:nth-child(2), .time .t:nth-child(3) { display: none; }
   .time .start { font-size: .95rem; }

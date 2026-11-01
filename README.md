@@ -39,11 +39,12 @@ npm start
 
 Then open http://localhost:3000. The filters (location, session types, date range) sit in a
 sticky left column with the session list on the right; under 1100px wide the column becomes a
-drawer behind a Filters button in the header (full-width Location / Session / When tabs on top,
-the chosen panel scrolling between them with no visible scrollbar, a full-width Done button at the
-bottom, thumb-sized chips and switches, and every rink listed with no "Show all" step). Cards shed detail as the list column narrows
+drawer behind a Filters button in the header. Column and drawer look the same: a full-width
+Location / Session / When tab bar, thumb-sized chips and switches, every rink listed; in the drawer
+the chosen panel scrolls between the tabs and a full-width Done button, with no visible scrollbar.
+Cards shed detail as the list column narrows
 (container queries on `.content`): under 1200px the "Tomorrow" badge goes, under 1030px the cost, under 900px the drive time, under 690px the restrictions tag shrinks to its icon; under 560px a
-card is just rink, type (with a ⚠ when restricted) and start time, and the rest shows in the
+card is just rink, type, the ⚠ marker when restricted, and start time, and the rest shows in the
 row that opens when the card is tapped. The page merges everything into one list, grouped by
 day, with rink and session-type filters, a date range, and a hide-finished toggle.
 By default only the three rinks closest to the starting point are on (`rinkMode: 'auto'`, so the

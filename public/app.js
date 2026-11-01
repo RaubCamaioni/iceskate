@@ -48,7 +48,7 @@ const mapsUrl = (r) => `https://www.google.com/maps/dir/?api=1&destination=${enc
 // Drive times start from Leesburg until the visitor sets their own place.
 const DEFAULT_ORIGIN = { label: 'Leesburg, VA', lat: 39.1157, lng: -77.5636, isDefault: true };
 // rinkMode 'auto' shows the three rinks closest to the origin; any switch flip makes it 'manual' (offRinks remembered).
-let state = { days: 14, rinkMode: 'auto', offRinks: [], allRinks: false, tab: 'location', categories: null, hidePast: false, origin: DEFAULT_ORIGIN, showMap: false }; // origin: { label, lat, lng }
+let state = { days: 14, rinkMode: 'auto', offRinks: [], tab: 'location', categories: null, hidePast: false, origin: DEFAULT_ORIGIN, showMap: false }; // origin: { label, lat, lng }
 let data = { rinks: [], events: [], errors: [] };
 let rinkInfo = {};
 let travel = {}; // slug -> { min, mi, mode: 'drive' | 'line' } from the chosen starting point
@@ -67,7 +67,6 @@ function loadState() {
   if (state.rinkMode !== 'manual') state.rinkMode = state.offRinks.length ? 'manual' : 'auto';
   if (!state.origin || state.origin.isDefault || !(Number.isFinite(state.origin.lat) && Number.isFinite(state.origin.lng))) state.origin = DEFAULT_ORIGIN;
   state.showMap = Boolean(state.showMap);
-  state.allRinks = Boolean(state.allRinks);
   if (!['location', 'session', 'when'].includes(state.tab)) state.tab = 'location';
 }
 function saveState() {
@@ -349,20 +348,6 @@ function renderRinkRows() {
     if (prices.childElementCount) li.append(prices);
     return li;
   }));
-  sizeRinkList();
-}
-
-// Five rinks are listed; the others wait behind a "Show all" button so the column never scrolls on its own.
-const VISIBLE_ROWS = 5;
-function sizeRinkList() {
-  const ul = $('#sources');
-  const lis = [...ul.children];
-  const btn = $('#rinks-more');
-  if (lis.length <= VISIBLE_ROWS) { btn.hidden = true; return; }
-  lis.forEach((li, i) => li.classList.toggle('more', !state.allRinks && i >= VISIBLE_ROWS));
-  btn.hidden = false;
-  const hiddenOn = state.allRinks ? 0 : lis.slice(VISIBLE_ROWS).filter((li) => !li.classList.contains('off')).length;
-  btn.textContent = state.allRinks ? 'Show the 5 closest only' : `Show all ${lis.length} rinks${hiddenOn ? ` (${hiddenOn} more switched on)` : ''}`;
 }
 
 function renderRinkMode() {
@@ -647,7 +632,6 @@ function init() {
   $('#filters-close').addEventListener('click', () => setDrawer(false));
   for (const b of $$('.tab')) b.addEventListener('click', () => { showTab(b.dataset.tab); saveState(); });
   showTab(state.tab);
-  $('#rinks-more').addEventListener('click', () => { state.allRinks = !state.allRinks; saveState(); sizeRinkList(); });
   $('#scrim').addEventListener('click', () => setDrawer(false));
   for (const b of $$('.range button')) b.addEventListener('click', () => { state.days = Number(b.dataset.days); saveState(); load(); });
   $('#hide-past').addEventListener('change', (ev) => { state.hidePast = ev.target.checked; saveState(); renderList(); });

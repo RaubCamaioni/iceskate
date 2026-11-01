@@ -8,6 +8,8 @@ export const slug = 'loudoun-ice-centre';
 export const name = 'Loudoun Ice Centre';
 export const shortName = 'Loudoun Ice';
 export const address = '22149 Davis Dr Suite 155, Sterling, VA 20164';
+export const lat = 38.9967937; // geocoded 2026-10-31; used for distance sorting and drive times
+export const lng = -77.4248634;
 export const phone = '(703) 444-0600';
 export const website = 'https://www.loudounice.com/calendar';
 export const registerUrl = 'https://www.loudounice.com/public-skating'; // walk-in prices; no online checkout found
@@ -65,4 +67,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };

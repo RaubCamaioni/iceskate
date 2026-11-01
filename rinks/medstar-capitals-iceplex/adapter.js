@@ -12,6 +12,8 @@ export const slug = 'medstar-capitals-iceplex';
 export const name = 'MedStar Capitals Iceplex';
 export const shortName = 'Capitals Iceplex';
 export const address = '627 N Glebe Rd Suite 800, Arlington, VA 22203';
+export const lat = 38.8787195; // geocoded 2026-10-31; used for distance sorting and drive times
+export const lng = -77.109675;
 export const phone = '(571) 224-0555';
 export const website = 'https://www.medstarcapitalsiceplex.com/';
 // Every drop-in is sold online in DASH (account required); this lists all drop-in activities.
@@ -87,4 +89,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };

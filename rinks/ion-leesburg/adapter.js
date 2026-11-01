@@ -8,6 +8,8 @@ export const slug = 'ion-leesburg';
 export const name = 'ION International Training Center';
 export const shortName = 'ION Leesburg';
 export const address = '19201 Compass Creek Pkwy, Leesburg, VA 20175';
+export const lat = 39.0854516; // geocoded 2026-10-31; used for distance sorting and drive times
+export const lng = -77.5650061;
 export const phone = '(703) 951-0050';
 export const website = 'https://www.ionitc.com/iceschedule';
 // ION has no online purchase for public skate. Checked on 2026-10-31 both logged out and inside a
@@ -85,4 +87,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, phone, website, registerUrl, accountUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, accountUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };

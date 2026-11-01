@@ -13,6 +13,8 @@ export const slug = 'rink-slug';
 export const name = 'Rink Name';
 export const shortName = 'Rink';
 export const address = '';
+export const lat = null; // decimal degrees, for distance sorting (geocode the address once)
+export const lng = null;
 export const phone = '';
 export const website = '';
 export const registerUrl = null; // online checkout, or a page with walk-in prices
@@ -39,4 +41,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };

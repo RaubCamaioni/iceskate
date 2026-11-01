@@ -41,15 +41,17 @@ const catShort = { ...catLabel, hockey: 'Hockey', figure_skating: 'Figure skatin
 const catColor = (k) => getComputedStyle(document.documentElement).getPropertyValue(`--cat-${k}`).trim();
 const mapsUrl = (r) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ? `${r.name}, ${r.address}` : r.name)}`;
 
-let state = { days: 14, offRinks: [], categories: null, hidePast: false };
+let state = { days: 14, offRinks: [], categories: null, hidePast: false, origin: null }; // origin: { label, lat, lng }
 let data = { rinks: [], events: [], errors: [] };
 let rinkInfo = {};
+let travel = {}; // slug -> { min, mi, mode: 'drive' | 'line' } from the chosen starting point
 let timer = null;
 
 function loadState() {
   try { state = { ...state, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') }; } catch { /* ignore */ }
   if (![1, 7, 14, 30].includes(state.days)) state.days = 14;
   if (!Array.isArray(state.offRinks)) state.offRinks = [];
+  if (state.origin && !(Number.isFinite(state.origin.lat) && Number.isFinite(state.origin.lng))) state.origin = null;
 }
 function saveState() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch { /* ignore */ }
@@ -109,9 +111,87 @@ function matches(e, now) {
   return true;
 }
 
-// One row per rink in the Location card: a switch, the name, phone, address, and links.
+// ---------------------------------------------------------------- distance and drive times
+const haversineMiles = (a, b) => {
+  const R = 3958.8, toRad = (d) => (d * Math.PI) / 180;
+  const dLat = toRad(b.lat - a.lat), dLng = toRad(b.lng - a.lng);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+};
+const fmtMin = (min) => fmtSpan(min * 60000);
+
+// Driving times from the OSRM demo router (one request for every rink); straight-line distance if it fails.
+async function computeTravel() {
+  travel = {};
+  const o = state.origin;
+  if (!o) return;
+  const rinks = data.rinks.filter((r) => Number.isFinite(r.lat) && Number.isFinite(r.lng));
+  for (const r of rinks) travel[r.slug] = { min: null, mi: Math.round(haversineMiles(o, r) * 10) / 10, mode: 'line' };
+  try {
+    const coords = [o, ...rinks].map((p) => `${p.lng},${p.lat}`).join(';');
+    const res = await fetch(`https://router.project-osrm.org/table/v1/driving/${coords}?sources=0&annotations=duration,distance`);
+    if (!res.ok) throw new Error(`router ${res.status}`);
+    const j = await res.json();
+    if (j.code !== 'Ok') throw new Error(j.code);
+    rinks.forEach((r, i) => {
+      const sec = j.durations?.[0]?.[i + 1], m = j.distances?.[0]?.[i + 1];
+      if (sec != null) travel[r.slug] = { min: Math.round(sec / 60), mi: Math.round((m / 1609.344) * 10) / 10, mode: 'drive' };
+    });
+  } catch (err) {
+    console.warn('drive times unavailable, using straight-line distance:', err.message);
+  }
+}
+
+function sortedRinks() {
+  if (!state.origin) return data.rinks;
+  const key = (r) => { const t = travel[r.slug]; return t ? (t.min ?? t.mi * 2) : Infinity; }; // ~30 mph when only distance is known
+  return [...data.rinks].sort((a, b) => key(a) - key(b) || a.name.localeCompare(b.name));
+}
+
+async function setOrigin(origin) {
+  state.origin = origin;
+  saveState();
+  renderOriginStatus(origin ? 'Working out drive times…' : '');
+  await computeTravel();
+  renderOriginStatus();
+  renderRinkRows();
+  renderList();
+}
+
+function renderOriginStatus(text) {
+  const el = $('#origin-status');
+  el.replaceChildren();
+  if (text) { el.textContent = text; return; }
+  if (!state.origin) return;
+  const modes = new Set(Object.values(travel).map((t) => t.mode));
+  el.append(modes.has('drive') ? `Drive times from ${state.origin.label}, closest first.` : `Straight-line distance from ${state.origin.label} (routing unavailable).`);
+  const clear = document.createElement('a'); clear.href = '#'; clear.className = 'clear'; clear.textContent = 'Clear';
+  clear.addEventListener('click', (ev) => { ev.preventDefault(); setOrigin(null); });
+  el.append(clear);
+}
+
+async function geocode(q) {
+  const res = await fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&q=${encodeURIComponent(q)}`, { headers: { accept: 'application/json' } });
+  if (!res.ok) throw new Error(`geocoder ${res.status}`);
+  const hit = (await res.json())[0];
+  if (!hit) throw new Error('not found');
+  const label = hit.display_name.split(',').slice(0, 2).join(',').trim();
+  return { label: label || q, lat: Number(hit.lat), lng: Number(hit.lon) };
+}
+
+function useMyLocation() {
+  if (!navigator.geolocation) { renderOriginStatus('This browser cannot share its location; type one instead.'); return; }
+  renderOriginStatus('Asking for your location…');
+  navigator.geolocation.getCurrentPosition(
+    (pos) => setOrigin({ label: 'my location', lat: pos.coords.latitude, lng: pos.coords.longitude }),
+    (err) => renderOriginStatus(`Location not shared (${err.message}). Type one instead.`),
+    { maximumAge: 5 * 60 * 1000, timeout: 15000 },
+  );
+}
+
+// One row per rink in the Location card: a switch, the name, drive time, phone, address, and links.
 function renderRinkRows() {
-  $('#sources').replaceChildren(...data.rinks.map((r) => {
+  $('#sources').replaceChildren(...sortedRinks().map((r) => {
     const on = !state.offRinks.includes(r.slug);
     const li = document.createElement('li');
     li.style.setProperty('--rink', r.color || '');
@@ -126,6 +206,13 @@ function renderRinkRows() {
     });
     const name = document.createElement('span'); name.className = 'rl-name'; name.textContent = r.name;
     const info = document.createElement('span'); info.className = 'rl-info';
+    const t = travel[r.slug];
+    if (t) {
+      const dv = document.createElement('span'); dv.className = 'rl-drive';
+      dv.textContent = t.mode === 'drive' ? `${fmtMin(t.min)} drive · ${t.mi} mi` : `${t.mi} mi away`;
+      dv.title = `${t.mode === 'drive' ? 'Driving time' : 'Straight-line distance'} from ${state.origin.label}`;
+      info.append(dv);
+    }
     if (r.phone) {
       const tel = document.createElement('a'); tel.href = `tel:${r.phone.replace(/[^\d+]/g, '')}`; tel.textContent = r.phone; tel.className = 'rl-phone';
       info.append(tel);
@@ -165,7 +252,8 @@ function fillCard(node, e, now) {
   link.title = `Directions to ${rink.name}${rink.address ? `, ${rink.address}` : ''}`;
   link.setAttribute('aria-label', link.title);
   $('.rink-text', node).textContent = rink.shortName || rink.name;
-  $('.sheet', node).textContent = e.sheet;
+  const t = travel[e.rink];
+  $('.sheet', node).textContent = t?.mode === 'drive' ? `${e.sheet} · ${fmtMin(t.min)}` : e.sheet;
   $('.cat', node).textContent = catShort[e.category] || e.category;
   $('.cat', node).title = catLabel[e.category] || e.category;
   $('.start', node).textContent = fmtTime(e.start);
@@ -261,6 +349,7 @@ async function load() {
     data.rawCount = data.events.length;
     data.events = mergeAdjacent(data.events);
     rinkInfo = Object.fromEntries(data.rinks.map((r) => [r.slug, r]));
+    if (state.origin && !Object.keys(travel).length) { await computeTravel(); renderOriginStatus(); }
     renderFilters();
     renderList();
     const asOf = new Date(data.fetchedAt || data.generatedAt);
@@ -287,6 +376,14 @@ function init() {
   loadState();
   for (const b of $$('.range button')) b.addEventListener('click', () => { state.days = Number(b.dataset.days); saveState(); load(); });
   $('#hide-past').addEventListener('change', (ev) => { state.hidePast = ev.target.checked; saveState(); renderList(); });
+  $('#use-location').addEventListener('click', useMyLocation);
+  $('#origin-form').addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const q = $('#origin-input').value.trim();
+    if (!q) return;
+    renderOriginStatus(`Looking up "${q}"…`);
+    try { await setOrigin(await geocode(q)); } catch (err) { renderOriginStatus(`Could not find "${q}" (${err.message}).`); }
+  });
   setInterval(renderList, 60 * 1000); // keep "now" highlighting fresh
   load();
 }

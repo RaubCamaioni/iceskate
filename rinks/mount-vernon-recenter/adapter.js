@@ -10,6 +10,8 @@ export const slug = 'mount-vernon-recenter';
 export const name = 'Mount Vernon RECenter';
 export const shortName = 'Mt Vernon';
 export const address = '2017 Belle View Blvd, Alexandria, VA 22307';
+export const lat = 38.7742696; // geocoded 2026-10-31; used for distance sorting and drive times
+export const lng = -77.0633647;
 export const phone = '(703) 768-3224';
 export const website = 'https://www.fairfaxcounty.gov/parks/recenter/mount-vernon/ice-arena';
 export const SEARCH_URL = 'https://fairfax.usedirect.com/FairfaxFCPAWeb/ACTIVITIES/Search.aspx?category_name=ICE%20TICKETS&place_id=7949';
@@ -98,4 +100,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };

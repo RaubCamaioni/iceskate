@@ -143,6 +143,18 @@ main { padding-bottom: 32px; }
 .empty, .error { padding: 28px 12px; text-align: center; color: var(--muted); }
 .error { color: #b00020; padding: 10px 12px; }
 
+/* Starting point for drive times */
+.origin-row { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; }
+.origin-form { display: flex; gap: 6px; flex: 1; min-width: 240px; }
+.origin-form input {
+  flex: 1; min-width: 0; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px;
+  font: inherit; font-size: .95rem; background: var(--bg); color: var(--text);
+}
+.origin-form input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+#origin-status { flex-basis: 100%; }
+#origin-status .clear { margin-left: 8px; }
+.rl-drive { font-weight: 700; color: var(--text); white-space: nowrap; }
+.rl-drive::before { content: "🚗"; font-size: .85em; margin-right: 4px; }
 .rinklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
 .rinklist li {
   display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; gap: 14px; font-size: .9rem;

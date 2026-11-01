@@ -395,3 +395,10 @@ test('fairfax: public skate by type id, pick-up hockey from Camp rows, rentals h
   assert.equal(fairfax.classify('k', 'Pick-Up Hockey Goalies - Friday'), null);
   assert.equal(fairfax.classify('r', 'Kilmer ES Skate Night'), null);
 });
+
+test('every rink adapter has coordinates in Northern Virginia for distance sorting', async () => {
+  for (const a of await loadAdapters()) {
+    assert.ok(Number.isFinite(a.lat) && Number.isFinite(a.lng), `${a.slug} lat/lng`);
+    assert.ok(a.lat > 38.3 && a.lat < 39.4 && a.lng > -78 && a.lng < -76.8, `${a.slug} is in the DC area: ${a.lat},${a.lng}`);
+  }
+});

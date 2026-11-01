@@ -8,6 +8,8 @@ export const slug = 'prince-william-ice-center';
 export const name = 'Prince William Ice Center';
 export const shortName = 'Prince William';
 export const address = '5180 Dale Blvd, Woodbridge, VA 22193';
+export const lat = 38.6596941; // geocoded 2026-10-31; used for distance sorting and drive times
+export const lng = -77.3619645;
 export const phone = '(703) 730-8423';
 export const website = 'https://www.innovativesportsva.com/';
 export const registerUrl = 'https://www.innovativesportsva.com/page/show/8780814-public-skate'; // prices; pay at the door
@@ -77,4 +79,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize };

@@ -12,6 +12,8 @@ export const slug = 'fairfax-ice-arena';
 export const name = 'Fairfax Ice Arena';
 export const shortName = 'Fairfax';
 export const address = '3779 Pickett Rd, Fairfax, VA 22031';
+export const lat = 38.8486715; // geocoded 2026-10-31; used for distance sorting and drive times
+export const lng = -77.2724089;
 export const phone = '(703) 323-1132';
 export const website = 'https://www.fairfaxicearena.com/public-skate-hours.html';
 export const registerUrl = 'https://www.fairfaxicearena.com/public-skate-hours.html'; // prices; public skate is box office only
@@ -75,4 +77,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };

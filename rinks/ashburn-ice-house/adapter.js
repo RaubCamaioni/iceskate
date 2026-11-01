@@ -12,6 +12,8 @@ export const slug = 'ashburn-ice-house';
 export const name = 'Ashburn Ice House';
 export const shortName = 'Ashburn';
 export const address = '21595 Smith Switch Rd, Ashburn, VA 20147';
+export const lat = 39.0190958; // geocoded 2026-10-31; used for distance sorting and drive times
+export const lng = -77.4671305;
 export const phone = '(703) 858-0300';
 export const website = 'https://www.ashburnice.com/publicskating';
 // Online pre-pay: the DaySmart event-registration page (all drop-in sessions live there; it has no per-event deep link).
@@ -96,4 +98,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };

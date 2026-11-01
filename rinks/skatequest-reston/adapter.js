@@ -11,6 +11,8 @@ export const slug = 'skatequest-reston';
 export const name = 'SkateQuest Reston';
 export const shortName = 'SkateQuest';
 export const address = '1800 Michael Faraday Ct, Reston, VA 20190';
+export const lat = 38.9494055; // geocoded 2026-10-31; used for distance sorting and drive times
+export const lng = -77.3307697;
 export const phone = '(703) 709-1010';
 export const website = 'https://www.skatequest.com/public-events';
 export const registerUrl = 'https://www.skatequest.com/public-events'; // prices; public sessions are pay at the door
@@ -85,4 +87,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };

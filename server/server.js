@@ -64,7 +64,7 @@ export async function loadAdapters() {
 }
 
 export function publicRinkInfo(a) {
-  return { slug: a.slug, name: a.name, shortName: a.shortName ?? a.name, address: a.address ?? null, phone: a.phone ?? null, onlinePay: Boolean(a.onlinePay), website: a.website ?? null, registerUrl: a.registerUrl ?? null, color: a.color ?? null, sheets: a.sheets ?? [] };
+  return { slug: a.slug, name: a.name, shortName: a.shortName ?? a.name, address: a.address ?? null, lat: a.lat ?? null, lng: a.lng ?? null, phone: a.phone ?? null, onlinePay: Boolean(a.onlinePay), website: a.website ?? null, registerUrl: a.registerUrl ?? null, color: a.color ?? null, sheets: a.sheets ?? [] };
 }
 
 // ---------------------------------------------------------------- dates

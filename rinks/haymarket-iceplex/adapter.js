@@ -11,6 +11,8 @@ export const slug = 'haymarket-iceplex';
 export const name = 'Haymarket IcePlex';
 export const shortName = 'Haymarket';
 export const address = '15155 Washington St, Haymarket, VA 20169';
+export const lat = 38.8124349; // geocoded 2026-10-31; used for distance sorting and drive times
+export const lng = -77.6402902;
 export const phone = '(703) 753-4423';
 export const website = portalUrl(COMPANY, 'calendar');
 export const registerUrl = 'https://www.haymarketiceplex.com/page/show/8611769-pricing'; // prices; sessions are pay at the door
@@ -76,4 +78,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };

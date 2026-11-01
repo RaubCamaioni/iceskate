@@ -20,8 +20,16 @@
     <div class="panels">
       <fieldset class="panel">
         <legend>Location</legend>
+        <div class="origin-row">
+          <button type="button" id="use-location" class="chip">Use my location</button>
+          <form id="origin-form" class="origin-form" autocomplete="off">
+            <input id="origin-input" type="text" placeholder="or an address, town or zip" aria-label="Starting location" inputmode="text">
+            <button type="submit" class="chip">Set</button>
+          </form>
+          <span id="origin-status" class="hint"></span>
+        </div>
         <ul id="sources" class="rinklist" aria-label="Rinks"></ul>
-        <p class="hint">Switch a rink off to hide its sessions. Colour = rink. Tap a rink on a session card for directions.</p>
+        <p class="hint">Set a starting point to sort rinks by driving time. Switch a rink off to hide its sessions. Colour = rink. Tap an address, or a rink on a session card, for directions. Your starting point is sent only to the OpenStreetMap routing and geocoding services.</p>
       </fieldset>
       <fieldset class="panel">
         <legend>Session</legend>

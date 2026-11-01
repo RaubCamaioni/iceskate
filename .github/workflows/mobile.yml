@@ -1,16 +1,19 @@
 name: Build mobile apps
 
-# Builds the Android APK and the (unsigned) iOS app whenever the wrapper apps change, then
-# publishes both to the rolling "mobile-latest" GitHub Release so they have permanent download
-# links (run artifacts expire after 90 days and need a GitHub login).
+# Builds the Android APK and the (unsigned) iOS app whenever the wrapper apps change (run
+# artifacts, which expire after 90 days). Pushing a tag such as v0.1.0 also publishes both files
+# to a GitHub Release of that name, with permanent download links:
+#   https://github.com/RaubCamaioni/iceskate/releases/latest/download/NoVAIce-android-debug.apk
+#   https://github.com/RaubCamaioni/iceskate/releases/latest/download/NoVAIce-ios-unsigned.ipa
 on:
   push:
     branches: [main]
     paths: ['mobile/**', '.github/workflows/mobile.yml']
+    tags: ['v*']
   workflow_dispatch:
 
 permissions:
-  contents: write   # the release job creates/replaces the mobile-latest release
+  contents: write   # the release job publishes a GitHub Release on v* tags
 
 jobs:
   android:
@@ -67,11 +70,11 @@ jobs:
           if-no-files-found: error
 
   release:
-    name: Publish to the Releases page
+    name: Publish the GitHub Release
+    if: startsWith(github.ref, 'refs/tags/v')
     needs: [android, ios]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
           path: dist
@@ -83,14 +86,16 @@ jobs:
       - name: Write the release notes
         run: |
           {
-            echo "Thin wrappers around https://raubcamaioni.github.io/iceskate/ - the site is the app, so these rarely need updating. Built from commit ${{ github.sha }}."
+            echo "NoVA Ice ${{ github.ref_name }}: Android and iOS apps that show https://raubcamaioni.github.io/iceskate/ full screen. The site is the app, so schedule and feature updates arrive without reinstalling."
             echo
-            echo "- **NoVAIce-android-debug.apk**: debug-signed. On the phone, open the file and allow installs from this source, or \`adb install NoVAIce-android-debug.apk\`."
-            echo "- **NoVAIce-ios-unsigned.ipa**: not signed (Apple requires your own Apple ID). Sign it with a sideloading tool such as AltStore or Sideloadly, or open \`mobile/ios\` in Xcode and run on your phone. See \`mobile/README.md\`."
+            echo "- **NoVAIce-android-debug.apk**: debug-signed. Open this link on the phone and install it (allow installs from this source), or run \`adb install NoVAIce-android-debug.apk\`."
+            echo "- **NoVAIce-ios-unsigned.ipa**: not signed, because Apple requires your own Apple ID. Sign it with a sideloading tool such as AltStore or Sideloadly, or open \`mobile/ios\` in Xcode and run on your phone. See \`mobile/README.md\`."
+            echo
+            echo "Built from commit ${{ github.sha }}."
           } > notes.md
-      - name: Replace the mobile-latest release
+      - name: Create the release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release delete mobile-latest --cleanup-tag --yes || true
-          gh release create mobile-latest NoVAIce-android-debug.apk NoVAIce-ios-unsigned.ipa --title "Mobile apps (latest build)" --notes-file notes.md
+          gh release create "${{ github.ref_name }}" NoVAIce-android-debug.apk NoVAIce-ios-unsigned.ipa \
+            --repo "${{ github.repository }}" --title "NoVA Ice ${{ github.ref_name }}" --notes-file notes.md

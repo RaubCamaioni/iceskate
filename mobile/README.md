@@ -17,14 +17,19 @@ Both apps:
 ## Getting the builds
 
 The GitHub Actions workflow `.github/workflows/mobile.yml` builds both apps on every push that
-touches `mobile/` (and on demand from the Actions tab), then publishes them to the rolling
-**mobile-latest** release on the repo's Releases page, so the download links never change and
-need no GitHub login:
+touches `mobile/` (and on demand from the Actions tab). Pushing a version tag publishes the
+builds to the repo's [Releases page](https://github.com/RaubCamaioni/iceskate/releases), where the
+links need no GitHub login and the `latest` ones always point at the newest release:
 
 | File | What it is | How to install |
 |---|---|---|
-| [NoVAIce-android-debug.apk](https://github.com/RaubCamaioni/iceskate/releases/download/mobile-latest/NoVAIce-android-debug.apk) | debug-signed APK | Open the link on the phone and install it (allow installs from this source), or `adb install NoVAIce-android-debug.apk` |
-| [NoVAIce-ios-unsigned.ipa](https://github.com/RaubCamaioni/iceskate/releases/download/mobile-latest/NoVAIce-ios-unsigned.ipa) | built without a signing identity | Sign with your own Apple ID: open `mobile/ios` in Xcode (see below) and run on your phone, or sign the .ipa with a sideloading tool such as AltStore or Sideloadly |
+| [NoVAIce-android-debug.apk](https://github.com/RaubCamaioni/iceskate/releases/latest/download/NoVAIce-android-debug.apk) | debug-signed APK | Open the link on the phone and install it (allow installs from this source), or `adb install NoVAIce-android-debug.apk` |
+| [NoVAIce-ios-unsigned.ipa](https://github.com/RaubCamaioni/iceskate/releases/latest/download/NoVAIce-ios-unsigned.ipa) | built without a signing identity | Sign with your own Apple ID: open `mobile/ios` in Xcode (see below) and run on your phone, or sign the .ipa with a sideloading tool such as AltStore or Sideloadly |
+
+To cut a release, bump `versionName` in `android/app/build.gradle.kts` and `MARKETING_VERSION` /
+`CFBundleShortVersionString` in `ios/project.yml`, then tag and push:
+
+    git tag v0.2.0 && git push origin v0.2.0
 
 The same files are also attached to each run as artifacts (`NoVAIce-android-debug-apk`,
 `NoVAIce-ios-unsigned-ipa`), which expire after 90 days.

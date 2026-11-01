@@ -118,8 +118,15 @@ main { padding-bottom: 32px; }
 .cat::before { left: var(--slash); width: 96px; transform: skewX(-15deg); transform-origin: top left; }
 .cat::after { left: calc(var(--slash) + 24px); right: 0; border-radius: 0 10px 10px 0; }
 .body {
-  background: var(--mid);
+  background: var(--mid); display: flex; align-items: center; padding: 0 14px; min-width: 0;
 }
+/* Drive time from the chosen starting point */
+.drive {
+  display: inline-flex; align-items: center; gap: 6px; font-size: .9rem; font-weight: 700; color: var(--text);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; white-space: nowrap;
+}
+.drive::before { content: "🚗"; font-size: .9em; }
+.drive[hidden] { display: none; }
 /* Right side: "In N days" badge, then the time tile */
 .right { display: flex; align-items: center; gap: 12px; padding: 6px 8px 6px 0; background: var(--mid); }
 .days { font-size: .8rem; font-weight: 700; color: var(--muted); white-space: nowrap; text-transform: uppercase; letter-spacing: .4px; }

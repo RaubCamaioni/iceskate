@@ -52,6 +52,17 @@ async function loadPrevious() {
   }
 }
 
+// GitHub Pages caches files for ten minutes, so a visitor could get a new index.html with an old
+// app.js. Stamp the script and stylesheet URLs with the commit (or the time) on every build.
+async function versionAssets() {
+  const file = path.join(ROOT, 'public', 'index.html');
+  const ver = (process.env.GITHUB_SHA ?? String(Date.now())).slice(0, 10);
+  const html = await fs.readFile(file, 'utf8');
+  const out = html.replace(/(href|src)="(style\.css|app\.js)(\?v=[^"]*)?"/g, `$1="$2?v=${ver}"`);
+  if (out !== html) await fs.writeFile(file, out);
+  console.log(`[build] assets versioned ?v=${ver}`);
+}
+
 async function main() {
   const adapters = await loadAdapters();
   const from = todayISO();
@@ -66,6 +77,7 @@ async function main() {
   }
   await fs.mkdir(path.dirname(OUT_FILE), { recursive: true });
   await fs.writeFile(OUT_FILE, JSON.stringify(snap));
+  await versionAssets();
   console.log(`[build] wrote ${path.relative(ROOT, OUT_FILE)}: ${snap.events.length} events from ${adapters.length - snap.errors.length}/${adapters.length} rinks, ${from}..${to}, ${Date.now() - started} ms`);
 }
 

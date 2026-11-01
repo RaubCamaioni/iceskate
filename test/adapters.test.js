@@ -402,3 +402,40 @@ test('every rink adapter has coordinates in Northern Virginia for distance sorti
     assert.ok(a.lat > 38.3 && a.lat < 39.4 && a.lng > -78 && a.lng < -76.8, `${a.slug} is in the DC area: ${a.lat},${a.lng}`);
   }
 });
+
+// ---------------------------------------------------------------- Mount Vernon PDF calendars
+import { parseTimeRun, parseCalendarPdf } from '../rinks/mount-vernon-recenter/pdf.js';
+
+test('mount vernon pdf: time runs with the meridiem only on the end time', () => {
+  assert.deepEqual(parseTimeRun('11:30-1:00pm (B)'), { start: '11:30:00', end: '13:00:00', sheet: 'Blue Rink', adultOnly: false });
+  assert.deepEqual(parseTimeRun('12:00-2:00 pm (R)'), { start: '12:00:00', end: '14:00:00', sheet: 'Red Rink', adultOnly: false });
+  assert.deepEqual(parseTimeRun('10:45-12:00pm(B)'), { start: '10:45:00', end: '12:00:00', sheet: 'Blue Rink', adultOnly: false });
+  assert.deepEqual(parseTimeRun('5:30-7:00 am (R)'), { start: '05:30:00', end: '07:00:00', sheet: 'Red Rink', adultOnly: false });
+  assert.deepEqual(parseTimeRun('*7:00-8:30 pm(R)*'), { start: '19:00:00', end: '20:30:00', sheet: 'Red Rink', adultOnly: true });
+  assert.equal(parseTimeRun('9:00\uFFFD10:30 am (B)')?.start, '09:00:00', 'mangled dash');
+  assert.equal(parseTimeRun('No Session'), null);
+});
+
+test('mount vernon pdf: parses the public and hockey calendars into dated sessions', async () => {
+  const pub = await parseCalendarPdf(await fs.readFile(path.join(ROOT, 'rinks/mount-vernon-recenter/samples/mvice.pdf')));
+  assert.ok(pub.length > 100, `public sessions: ${pub.length}`);
+  const mon = pub.filter((s) => s.date === '2026-11-02').map((s) => `${s.start.slice(0, 5)}-${s.end.slice(0, 5)} ${s.sheet}${s.adultOnly ? ' adult' : ''}`).sort();
+  assert.deepEqual(mon, ['07:00-09:00 Blue Rink', '09:15-11:15 Blue Rink', '15:45-17:15 Red Rink', '19:00-20:30 Red Rink adult']);
+  assert.ok(pub.every((s) => /^2026-1[01]-\d{2}$/.test(s.date)), 'October and November pages');
+  const hockey = await parseCalendarPdf(await fs.readFile(path.join(ROOT, 'rinks/mount-vernon-recenter/samples/mvice-hockey.pdf')));
+  const nov2 = hockey.filter((s) => s.date === '2026-11-02').map((s) => `${s.label} ${s.start.slice(0, 5)}`).sort();
+  assert.deepEqual(nov2, ['PUH 11:30', 'SNP 05:15', 'SNP 14:00']);
+  const events = mountvernon.fromCalendar(hockey, 'mvice-hockey.pdf');
+  assertNormalized(events, 'mount-vernon-recenter');
+  assert.deepEqual([...new Set(events.map((e) => e.category))].sort(), ['pickup_hockey', 'stick_and_puck']);
+});
+
+test('mount vernon: ticket-store rows enrich matching PDF sessions with sign-up links', async () => {
+  const html = await fs.readFile(path.join(ROOT, 'rinks/mount-vernon-recenter/samples/usedirect-search-sample.html'), 'utf8');
+  const tickets = mountvernon.normalize(html);
+  const pdf = [{ rink: 'mount-vernon-recenter', sheet: 'Red Rink', sourceId: 'x', start: '2026-11-01T12:00:00', end: '2026-11-01T14:00:00', title: '', subtitle: '', category: 'public_skate', capacity: null, registerUrl: null }];
+  const [e] = mountvernon.enrich(pdf, tickets);
+  assert.equal(e.capacity, 200);
+  assert.match(e.registerUrl, /session_id=\d+$/);
+  assert.equal(e.sheet, 'Red Rink', 'sheet comes from the PDF');
+});

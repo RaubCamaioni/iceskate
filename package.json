@@ -4,9 +4,14 @@
   "description": "One merged schedule for Northern Virginia ice rinks, pulled live from each rink's own system",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node server/server.js",
     "test": "node --test"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^4.10.38"
   }
 }

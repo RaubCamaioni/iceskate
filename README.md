@@ -17,7 +17,7 @@ a rink.
 | SkateQuest | Reston, VA | DaySmart Recreation | Yes, open JSON:API, CORS enabled | [`rinks/skatequest-reston/`](rinks/skatequest-reston/README.md) |
 | MedStar Capitals Iceplex | Arlington, VA | DaySmart Recreation | Yes, open JSON:API, CORS enabled | [`rinks/medstar-capitals-iceplex/`](rinks/medstar-capitals-iceplex/README.md) |
 | Fairfax Ice Arena | Fairfax, VA | DaySmart Recreation (+ Mindbody for freestyle) | Yes for DASH; Mindbody is HTML | [`rinks/fairfax-ice-arena/`](rinks/fairfax-ice-arena/README.md) |
-| Mount Vernon RECenter | Alexandria, VA | Fairfax County ticket store (US eDirect) + PDF calendars | No, HTML listing | [`rinks/mount-vernon-recenter/`](rinks/mount-vernon-recenter/README.md) |
+| Mount Vernon RECenter | Alexandria, VA | Fairfax County PDF calendars + ticket store (US eDirect) | No, PDF grids parsed with pdfjs | [`rinks/mount-vernon-recenter/`](rinks/mount-vernon-recenter/README.md) |
 | Prince William Ice Center | Dale City, VA | Frontline Connect | No, HTML monthly pages | [`rinks/prince-william-ice-center/`](rinks/prince-william-ice-center/README.md) |
 | The St. James | Springfield, VA | own platform (hub.thestjames.com) | private API, not integrated | see "Not integrated" below |
 
@@ -25,9 +25,11 @@ Every indoor rink in Northern Virginia within about 50 miles of Leesburg. Findin
 
 ## Running the site
 
-Requires Node 18 or newer. No dependencies.
+Requires Node 18 or newer. One dependency (`pdfjs-dist`, which reads Mount Vernon's
+PDF calendars).
 
 ```
+npm install
 npm start
 ```
 
@@ -121,7 +123,8 @@ rinks/
   fairfax-ice-arena/           DaySmart
   mount-vernon-recenter/       county ticket-store HTML
   prince-william-ice-center/   Frontline Connect HTML
-lib/daysmart.js                shared DaySmart JSON:API client (four rinks use it)
+  mount-vernon-recenter/pdf.js PDF month-grid parser (pdfjs)
+lib/daysmart.js                shared DaySmart JSON:API client (five rinks use it)
 lib/ics.js                     iCalendar parser + recurrence expander
 ```
 
@@ -409,23 +412,26 @@ authoritative schedule. Pick-up hockey is listed in DASH event registration.
 |---|---|
 | Address | 2017 Belle View Blvd, Alexandria, VA 22307 |
 | Phone | (703) 768-3224 |
-| Ice sheets | Red Rink, Blue Rink (the ticket store does not say which) |
-| Register / pay | pre-pay online in the county ticket store: https://fairfax.usedirect.com/FairfaxFCPAWeb/ACTIVITIES/Search.aspx?category_name=ice%20tickets&place_id=7949 |
-| Source | ticket store HTML (no API). The county's PDF calendars have the full schedule including door-only mornings and freestyle; not parsed yet. |
+| Ice sheets | Red Rink, Blue Rink |
+| Register / pay | pre-pay online in the county ticket store: https://fairfax.usedirect.com/FairfaxFCPAWeb/ACTIVITIES/Search.aspx?category_name=ice%20tickets&place_id=7949 (public skate, stick and puck, pickup hockey; some morning public sessions are door only) |
+| Source | the county's four PDF month calendars (public, freestyle, hockey, ice dance), parsed by `rinks/mount-vernon-recenter/pdf.js`; the ticket store adds sign-up links and seat counts when reachable |
 
-### Repeat times (ticketed sessions)
+### Repeat times
 
 | Day | Session | Time |
 |-----|---------|------|
+| Mon to Fri | Public skate (door only) | 7:00 or 7:15 to 9:00/9:15am, then 9:15/9:30 to 11:00/11:15am |
 | Mon to Fri | Stick and Puck | 5:15 or 5:30 to 7:00am |
 | Mon, Wed, Fri | Pickup hockey | 11:30am to 1:00pm (Wed 12:15pm) |
 | Mon | Public skate | 3:15 to 5:15pm; adults only 7:00 to 8:30pm |
 | Tue | Public skate | 12:15 to 2:15pm, 2:30 to 4:30pm |
 | Wed | Public skate | 2:30 to 4:00pm |
 | Thu | Public skate | 10:00am to 12:00pm, 3:15 to 5:15pm |
-| Fri | Public skate | 2:15 to 4:15pm |
+| Fri | Public skate | 2:15 to 4:15pm, 7:00 to 8:30pm |
 | Sat | Public skate | 10:45am to 12:00pm, 12:15 to 2:00pm |
 | Sun | Public skate | 12:00 to 2:00pm, 2:15 to 3:45pm |
+| Daily | Freestyle | early morning and midday blocks on both sheets |
+| Tue to Fri | Ice dance | around 12:00 to 3:00pm |
 
 ### Costs (public skate includes rental; members free)
 

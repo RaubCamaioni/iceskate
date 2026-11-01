@@ -252,8 +252,15 @@ function fillCard(node, e, now) {
   link.title = `Directions to ${rink.name}${rink.address ? `, ${rink.address}` : ''}`;
   link.setAttribute('aria-label', link.title);
   $('.rink-text', node).textContent = rink.shortName || rink.name;
+  $('.sheet', node).textContent = e.sheet;
+  // Drive time from the chosen starting point, in the card's middle.
   const t = travel[e.rink];
-  $('.sheet', node).textContent = t?.mode === 'drive' ? `${e.sheet} · ${fmtMin(t.min)}` : e.sheet;
+  const drive = $('.drive', node);
+  if (t) {
+    drive.hidden = false;
+    drive.textContent = t.mode === 'drive' ? `${fmtMin(t.min)} drive` : `${t.mi} mi away`;
+    drive.title = `${t.mode === 'drive' ? `${fmtMin(t.min)} drive, ${t.mi} mi` : `${t.mi} mi straight line`} from ${state.origin.label}`;
+  }
   $('.cat', node).textContent = catShort[e.category] || e.category;
   $('.cat', node).title = catLabel[e.category] || e.category;
   $('.start', node).textContent = fmtTime(e.start);

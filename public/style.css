@@ -202,7 +202,8 @@ main { padding-bottom: 32px; }
 @media (prefers-reduced-motion: reduce) { .cat-sub-text.marquee { animation: none; } }
 .cat::before, .cat::after { content: ""; position: absolute; top: 0; bottom: 0; background: var(--cat, var(--muted)); z-index: -1; }
 /* Diagonal: top corner sits exactly at the rink block's right edge, bottom corner leans left by height·tan(15°). */
-.cat::before { left: var(--slash); width: 96px; transform: skewX(-15deg); transform-origin: top left; }
+/* The strip stops short of the rounded right end, so on narrow cards it cannot square the corner off. */
+.cat::before { left: var(--slash); width: min(96px, calc(var(--cat-w) - 14px)); transform: skewX(-15deg); transform-origin: top left; }
 .cat::after { left: calc(var(--slash) + 24px); right: 0; border-radius: 0 10px 10px 0; }
 .body {
   background: var(--mid); display: flex; align-items: center; padding: 0 14px; min-width: 0;

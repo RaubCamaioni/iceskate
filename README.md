@@ -35,8 +35,9 @@ npm start
 
 Then open http://localhost:3000. The page merges everything into one list, grouped by
 day, with rink and session-type filters, a date range, and a hide-finished toggle.
-Set a starting point (your location, or a typed address or zip) and the rinks sort by
-driving time, shown on each rink row and on every session card. "Show map" reveals a
+Rinks sort by driving time from a starting point, shown on each rink row and on every
+session card. The default starting point is Leesburg, VA (`DEFAULT_ORIGIN` in
+`public/app.js`); "Use my location" or a typed address or zip replaces it. "Show map" reveals a
 Leaflet map (OpenStreetMap tiles, loaded from cdnjs) with every rink as a marker in its
 colour; a marker's popup has the drive time, directions, phone, website and a switch for
 its sessions. Geocoding uses

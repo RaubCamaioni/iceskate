@@ -41,7 +41,9 @@ const catShort = { ...catLabel, hockey: 'Hockey', figure_skating: 'Figure skatin
 const catColor = (k) => getComputedStyle(document.documentElement).getPropertyValue(`--cat-${k}`).trim();
 const mapsUrl = (r) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ? `${r.name}, ${r.address}` : r.name)}`;
 
-let state = { days: 14, offRinks: [], categories: null, hidePast: false, origin: null, showMap: false }; // origin: { label, lat, lng }
+// Drive times start from Leesburg until the visitor sets their own place.
+const DEFAULT_ORIGIN = { label: 'Leesburg, VA', lat: 39.1157, lng: -77.5636, isDefault: true };
+let state = { days: 14, offRinks: [], categories: null, hidePast: false, origin: DEFAULT_ORIGIN, showMap: false }; // origin: { label, lat, lng }
 let data = { rinks: [], events: [], errors: [] };
 let rinkInfo = {};
 let travel = {}; // slug -> { min, mi, mode: 'drive' | 'line' } from the chosen starting point
@@ -51,7 +53,7 @@ function loadState() {
   try { state = { ...state, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') }; } catch { /* ignore */ }
   if (![1, 7, 14, 30].includes(state.days)) state.days = 14;
   if (!Array.isArray(state.offRinks)) state.offRinks = [];
-  if (state.origin && !(Number.isFinite(state.origin.lat) && Number.isFinite(state.origin.lng))) state.origin = null;
+  if (!state.origin || state.origin.isDefault || !(Number.isFinite(state.origin.lat) && Number.isFinite(state.origin.lng))) state.origin = DEFAULT_ORIGIN;
   state.showMap = Boolean(state.showMap);
 }
 function saveState() {
@@ -150,9 +152,9 @@ function sortedRinks() {
 }
 
 async function setOrigin(origin) {
-  state.origin = origin;
+  state.origin = origin ?? DEFAULT_ORIGIN;
   saveState();
-  renderOriginStatus(origin ? 'Working out drive times…' : '');
+  renderOriginStatus('Working out drive times…');
   await computeTravel();
   renderOriginStatus();
   renderRinkRows();
@@ -165,10 +167,13 @@ function renderOriginStatus(text) {
   if (text) { el.textContent = text; return; }
   if (!state.origin) return;
   const modes = new Set(Object.values(travel).map((t) => t.mode));
-  el.append(modes.has('drive') ? `Drive times from ${state.origin.label}, closest first.` : `Straight-line distance from ${state.origin.label} (routing unavailable).`);
-  const clear = document.createElement('a'); clear.href = '#'; clear.className = 'clear'; clear.textContent = 'Clear';
-  clear.addEventListener('click', (ev) => { ev.preventDefault(); setOrigin(null); });
-  el.append(clear);
+  const from = state.origin.isDefault ? `${state.origin.label} (the default; set your own above)` : state.origin.label;
+  el.append(modes.has('drive') ? `Drive times from ${from}, closest first.` : `Straight-line distance from ${from} (routing unavailable).`);
+  if (!state.origin.isDefault) {
+    const clear = document.createElement('a'); clear.href = '#'; clear.className = 'clear'; clear.textContent = 'Reset to Leesburg';
+    clear.addEventListener('click', (ev) => { ev.preventDefault(); setOrigin(DEFAULT_ORIGIN); });
+    el.append(clear);
+  }
 }
 
 async function geocode(q) {
@@ -245,7 +250,7 @@ function renderMap() {
   }
   if (state.origin) {
     const o = [state.origin.lat, state.origin.lng];
-    if (!originMarker) { originMarker = L.circleMarker(o, { radius: 7, color: '#fff', weight: 2, fillColor: '#e53935', fillOpacity: 1 }).addTo(map); originMarker.bindTooltip('Start', { direction: 'top', offset: [0, -6] }); }
+    if (!originMarker) { originMarker = L.circleMarker(o, { radius: 7, color: '#fff', weight: 2, fillColor: '#e53935', fillOpacity: 1 }).addTo(map); originMarker.bindTooltip(() => `Start: ${state.origin.label}`, { direction: 'top', offset: [0, -6] }); }
     else originMarker.setLatLng(o);
     pts.push(o);
   } else if (originMarker) { originMarker.remove(); originMarker = null; }

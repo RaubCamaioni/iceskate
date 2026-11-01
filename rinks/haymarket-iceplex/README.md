@@ -40,7 +40,8 @@ Two weeks is about 230 events in one page. CORS echoes any origin. Lookups:
 | 16 | Adult Pick Up Hockey | pickup_hockey (defined, none scheduled through Dec 2026) |
 | 19, 15, c | Learn to Skate, LTPH/FCLTP, Class | learn_to_skate |
 | 20, 21, 9, g | Power Skating, Hockey Skills, Piedmont Hockey Club, Game | hockey |
-| 18, k | Home Schooling Ice, Camp | other |
+| 18 | Home Schooling Ice | public_skate (the server moves it to family_skate: homeschool families only) |
+| k | Camp | other |
 | r, b, L, 10, 17, 13 | Rental, Block, Locker Room, Parties, Room Rental, Private Lesson | hidden |
 
 Titles that only repeat the category ("Public Skate", "Freestyle", "Stick n Shoot") are

@@ -2,7 +2,9 @@
 // hosting), filters client-side, re-fetches every 5 minutes.
 
 const CATEGORIES = [
-  ['public_skate', 'Public skate', true], // the only type on by default; the user's choices are remembered after that
+  ['public_skate', 'Public skate', true], // on by default; the user's choices are remembered after that
+  ['adult_skate', 'Adult skate', true], // public skates limited to adults or seniors
+  ['family_skate', 'Kids & family skate', true], // parent & tot, playground on ice, homeschool, youth-only public skates
   ['freestyle', 'Freestyle', false],
   ['stick_and_puck', 'Stick & puck', false],
   ['pickup_hockey', 'Pick-up hockey', false],
@@ -37,7 +39,7 @@ const fmtDuration = (start, end) => {
 };
 const catLabel = Object.fromEntries(CATEGORIES.map(([k, l]) => [k, l]));
 // Shorter labels for the fixed-width type block on cards.
-const catShort = { ...catLabel, hockey: 'Hockey', figure_skating: 'Figure skating' };
+const catShort = { ...catLabel, family_skate: 'Kids & family', hockey: 'Hockey', figure_skating: 'Figure skating' };
 import { audience, sessionLabel } from './audience.js';
 const catColor = (k) => getComputedStyle(document.documentElement).getPropertyValue(`--cat-${k}`).trim();
 const mapsUrl = (r) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ? `${r.name}, ${r.address}` : r.name)}`;
@@ -52,6 +54,11 @@ let timer = null;
 
 function loadState() {
   try { state = { ...state, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') }; } catch { /* ignore */ }
+  // Visitors who saved their chips before the adult/family split get the new chips switched on once.
+  if (state.categories && !state.sawSkateSplit) {
+    for (const k of ['adult_skate', 'family_skate']) if (!state.categories.includes(k)) state.categories.push(k);
+  }
+  state.sawSkateSplit = true;
   if (![1, 7, 14, 30].includes(state.days)) state.days = 14;
   if (!Array.isArray(state.offRinks)) state.offRinks = [];
   if (!state.origin || state.origin.isDefault || !(Number.isFinite(state.origin.lat) && Number.isFinite(state.origin.lng))) state.origin = DEFAULT_ORIGIN;

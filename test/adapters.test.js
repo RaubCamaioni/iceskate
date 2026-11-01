@@ -12,7 +12,7 @@ import os from 'node:os';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const readJson = async (rel) => JSON.parse(await fs.readFile(path.join(ROOT, rel), 'utf8'));
 
-const CATEGORIES = new Set(['public_skate', 'freestyle', 'stick_and_puck', 'pickup_hockey', 'learn_to_skate', 'hockey', 'figure_skating', 'other']);
+const CATEGORIES = new Set(['public_skate', 'adult_skate', 'family_skate', 'freestyle', 'stick_and_puck', 'pickup_hockey', 'learn_to_skate', 'hockey', 'figure_skating', 'other']);
 const ISO_LOCAL = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$/;
 
 function assertNormalized(events, rinkSlug) {
@@ -124,6 +124,9 @@ test('ion: classify', () => {
   assert.equal(ion.classify('Learn To Skate', 'Learn To Skate'), 'learn_to_skate');
   assert.equal(ion.classify('Dance Academy', 'Dance Academy'), 'figure_skating');
   assert.equal(ion.classify('Curling League', 'Curling League'), 'other');
+  assert.equal(ion.classify('Facility', 'Adult Hockey League'), 'hockey');
+  assert.equal(ion.classify('Streiff', 'Streiff 3v3'), 'hockey');
+  assert.equal(ion.classify('Facility', 'McGhee'), 'other');
 });
 
 test('server: discovers every rink adapter and skips the template', async () => {
@@ -321,6 +324,7 @@ test('haymarket: normalises the sample, classifies by event type id, keeps only 
   const expected = raw.filter((r) => r.a.publish && [1, 7].includes(Number(r.a.resource_id)) && haymarket.classify(r.typeId)).length;
   assert.equal(events.length, expected);
   assert.equal(haymarket.classify('8'), 'public_skate');
+  assert.equal(haymarket.classify('18'), 'public_skate');
   assert.equal(haymarket.classify(12), 'freestyle');
   assert.equal(haymarket.classify('L'), null);
   assert.equal(haymarket.classify('13'), null, 'private lessons hidden');

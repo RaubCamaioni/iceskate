@@ -54,7 +54,7 @@ rules blurb as the subtitle and `registerUrl` pointing at the DASH checkout.
 |---|---|---|
 | Mon | Arlington County Senior Skate ($1) | 8:40 to 9:50am |
 | Tue | Public skate | 4:30 to 5:20pm |
-| Sun | Recess (daytime public skate) | 1:50 to 2:50pm |
+| Sun | Recess (public skate for children aged 2 to 10; shown under Kids & family skate) | 1:50 to 2:50pm |
 | Sun | Public skate | 3:00 to 4:00pm |
 | Sun | Hybrid freestyle | 6:30 to 8:00pm |
 | Mon to Fri | Freestyle (30-min slots, merged on the site) | daytime |

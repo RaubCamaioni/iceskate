@@ -37,7 +37,7 @@ export const TYPE_CATEGORY = {
   16: 'pickup_hockey',
   19: 'learn_to_skate',
   15: 'learn_to_skate', // Learn to Play Hockey / Future Caps
-  18: 'other', // Home Schooling Ice
+  18: 'public_skate', // Home Schooling Ice: a daytime public skate for homeschool families (becomes family_skate)
   20: 'hockey', // Power Skating
   21: 'hockey', // Hockey Skills Session
   9: 'hockey', // Piedmont Hockey Club

@@ -37,7 +37,9 @@ export function classify(type, title) {
   if (/pick-?up/i.test(t)) return 'pickup_hockey';
   if (/learn to skate/i.test(t)) return 'learn_to_skate';
   if (FIGURE_TYPES.test(t)) return 'figure_skating';
-  if (HOCKEY_TYPES.test(t) || /\bvs\.?\b/.test(n)) return 'hockey';
+  // League games are often filed under a generic type ("Facility", a sponsor name) with the
+  // league in the title, so the title counts too.
+  if (HOCKEY_TYPES.test(n) || /\bvs\.?\b|\b3v3\b/.test(n)) return 'hockey';
   return 'other';
 }
 

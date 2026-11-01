@@ -43,9 +43,10 @@ Rinks sort by driving time from a starting point, shown on each rink row and on 
 session card. The default starting point is Leesburg, VA (`DEFAULT_ORIGIN` in
 `public/app.js`); "Use my location" or a typed address or zip replaces it. Each rink row and map popup lists the rink's per-session prices (`prices` in its adapter,
 copied from the cost table in its README; hover a price for the fine print). Each session card
-shows who may skate: a green "All ages" badge on every public skate and stick-and-puck session
-unless the rink limits it, in which case an amber badge such as "18+ only", "Parent & tot" or
-"Ages 12 and under" (other session types only get a badge when the rink states a rule), and the rink's own name for the
+shows who may skate when the rink limits it (an amber badge such as "18+ only", "Parent & tot" or
+"Ages 12 and under"; stick-and-puck shows a green "All ages" unless the rink says otherwise; a plain
+"Public skate" card is open to everyone, since restricted ones live under the Adult skate and
+Kids & family skate chips), and the rink's own name for the
 session when it is not just the category ("Cheapskate", "Disco Skate"). Both come from the
 title and description via `public/audience.js`, tested in `test/audience.test.js`; the
 Session panel has an expandable glossary of every session type and name. "Show map" reveals a
@@ -161,7 +162,7 @@ Every adapter returns events in this shape so the page never needs rink-specific
 | `start`, `end` | `YYYY-MM-DDTHH:MM:SS` | local wall-clock, America/New_York |
 | `title` | string | public session name; empty when it would only repeat the category (e.g. ION "Freestyle/Dance") |
 | `subtitle` | string | optional second line |
-| `category` | enum | `public_skate`, `freestyle`, `stick_and_puck`, `pickup_hockey`, `learn_to_skate`, `hockey`, `figure_skating`, `other` |
+| `category` | enum | `public_skate` (anyone may skate), `adult_skate` (adults or seniors only), `family_skate` (parent & tot, playground on ice, homeschool, youth-only), `freestyle`, `stick_and_puck`, `pickup_hockey`, `learn_to_skate`, `hockey`, `figure_skating`, `other`. Adapters emit `public_skate` for every public session; `loadAdapters()` in `server/server.js` runs `refineCategory()` from `public/audience.js` on each event to split the restricted ones off by title and description. |
 | `capacity` | int or null | only Ashburn exposes this |
 | `color` | string or null | vendor's colour for the session type |
 | `registerUrl` | string or null | where to sign up or pay |

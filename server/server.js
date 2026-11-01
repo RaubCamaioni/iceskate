@@ -15,6 +15,7 @@ import http from 'node:http';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { refineCategory } from '../public/audience.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC_DIR = path.join(ROOT, 'public');
@@ -57,7 +58,10 @@ export async function loadAdapters() {
       console.warn(`[rinks] ${e.name}/adapter.js has no fetchEvents(); skipped`);
       continue;
     }
-    adapters.push({ slug: adapter.slug ?? e.name, ...adapter });
+    // Every event passes through refineCategory() so restricted public skates land in
+    // adult_skate / family_skate for the API, the static snapshot and the tests alike.
+    const fetchEvents = (opts) => adapter.fetchEvents(opts).then((events) => events.map((ev) => ({ ...ev, category: refineCategory(ev) })));
+    adapters.push({ slug: adapter.slug ?? e.name, ...adapter, fetchEvents });
   }
   adapters.sort((a, b) => a.name.localeCompare(b.name));
   return adapters;

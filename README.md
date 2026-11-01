@@ -43,8 +43,9 @@ Rinks sort by driving time from a starting point, shown on each rink row and on 
 session card. The default starting point is Leesburg, VA (`DEFAULT_ORIGIN` in
 `public/app.js`); "Use my location" or a typed address or zip replaces it. Each rink row and map popup lists the rink's per-session prices (`prices` in its adapter,
 copied from the cost table in its README; hover a price for the fine print). Each session card
-shows who may skate when the rink limits it (an amber badge such as "18+ only", "Parent & tot",
-"Ages 12 and under"; green "All ages" when the rink says so) and the rink's own name for the
+shows who may skate: a green "All ages" badge on every public skate and stick-and-puck session
+unless the rink limits it, in which case an amber badge such as "18+ only", "Parent & tot" or
+"Ages 12 and under" (other session types only get a badge when the rink states a rule), and the rink's own name for the
 session when it is not just the category ("Cheapskate", "Disco Skate"). Both come from the
 title and description via `public/audience.js`, tested in `test/audience.test.js`; the
 Session panel has an expandable glossary of every session type and name. "Show map" reveals a

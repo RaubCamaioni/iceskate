@@ -1,7 +1,20 @@
 // Who a session is for, worked out from the rink's own title and description.
 // Returns { text, restricted } or null. `restricted` means not everyone can
-// skate (age or group rule), so the card shows an amber badge.
+// skate (age or group rule), so the card shows an amber badge; an open session
+// shows a green "All ages" badge.
 export function audience(e) {
+  return fromText(e) || defaultFor(e);
+}
+
+// Public skates and stick-and-puck sessions are open to everyone unless the rink says
+// otherwise. Pick-up hockey, freestyle and classes have rules the feeds rarely state
+// (age, full gear, skill level), so they only get a badge when the rink spells it out.
+const OPEN_BY_DEFAULT = new Set(['public_skate', 'stick_and_puck']);
+function defaultFor(e) {
+  return OPEN_BY_DEFAULT.has(e.category) ? { text: 'All ages', restricted: false } : null;
+}
+
+function fromText(e) {
   const t = `${e.title || ''} ${e.subtitle || ''}`.toLowerCase().replace(/\s+/g, ' ');
   if (!t.trim()) return null;
   // Age floors written as "18+", "(14+)", "18 and older", "must be 18".

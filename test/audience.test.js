@@ -30,9 +30,21 @@ test('open sessions get no restriction', () => {
   assert.equal(who('Cheapskate (includes rental)'), null);
   assert.equal(who('Disco Skate'), null);
   assert.equal(who('Recess'), null);
+  assert.equal(who('Low Freestyle'), null);
   assert.deepEqual(who('Stick & Shoot', 'Open hockey for all ages.'), { text: 'All ages', restricted: false });
   assert.deepEqual(who('Family Pick Up Hockey', 'open to all ages. Full gear is required!'), { text: 'All ages', restricted: false });
   assert.deepEqual(who('SHSA On Ice Stroking', 'for skating levels Freeskate 1 and above. Adults welcome.'), { text: 'All ages', restricted: false });
+});
+
+test('public skate and stick and puck are all ages unless the rink says otherwise', () => {
+  const open = { text: 'All ages', restricted: false };
+  assert.deepEqual(audience({ title: '', category: 'public_skate' }), open);
+  assert.deepEqual(audience({ title: 'Cheapskate (includes rental)', category: 'public_skate' }), open);
+  assert.deepEqual(audience({ title: 'Stick & Puck', subtitle: '', category: 'stick_and_puck' }), open);
+  assert.deepEqual(audience({ title: 'Adults only (18+)', category: 'public_skate' }), { text: '18+ only', restricted: true });
+  assert.deepEqual(audience({ title: 'Stick n Shoot 12U', category: 'stick_and_puck' }), { text: 'Ages 12 and under', restricted: true });
+  assert.equal(audience({ title: '', category: 'pickup_hockey' }), null);
+  assert.equal(audience({ title: 'Freestyle', category: 'freestyle' }), null);
 });
 
 test('session labels strip generic words and duplicates of the badge', () => {

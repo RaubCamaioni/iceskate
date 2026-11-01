@@ -47,7 +47,8 @@ const mapsUrl = (r) => `https://www.google.com/maps/dir/?api=1&destination=${enc
 
 // Drive times start from Leesburg until the visitor sets their own place.
 const DEFAULT_ORIGIN = { label: 'Leesburg, VA', lat: 39.1157, lng: -77.5636, isDefault: true };
-let state = { days: 14, offRinks: [], categories: null, hidePast: false, origin: DEFAULT_ORIGIN, showMap: false }; // origin: { label, lat, lng }
+// rinkMode 'auto' shows the three rinks closest to the origin; any switch flip makes it 'manual' (offRinks remembered).
+let state = { days: 14, rinkMode: 'auto', offRinks: [], categories: null, hidePast: false, origin: DEFAULT_ORIGIN, showMap: false }; // origin: { label, lat, lng }
 let data = { rinks: [], events: [], errors: [] };
 let rinkInfo = {};
 let travel = {}; // slug -> { min, mi, mode: 'drive' | 'line' } from the chosen starting point
@@ -62,6 +63,8 @@ function loadState() {
   state.sawSkateSplit = true;
   if (![1, 7, 14, 30].includes(state.days)) state.days = 14;
   if (!Array.isArray(state.offRinks)) state.offRinks = [];
+  // Visitors from before the closest-three default keep a hand-picked list only if they had switched something off.
+  if (state.rinkMode !== 'manual') state.rinkMode = state.offRinks.length ? 'manual' : 'auto';
   if (!state.origin || state.origin.isDefault || !(Number.isFinite(state.origin.lat) && Number.isFinite(state.origin.lng))) state.origin = DEFAULT_ORIGIN;
   state.showMap = Boolean(state.showMap);
 }
@@ -117,7 +120,7 @@ function renderFilters() {
 }
 
 function matches(e, now) {
-  if (state.offRinks.includes(e.rink)) return false;
+  if (!isRinkOn(e.rink)) return false;
   if (!state.categories.includes(e.category)) return false;
   if (state.hidePast && parseLocal(e.end) < now) return false;
   return true;
@@ -160,11 +163,31 @@ function sortedRinks() {
   return [...data.rinks].sort((a, b) => key(a) - key(b) || a.name.localeCompare(b.name));
 }
 
+// Which rinks are on. In 'auto' mode it is the AUTO_COUNT closest to the starting point, so it
+// follows the origin; in 'manual' mode it is every rink not in state.offRinks.
+const AUTO_COUNT = 3;
+let onSet = null;
+function refreshOnSet() {
+  if (!data) return;
+  onSet = state.rinkMode === 'auto'
+    ? new Set(sortedRinks().slice(0, AUTO_COUNT).map((r) => r.slug))
+    : new Set(data.rinks.map((r) => r.slug).filter((s) => !state.offRinks.includes(s)));
+}
+function isRinkOn(slug) {
+  if (!onSet) refreshOnSet();
+  return onSet ? onSet.has(slug) : true;
+}
+function resetRinks() {
+  state.rinkMode = 'auto'; state.offRinks = []; onSet = null;
+  saveState(); renderRinkRows(); renderList();
+}
+
 async function setOrigin(origin) {
   state.origin = origin ?? DEFAULT_ORIGIN;
   saveState();
   renderOriginStatus('Working out drive times…');
   await computeTravel();
+  onSet = null; // the closest three may have changed
   renderOriginStatus();
   renderRinkRows();
   renderList();
@@ -210,12 +233,19 @@ let markers = new Map(); // slug -> circleMarker
 let originMarker = null;
 
 function toggleRink(slug) {
+  if (state.rinkMode === 'auto') {
+    // First manual flip: freeze the current closest-three selection as the starting list.
+    refreshOnSet();
+    state.offRinks = data.rinks.map((r) => r.slug).filter((s) => !onSet.has(s));
+    state.rinkMode = 'manual';
+  }
   state.offRinks = state.offRinks.includes(slug) ? state.offRinks.filter((s) => s !== slug) : [...state.offRinks, slug];
+  onSet = null;
   saveState(); renderRinkRows(); renderList();
 }
 
 function popupHtml(r) {
-  const off = state.offRinks.includes(r.slug);
+  const off = !isRinkOn(r.slug);
   const t = travel[r.slug];
   const drive = t ? `<div class="pop-drive">${t.mode === 'drive' ? `${fmtMin(t.min)} drive · ${t.mi} mi` : `${t.mi} mi away`}</div>` : '';
   const addr = r.address ? `<div class="pop-row"><a href="${mapsUrl(r)}" target="_blank" rel="noopener" title="Directions">${escapeHtml(r.address)}</a></div>` : '';
@@ -246,7 +276,7 @@ function renderMap() {
   const pts = [];
   for (const r of data.rinks) {
     if (!Number.isFinite(r.lat) || !Number.isFinite(r.lng)) continue;
-    const off = state.offRinks.includes(r.slug);
+    const off = !isRinkOn(r.slug);
     const style = { radius: 10, color: '#fff', weight: 2, fillColor: r.color || '#888', fillOpacity: off ? 0.3 : 0.95, opacity: off ? 0.4 : 1 };
     let m = markers.get(r.slug);
     if (!m) {
@@ -270,9 +300,11 @@ function renderMap() {
 
 // One row per rink in the Location card: a switch, the name, drive time, phone, address, and links.
 function renderRinkRows() {
+  refreshOnSet();
   renderMap();
+  renderRinkMode();
   $('#sources').replaceChildren(...sortedRinks().map((r) => {
-    const on = !state.offRinks.includes(r.slug);
+    const on = isRinkOn(r.slug);
     const li = document.createElement('li');
     li.style.setProperty('--rink', r.color || '');
     li.classList.toggle('off', !on);
@@ -315,6 +347,30 @@ function renderRinkRows() {
     if (prices.childElementCount) li.append(prices);
     return li;
   }));
+  sizeRinkList();
+}
+
+// Show three rinks at a time; the rest scroll. Measured from the real rows so phones (taller rows) fit too.
+function sizeRinkList() {
+  const ul = $('#sources');
+  const lis = ul.children;
+  if (lis.length <= 3) { ul.style.maxHeight = ''; return; }
+  const last = lis[2];
+  ul.style.maxHeight = `${last.offsetTop + last.offsetHeight - lis[0].offsetTop + 2}px`;
+}
+
+function renderRinkMode() {
+  const el = $('#rink-mode');
+  el.replaceChildren();
+  if (state.rinkMode === 'auto') {
+    el.textContent = `Showing the ${AUTO_COUNT} rinks closest to ${state.origin?.label ?? 'you'}. Switch any rink on or off to pick your own set.`;
+  } else {
+    const n = data ? data.rinks.length - state.offRinks.length : 0;
+    el.append(`Your own set: ${n} of ${data?.rinks.length ?? 0} rinks on. `);
+    const a = document.createElement('a'); a.textContent = `Back to the ${AUTO_COUNT} closest`; a.href = '#';
+    a.addEventListener('click', (ev) => { ev.preventDefault(); resetRinks(); });
+    el.append(a);
+  }
 }
 
 // Popover under a card's "Restrictions apply" / "All ages" tag: the parsed rule, the

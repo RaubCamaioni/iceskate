@@ -401,12 +401,21 @@ function toggleWhoPop(anchor, e, who, rink) {
 }
 function hideWhoPop() { const pop = $('#who-pop'); pop.hidden = true; pop.dataset.for = ''; }
 
+// On the card a range such as "$11 to $15" shows only its higher figure; the expanded row keeps the full wording.
+function topPrice(price) {
+  const nums = [...price.matchAll(/\$(\d+(?:\.\d+)?)/g)].map((m) => Number(m[1]));
+  if (nums.length < 2 || !/\bto\b|[-–]/.test(price)) return price;
+  const top = Math.max(...nums);
+  return `$${Number.isInteger(top) ? top : top.toFixed(2)}`;
+}
+
 // The row that opens under a tapped card: name, the rink's description, the facts and links.
 function detailsHtml(e, rink, who, price) {
   const facts = [
     `<span><b>${escapeHtml(catLabel[e.category] || e.category)}</b></span>`,
     `<span>Sheet <b>${escapeHtml(e.sheet || '')}</b></span>`,
     `<span>${fmtTime(e.start)} to ${fmtTime(e.end)} <b>${fmtDuration(e.start, e.end)}</b></span>`,
+    travel[e.rink] ? `<span>${travel[e.rink].mode === 'drive' ? `Drive <b>${fmtMin(travel[e.rink].min)}</b> (${travel[e.rink].mi} mi)` : `<b>${travel[e.rink].mi} mi</b> away`} from ${escapeHtml(state.origin.label)}</span>` : '',
     who ? `<span>Who <b>${escapeHtml(who.restricted ? who.text : 'All ages')}</b></span>` : '',
     price ? `<span>Price <b>${escapeHtml(price.price)}</b>${price.note ? ` (${escapeHtml(price.label)}: ${escapeHtml(price.note)})` : ` (${escapeHtml(price.label)})`}</span>` : '',
     e.capacity ? `<span>Capacity <b>${e.capacity}${e.slots > 1 ? ' per slot' : ''}</b></span>` : '',
@@ -458,6 +467,7 @@ function fillCard(node, e, now) {
   // A general tag after the drive time; tapping it opens the rule and the rink's own wording.
   const who = audience(e), whoEl = $('.who', node);
   whoEl.hidden = !who;
+  node.classList.toggle('restricted', Boolean(who?.restricted)); // on small screens the type block carries a ⚠ instead of the tag
   if (who) {
     whoEl.textContent = who.restricted ? 'Restrictions apply' : 'All ages';
     whoEl.classList.toggle('open', !who.restricted);
@@ -466,7 +476,7 @@ function fillCard(node, e, now) {
   }
   // "Cost: $9" from the rink's published list (named variant, weekday/weekend, or plain), or "Cost: unknown".
   const price = priceFor(e, rink.prices), feeEl = $('.fee', node);
-  feeEl.textContent = `Cost: ${price ? price.price : 'unknown'}`;
+  feeEl.textContent = `Cost: ${price ? topPrice(price.price) : 'unknown'}`;
   feeEl.classList.toggle('unknown', !price);
   feeEl.title = price ? `${price.label}${price.note ? `: ${price.note}` : ''}` : 'The rink does not publish a per-session price for this type; check its website.';
   $('.cat-name', node).textContent = catShort[e.category] || e.category;

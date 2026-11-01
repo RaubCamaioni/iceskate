@@ -42,7 +42,7 @@ a { color: var(--accent); }
 .sidebar::-webkit-scrollbar { width: 6px; }
 .sidebar::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
 .sidebar-head { display: none; }
-.content { min-width: 0; }
+.content { min-width: 0; container-type: inline-size; container-name: list; }
 .scrim { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 40; }
 .scrim[hidden] { display: none; }
 /* Narrow screens: the filters become a drawer that slides in from the left behind a Filters button */
@@ -185,7 +185,7 @@ main { padding-bottom: 32px; }
 }
 /* "Cost: $9" from the rink's list; hover for which price and the fine print */
 .fee {
-  display: inline-flex; align-items: center; font-size: .9rem; font-weight: 800; color: var(--text); white-space: nowrap;
+  display: inline-flex; align-items: center; justify-content: center; min-width: 120px; font-size: .9rem; font-weight: 800; color: var(--text); white-space: nowrap;
   background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px;
 }
 .fee.unknown { color: var(--muted); font-weight: 600; }
@@ -320,22 +320,26 @@ main { padding-bottom: 32px; }
 .rl-info, .rl-prices { grid-column: 1 / -1; }
 .foot { color: var(--muted); font-size: .85rem; padding: 12px 16px 32px; border-top: 1px solid var(--line); }
 
-@media (max-width: 560px) {
-  .event { --slash: 20px; --rink-w: 104px; --cat-w: 84px; --time-w: 200px; }
-  .time .start, .time .end { font-size: .82rem; }
-  .time .dur { font-size: .78rem; }
-  .time .lbl { font-size: .52rem; }
+/* Cards shed detail as the list column narrows (container queries on .content, so the sidebar's
+   width counts too). Medium: no "Tomorrow" badge or cost. Small: just rink, type and start time;
+   everything else waits in the expanded row. */
+@container list (max-width: 820px) {
+  .event { --time-w: 230px; }
+  .days, .fee, .drive { display: none; }
+  .body { padding: 0 8px; gap: 6px; }
+  .who { font-size: .74rem; padding: 3px 8px; }
+}
+@container list (max-width: 560px) {
+  .event { --slash: 20px; --rink-w: 104px; --cat-w: 92px; --time-w: auto; --row-h: 60px; }
   .rink { padding: 6px 6px 6px 8px; font-size: .76rem; }
   .cat { font-size: .6rem; padding-right: 6px; letter-spacing: .3px; }
   .cat-sub { font-size: .6rem; }
   .details { padding: 8px 10px 10px; font-size: .82rem; }
-  .body { padding: 6px 6px; gap: 5px; flex-wrap: wrap; overflow: hidden; align-content: center; }
-  .who { font-size: .66rem; padding: 2px 7px; }
-  .fee { font-size: .7rem; padding: 2px 7px; }
-  .drive { font-size: .7rem; padding: 2px 7px; }
-  .time { padding: 2px 2px; margin: 0; }
+  .body > * { display: none; }
+  .event.restricted .cat-name::before { content: "\26A0  "; color: #fecaca; }
+  .time { padding: 2px 4px; margin: 0; grid-template-columns: 1fr; }
+  .time .t:nth-child(2), .time .t:nth-child(3) { display: none; }
+  .time .start { font-size: .95rem; }
+  .time .lbl { font-size: .52rem; }
   .right { gap: 6px; padding-right: 5px; }
-  .days { font-size: .62rem; }
-  .time .t { padding: 0 2px; }
-  .event { --row-h: 66px; }
 }

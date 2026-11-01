@@ -22,6 +22,8 @@ a rink.
 | The St. James | Springfield, VA | own platform (hub.thestjames.com) | private API, not integrated | see "Not integrated" below |
 | SKATE Frederick | Frederick, MD | WordPress + The Events Calendar | Yes, open REST JSON, CORS enabled | [`rinks/skate-frederick/`](rinks/skate-frederick/README.md) |
 | Rockville Ice Arena | Rockville, MD | SportsEngine | ICS feed, no CORS | [`rinks/rockville-ice-arena/`](rinks/rockville-ice-arena/README.md) |
+| Cabin John Ice Rink | Rockville, MD | Montgomery Parks WordPress pages (+ ActiveMONTGOMERY WebTrac for booking) | No, HTML schedule pages | [`rinks/cabin-john-ice-rink/`](rinks/cabin-john-ice-rink/README.md) |
+| Wheaton Ice Arena | Wheaton, MD | Montgomery Parks WordPress pages | No, HTML schedule pages | [`rinks/wheaton-ice-arena/`](rinks/wheaton-ice-arena/README.md) |
 
 Every year-round indoor rink in Northern Virginia, plus the Maryland rinks closest to Leesburg (the site is centred on Leesburg; drive times default to it). Findings verified live on 2026-10-31. Endpoints can change without notice.
 
@@ -132,6 +134,9 @@ rinks/
   mount-vernon-recenter/pdf.js PDF month-grid parser (pdfjs)
   skate-frederick/             The Events Calendar REST (WordPress)
   rockville-ice-arena/         SportsEngine ICS feed
+  cabin-john-ice-rink/         Montgomery Parks HTML pages (lib/montgomeryparks.js)
+  wheaton-ice-arena/           Montgomery Parks HTML pages (lib/montgomeryparks.js)
+lib/montgomeryparks.js         weekly-template + dated-table parsers for Montgomery Parks rinks
 lib/daysmart.js                shared DaySmart JSON:API client (five rinks use it)
 lib/ics.js                     iCalendar parser + recurrence expander
 ```
@@ -539,6 +544,74 @@ Public skating and stick time most days around midday (for example Mon and Fri 1
 | Skate rental | pair | 1 | $4 | $4 |
 | Stick time (goalies free) | session | 1 | $18 | $18 |
 | Freestyle | hour | 1 | $18 | $18 |
+
+---
+
+## Cabin John Ice Rink (Rockville, MD)
+
+| | |
+|---|---|
+| Address | 10610 Westlake Dr, Rockville, MD 20852 |
+| Phone | (301) 765-8620 |
+| Ice sheets | NHL, Olympic |
+| Register / pay | public skating in person only; stick and puck and freestyle book on ActiveMONTGOMERY |
+| Source | Montgomery Parks schedule pages: a weekly public-skate template expanded over the dates, dated stick-and-puck and freestyle tables, holiday closures |
+
+### Repeat times (fall schedule, September to March)
+
+| Day | Session | Time |
+|-----|---------|------|
+| Mon to Fri | Cheapskate ($9 with rental) | 8:00 to 9:15am |
+| Mon, Tue, Thu | Adult skate | 9:30 to 11:00am |
+| Mon, Wed, Fri | Parent and Tot | 11:00am to 12:00pm |
+| Mon to Fri | Public skate | 12:30 to 2:30pm and 4:30 to 6:15pm |
+| Tue | Public skate | 8:30 to 10:00pm |
+| Thu | Adult skate | 8:30 to 10:00pm |
+| Fri | Disco Skate | 8:00 to 10:00pm |
+| Sat | Public skate | 12:00 to 2:00pm, 4:00 to 6:00pm, 8:30 to 10:00pm |
+| Sun | Public skate | 8:00 to 9:30am, 12:00 to 2:00pm, 4:00 to 6:00pm |
+
+### Costs
+
+| Item | Unit | Sessions | Price | Per session |
+|------|------|----------|-------|-------------|
+| Regular (age 5 and up) | admission | 1 | $9 | $9 |
+| Tots (3 to 4) / senior (60+, weekdays) | admission | 1 | $5 / $7 | |
+| Cheapskate (admission + rental) | admission | 1 | $9 | $9 |
+| Skate rental | pair | 1 | $4 | $4 |
+| Discount ticket book | 10 admissions | 10 | $81 | $8.10 |
+| Stick and Puck | session | 1 | $11 to $15 | |
+| Freestyle | 30 minutes | 1 | $9 | |
+| Freestyle punch pass | 20 / 40 / 80 | 20 / 40 / 80 | $160 / $300 / $520 | $8 / $7.50 / $6.50 |
+
+---
+
+## Wheaton Ice Arena (Wheaton, MD)
+
+| | |
+|---|---|
+| Address | 11717 Orebaugh Ave, Wheaton, MD 20902 |
+| Phone | (301) 905-3000 |
+| Ice sheets | one |
+| Register / pay | as Cabin John (same operator and fees) |
+| Source | Montgomery Parks schedule pages, same parser as Cabin John |
+
+### Repeat times (fall schedule)
+
+| Day | Session | Time |
+|-----|---------|------|
+| Wed, Thu, Fri | Adult session | 9:00 to 10:30am |
+| Tue, Wed, Thu | Parent and Tot | 10:45 to 11:45am |
+| Tue, Wed | Public session | 1:00 to 2:30pm |
+| Thu | Public session | 12:30 to 2:00pm, 4:15 to 5:45pm |
+| Fri | Public session | 12:30 to 2:00pm, 6:00 to 8:00pm |
+| Sat | Public session | 12:30 to 2:30pm, 4:30 to 6:30pm |
+| Sun | Public session | 11:00am to 1:00pm, 3:00 to 5:00pm |
+| Mon | Public session | 1:00 to 2:30pm on school-holiday Mondays only |
+
+### Costs
+
+Same as Cabin John.
 
 ---
 

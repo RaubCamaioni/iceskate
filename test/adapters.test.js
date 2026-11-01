@@ -472,3 +472,51 @@ test('rockville: reads the tagged ICS feed', async () => {
   assert.deepEqual(rockville.classify('Public Skating'), ['public_skate', '']);
   assert.deepEqual(rockville.classify('Stick Time - Youth'), ['stick_and_puck', 'Youth (13 and under)']);
 });
+
+// ---------------------------------------------------------------- Montgomery Parks: Cabin John + Wheaton
+import * as mp from '../lib/montgomeryparks.js';
+import * as cabinjohn from '../rinks/cabin-john-ice-rink/adapter.js';
+import * as wheaton from '../rinks/wheaton-ice-arena/adapter.js';
+
+const mpPages = async (slug) => {
+  const dir = path.join(ROOT, 'rinks', slug, 'samples');
+  const read = (f) => fs.readFile(path.join(dir, `${f}-2026-10-31.html`), 'utf8');
+  return { publicHtml: await read('public-sessions'), hockeyHtml: await read('hockey'), figureHtml: await read('figure-skating'), hoursHtml: await read('schedules-hub') };
+};
+
+test('montgomery parks: time ranges with one or two meridiems', () => {
+  assert.deepEqual([mp.parseTimeRange('11:00-12:00 pm Parent and Tot').start, mp.parseTimeRange('11:00-12:00 pm Parent and Tot').end], ['11:00:00', '12:00:00']);
+  assert.deepEqual([mp.parseTimeRange('8:30-10:00 pm Public Skate').start, mp.parseTimeRange('8:30-10:00 pm Public Skate').end], ['20:30:00', '22:00:00']);
+  assert.deepEqual([mp.parseTimeRange('9:00 am – 10:30 am').start, mp.parseTimeRange('12:30 pm- 2:00 pm').end], ['09:00:00', '14:00:00']);
+  assert.equal(mp.parseTimeRange('10:45 am-12:15 pm, ').start, '10:45:00');
+  assert.equal(mp.parseTimeRange('Rink closed'), null);
+  assert.equal(mp.resolveDate('November 26, 2026', { from: '2026-11-01', to: '2026-12-05' }), '2026-11-26');
+  assert.equal(mp.resolveDate('Nov. 3', { from: '2026-11-01', to: '2026-12-05' }), '2026-11-03');
+  assert.equal(mp.resolveDate('January 2', { from: '2026-12-20', to: '2027-01-24' }), '2027-01-02');
+});
+
+test('cabin john: weekly public template, dated stick and puck with sheets, freestyle, closures', async () => {
+  const range = { from: '2026-11-01', to: '2026-12-13' };
+  const events = cabinjohn.normalize(await mpPages('cabin-john-ice-rink'), range);
+  assertNormalized(events, 'cabin-john-ice-rink');
+  const mon = events.filter((e) => e.start.startsWith('2026-11-02') && e.category === 'public_skate').map((e) => `${e.start.slice(11, 16)} ${e.title}`);
+  assert.deepEqual(mon, ['08:00 Cheapskate (includes rental)', '09:30 Adults only (18+)', '11:00 Parent and Tot', '12:30 ', '16:30 ']);
+  assert.equal(events.filter((e) => e.start.startsWith('2026-11-26')).length, 0, 'Thanksgiving closed');
+  assert.ok(!events.some((e) => e.start === '2026-12-12T20:30:00'), 'ice show night skipped');
+  const snp = events.filter((e) => e.category === 'stick_and_puck' && e.start.startsWith('2026-11-02')).map((e) => `${e.start.slice(11, 16)} ${e.sheet}`);
+  assert.deepEqual(snp, ['06:45 NHL', '12:00 Olympic']);
+  assert.ok(events.some((e) => e.category === 'freestyle' && e.start === '2026-11-02T05:30:00' && e.title === 'Mixed use'));
+  assert.ok(!events.some((e) => e.category === 'other'), 'nothing left unclassified');
+});
+
+test('wheaton: table-style weekly template with a date-restricted Monday row', async () => {
+  const range = { from: '2026-11-01', to: '2026-12-31' };
+  const events = wheaton.normalize(await mpPages('wheaton-ice-arena'), range);
+  assertNormalized(events, 'wheaton-ice-arena');
+  const mondays = events.filter((e) => e.category === 'public_skate' && new Date(e.start).getDay() === 1).map((e) => e.start.slice(0, 10));
+  assert.deepEqual([...new Set(mondays)], ['2026-11-02', '2026-12-28'], 'Monday public sessions only on the listed dates');
+  const thu = events.filter((e) => e.start.startsWith('2026-11-05') && e.category === 'public_skate').map((e) => `${e.start.slice(11, 16)}-${e.end.slice(11, 16)} ${e.title}`);
+  assert.deepEqual(thu, ['09:00-10:30 Adults only (18+)', '10:45-11:45 Parent and Tot', '12:30-14:00 ', '16:15-17:45 ']);
+  assert.ok(events.filter((e) => e.start.startsWith('2026-12-24')).every((e) => e.start.slice(11) < '15:00:00'), 'Christmas Eve closes at 3pm');
+  assert.ok(events.some((e) => e.category === 'stick_and_puck' && e.start === '2026-11-06T20:15:00'));
+});

@@ -11,13 +11,18 @@
 </head>
 <body>
   <header class="top">
-    <div class="wrap">
-      <h1>NoVA Ice Schedules</h1>
-      <p class="tagline">Every session at every rink around Leesburg, pulled live from the rinks’ own systems.</p>
+    <div class="wrap top-row">
+      <button type="button" id="filters-toggle" class="filters-toggle" aria-controls="sidebar" aria-expanded="false"><span class="bars" aria-hidden="true"></span>Filters</button>
+      <div>
+        <h1>NoVA Ice Schedules</h1>
+        <p class="tagline">Every session at every rink around Leesburg, pulled live from the rinks’ own systems.</p>
+      </div>
     </div>
   </header>
 
-  <section class="controls wrap" aria-label="Filters">
+  <div class="layout wrap">
+  <aside id="sidebar" class="sidebar" aria-label="Filters">
+    <div class="sidebar-head"><span>Filters</span><button type="button" id="filters-close" class="chip">Done</button></div>
     <div class="panels">
       <fieldset class="panel">
         <legend>Location</legend>
@@ -127,10 +132,13 @@
         </div>
       </fieldset>
     </div>
+  </aside>
+  <div class="content">
     <div class="row meta"><span id="status">Loading…</span></div>
-  </section>
-
-  <main class="wrap" id="list" aria-live="polite"></main>
+    <main id="list" aria-live="polite"></main>
+  </div>
+  </div>
+  <div id="scrim" class="scrim" hidden></div>
 
   <footer class="wrap foot">
     <p>Times are US Eastern. Schedules come straight from each rink's own system. Prices and regular times are in the project README. This site is not affiliated with any rink.</p>

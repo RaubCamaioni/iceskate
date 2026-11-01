@@ -37,12 +37,14 @@ npm install
 npm start
 ```
 
-Then open http://localhost:3000. The page merges everything into one list, grouped by
+Then open http://localhost:3000. The filters (location, session types, date range) sit in a
+sticky left column with the session list on the right; under 1100px wide the column becomes a
+drawer behind a Filters button in the header. The page merges everything into one list, grouped by
 day, with rink and session-type filters, a date range, and a hide-finished toggle.
 By default only the three rinks closest to the starting point are on (`rinkMode: 'auto'`, so the
 set follows the origin); flipping any rink switch freezes that set as a hand-picked list
 (`rinkMode: 'manual'`, `offRinks` remembered) with a "Back to the 3 closest" link. The rink list
-shows three rows at a time and scrolls for the rest. Rinks sort by driving time from a starting point, shown on each rink row and on every
+shows five rows at a time and scrolls for the rest behind a slim themed scrollbar. Rinks sort by driving time from a starting point, shown on each rink row and on every
 session card. The default starting point is Leesburg, VA (`DEFAULT_ORIGIN` in
 `public/app.js`); "Use my location" or a typed address or zip replaces it. Each rink row and map popup lists the rink's per-session prices (`prices` in its adapter,
 copied from the cost table in its README; hover a price for the fine print). Each session card

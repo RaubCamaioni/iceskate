@@ -350,13 +350,17 @@ function renderRinkRows() {
   sizeRinkList();
 }
 
-// Show three rinks at a time; the rest scroll. Measured from the real rows so phones (taller rows) fit too.
+// Show VISIBLE_ROWS rinks at a time; the rest scroll. Measured from the real rows so phones (taller rows) fit too.
+const VISIBLE_ROWS = 5;
+// Rows reflow when the column's width changes (a scrollbar appearing, the drawer, a rotation), so re-measure then.
+const rowObserver = typeof ResizeObserver === 'function' ? new ResizeObserver(() => sizeRinkList()) : null;
 function sizeRinkList() {
   const ul = $('#sources');
   const lis = ul.children;
-  if (lis.length <= 3) { ul.style.maxHeight = ''; return; }
-  const last = lis[2];
+  if (lis.length <= VISIBLE_ROWS) { ul.style.maxHeight = ''; return; }
+  const last = lis[VISIBLE_ROWS - 1];
   ul.style.maxHeight = `${last.offsetTop + last.offsetHeight - lis[0].offsetTop + 2}px`;
+  if (rowObserver) { rowObserver.disconnect(); for (let i = 0; i < VISIBLE_ROWS; i++) rowObserver.observe(lis[i]); }
 }
 
 function renderRinkMode() {
@@ -599,11 +603,22 @@ async function load() {
   timer = setTimeout(load, REFRESH_MS);
 }
 
+function setDrawer(open) {
+  $('#sidebar').classList.toggle('open', open);
+  $('#scrim').hidden = !open;
+  $('#filters-toggle').setAttribute('aria-expanded', String(open));
+  document.body.classList.toggle('drawer-open', open);
+}
+
 function init() {
   loadState();
   // The restrictions popover closes on an outside tap, Escape, or when the list re-renders.
   document.addEventListener('click', (ev) => { const pop = $('#who-pop'); if (!pop.hidden && !pop.contains(ev.target)) hideWhoPop(); });
-  document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') hideWhoPop(); });
+  document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') { hideWhoPop(); setDrawer(false); } });
+  // On narrow screens the filters are a drawer behind the Filters button in the header.
+  $('#filters-toggle').addEventListener('click', () => setDrawer(!$('#sidebar').classList.contains('open')));
+  $('#filters-close').addEventListener('click', () => setDrawer(false));
+  $('#scrim').addEventListener('click', () => setDrawer(false));
   for (const b of $$('.range button')) b.addEventListener('click', () => { state.days = Number(b.dataset.days); saveState(); load(); });
   $('#hide-past').addEventListener('change', (ev) => { state.hidePast = ev.target.checked; saveState(); renderList(); });
   $('#use-location').addEventListener('click', useMyLocation);

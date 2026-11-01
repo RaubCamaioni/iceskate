@@ -107,8 +107,20 @@ main { padding-bottom: 32px; }
 .nowmark { display: flex; align-items: center; gap: 10px; margin: 10px 0; color: var(--nowline); font-weight: 800; font-size: .9rem; text-transform: uppercase; letter-spacing: .6px; }
 .nowmark::before, .nowmark::after { content: ""; flex: 1; height: 2px; background: var(--nowline); border-radius: 2px; }
 .nowmark .nowtime { font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--text); }
-/* Every card is the same thickness; the middle stays empty (details are in the tooltip). */
-.event { height: 68px; }
+/* Every card's main row is the same thickness; tapping a card opens a details row under it. */
+.event { --row-h: 76px; cursor: pointer; }
+.event > .rink, .event > .cat, .event > .body, .event > .right { height: var(--row-h); }
+.event .details { grid-column: 1 / -1; cursor: auto; }
+.event .details[hidden] { display: none; }
+.event[aria-expanded="true"] { box-shadow: 0 0 0 2px var(--accent); }
+.details { padding: 10px 14px 12px; border-top: 1px solid var(--line); font-size: .9rem; line-height: 1.45; }
+.details .d-title { font-weight: 800; font-size: 1rem; margin-bottom: 2px; }
+.details .d-desc { margin: 4px 0 8px; white-space: pre-line; }
+.details .d-desc.muted { color: var(--muted); }
+.details .d-facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; color: var(--muted); }
+.details .d-facts b { color: var(--text); font-weight: 700; }
+.details .d-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 14px; }
+.details .d-links a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .rink {
   display: flex; flex-direction: column; justify-content: center; gap: 2px; text-decoration: none;
   background: var(--rink, var(--muted)); color: #fff; padding: 8px 10px 8px 12px; width: var(--rink-w); min-width: 0;
@@ -124,11 +136,19 @@ main { padding-bottom: 32px; }
    a skewed strip (constant 15° diagonal regardless of card height) and a plain rectangle. */
 .cat {
   position: relative; isolation: isolate;
-  display: flex; align-items: center; color: #fff;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2px; color: #fff;
   font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; white-space: nowrap;
   margin-left: calc(var(--slash) * -1); padding: 8px 8px 8px calc(var(--slash) + 10px);
-  width: calc(var(--cat-w) + var(--slash)); overflow: hidden; text-overflow: ellipsis;
+  width: calc(var(--cat-w) + var(--slash)); overflow: hidden;
 }
+.cat-name { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+/* The rink's own name for the session, under the type; long names glide back and forth */
+.cat-sub { display: block; max-width: 100%; overflow: hidden; font-size: .72rem; font-weight: 600; letter-spacing: 0; text-transform: none; opacity: .95; }
+.cat-sub[hidden] { display: none; }
+.cat-sub-text { display: inline-block; white-space: nowrap; }
+.cat-sub-text.marquee { animation: glide 9s ease-in-out infinite alternate; }
+@keyframes glide { 0%, 12% { transform: translateX(0); } 88%, 100% { transform: translateX(var(--shift)); } }
+@media (prefers-reduced-motion: reduce) { .cat-sub-text.marquee { animation: none; } }
 .cat::before, .cat::after { content: ""; position: absolute; top: 0; bottom: 0; background: var(--cat, var(--muted)); z-index: -1; }
 /* Diagonal: top corner sits exactly at the rink block's right edge, bottom corner leans left by height·tan(15°). */
 .cat::before { left: var(--slash); width: 96px; transform: skewX(-15deg); transform-origin: top left; }
@@ -156,9 +176,12 @@ main { padding-bottom: 32px; }
 .who.open::before { content: "✓"; }
 .who.demo { font-size: .78rem; padding: 1px 8px; vertical-align: 1px; cursor: default; }
 .who[hidden] { display: none; }
-/* The rink's own name for the session, when it is not just the category */
-.label { font-size: .88rem; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
-.label[hidden] { display: none; }
+/* The session's price from the rink's list; hover for which price and the fine print */
+.fee {
+  display: inline-flex; align-items: center; font-size: .9rem; font-weight: 800; color: var(--text); white-space: nowrap;
+  background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px;
+}
+.fee[hidden] { display: none; }
 /* Popover opened by the tag */
 .who-pop {
   position: absolute; z-index: 1000; background: var(--surface); color: var(--text); border: 1px solid var(--line);
@@ -265,14 +288,15 @@ main { padding-bottom: 32px; }
   .time .lbl { font-size: .52rem; }
   .rink { padding: 6px 6px 6px 8px; font-size: .76rem; }
   .cat { font-size: .6rem; padding-right: 6px; letter-spacing: .3px; }
+  .cat-sub { font-size: .6rem; }
+  .details { padding: 8px 10px 10px; font-size: .82rem; }
   .body { padding: 6px 6px; gap: 5px; flex-wrap: wrap; overflow: hidden; align-content: center; }
   .who { font-size: .66rem; padding: 2px 7px; }
-  .label { font-size: .72rem; }
+  .fee { font-size: .7rem; padding: 2px 7px; }
   .drive { font-size: .7rem; padding: 2px 7px; }
-  .body:has(.who:not([hidden])) .label { display: none; }
   .time { padding: 2px 2px; margin: 0; }
   .right { gap: 6px; padding-right: 5px; }
   .days { font-size: .62rem; }
   .time .t { padding: 0 2px; }
-  .event { height: 60px; }
+  .event { --row-h: 66px; }
 }

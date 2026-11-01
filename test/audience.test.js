@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { audience, sessionLabel, refineCategory } from '../public/audience.js';
+import { audience, refineCategory } from '../public/audience.js';
 
 const who = (title, subtitle = '') => audience({ title, subtitle });
 
@@ -70,13 +70,3 @@ test('restricted public skates move to adult_skate or family_skate', () => {
   assert.equal(refineCategory({ title: 'Adult Pick-Up Hockey', category: 'pickup_hockey' }), 'pickup_hockey');
 });
 
-test('session labels strip generic words and duplicates of the badge', () => {
-  assert.equal(sessionLabel({ title: '' }), null);
-  assert.equal(sessionLabel({ title: 'Public-Weekday Afternoon' }), null);
-  assert.equal(sessionLabel({ title: 'Public Skate- HALLOWEEN SKATE in costume' }), 'HALLOWEEN SKATE in costume');
-  assert.equal(sessionLabel({ title: 'Cheapskate (includes rental)' }), 'Cheapskate');
-  assert.equal(sessionLabel({ title: 'Adults only (18+)' }), null);
-  assert.equal(sessionLabel({ title: 'Parent and Tot' }), null);
-  assert.equal(sessionLabel({ title: 'Friday Chill Out' }), 'Friday Chill Out');
-  assert.equal(sessionLabel({ title: "Public- Friday Rockin' Skate" }), "Friday Rockin' Skate");
-});

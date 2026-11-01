@@ -40,7 +40,8 @@ const fmtDuration = (start, end) => {
 const catLabel = Object.fromEntries(CATEGORIES.map(([k, l]) => [k, l]));
 // Shorter labels for the fixed-width type block on cards.
 const catShort = { ...catLabel, family_skate: 'Kids & family', hockey: 'Hockey', figure_skating: 'Figure skating' };
-import { audience, sessionLabel } from './audience.js';
+import { audience } from './audience.js';
+import { priceFor } from './pricing.js';
 const catColor = (k) => getComputedStyle(document.documentElement).getPropertyValue(`--cat-${k}`).trim();
 const mapsUrl = (r) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ? `${r.name}, ${r.address}` : r.name)}`;
 
@@ -340,6 +341,33 @@ function toggleWhoPop(anchor, e, who, rink) {
 }
 function hideWhoPop() { const pop = $('#who-pop'); pop.hidden = true; pop.dataset.for = ''; }
 
+// The row that opens under a tapped card: name, the rink's description, the facts and links.
+function detailsHtml(e, rink, who, price) {
+  const facts = [
+    `<span><b>${escapeHtml(catLabel[e.category] || e.category)}</b></span>`,
+    `<span>Sheet <b>${escapeHtml(e.sheet || '')}</b></span>`,
+    `<span>${fmtTime(e.start)} to ${fmtTime(e.end)} <b>${fmtDuration(e.start, e.end)}</b></span>`,
+    who ? `<span>Who <b>${escapeHtml(who.restricted ? who.text : 'All ages')}</b></span>` : '',
+    price ? `<span>Price <b>${escapeHtml(price.price)}</b>${price.note ? ` (${escapeHtml(price.label)}: ${escapeHtml(price.note)})` : ` (${escapeHtml(price.label)})`}</span>` : '',
+    e.capacity ? `<span>Capacity <b>${e.capacity}${e.slots > 1 ? ' per slot' : ''}</b></span>` : '',
+    e.slots > 1 ? `<span><b>${e.slots}</b> back-to-back slots merged</span>` : '',
+  ].filter(Boolean).join('');
+  const links = [
+    e.registerUrl ? `<a href="${escapeHtml(e.registerUrl)}" target="_blank" rel="noopener">Sign up or pay online</a>` : '',
+    rink.website ? `<a href="${escapeHtml(rink.website)}" target="_blank" rel="noopener">${escapeHtml(rink.name)} website</a>` : '',
+    `<a href="${mapsUrl(rink)}" target="_blank" rel="noopener">Directions</a>`,
+  ].filter(Boolean).join('');
+  const desc = e.subtitle ? `<p class="d-desc">${escapeHtml(e.subtitle)}</p>` : '<p class="d-desc muted">The rink gave no description for this session.</p>';
+  return `<div class="d-title">${escapeHtml(e.title || catLabel[e.category] || e.category)}</div>${desc}<div class="d-facts">${facts}</div><div class="d-links">${links}</div>`;
+}
+
+// Session names wider than the type block glide back and forth so the whole name can be read.
+function startMarquees() {
+  const els = $$('.cat-sub-text');
+  const shifts = els.map((el) => el.scrollWidth - el.parentElement.clientWidth); // all reads first, one layout
+  els.forEach((el, i) => { if (shifts[i] > 4) { el.style.setProperty('--shift', `-${shifts[i] + 4}px`); el.classList.add('marquee'); } });
+}
+
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
@@ -376,11 +404,26 @@ function fillCard(node, e, now) {
     whoEl.title = who.restricted ? `${who.text}. Tap for details.` : 'Open to all ages. Tap for details.';
     whoEl.addEventListener('click', (ev) => { ev.stopPropagation(); toggleWhoPop(whoEl, e, who, rink); });
   }
-  const label = sessionLabel(e), labelEl = $('.label', node);
-  labelEl.hidden = !label;
-  if (label) { labelEl.textContent = label; labelEl.title = e.title; }
-  $('.cat', node).textContent = catShort[e.category] || e.category;
+  // The session's price from the rink's published list (named variant, weekday/weekend, or plain).
+  const price = priceFor(e, rink.prices), feeEl = $('.fee', node);
+  feeEl.hidden = !price;
+  if (price) { feeEl.textContent = price.price; feeEl.title = `${price.label}${price.note ? `: ${price.note}` : ''}`; }
+  $('.cat-name', node).textContent = catShort[e.category] || e.category;
   $('.cat', node).title = catLabel[e.category] || e.category;
+  // The rink's own name for the session sits under the type; overflowing names glide (see renderList).
+  const sub = $('.cat-sub', node);
+  sub.hidden = !e.title;
+  if (e.title) $('.cat-sub-text', node).textContent = e.title;
+  // Tap anywhere on the card (links, buttons and the details row excepted) to open its details.
+  node.setAttribute('aria-expanded', 'false');
+  node.addEventListener('click', (ev) => {
+    if (ev.target.closest('a, button, .details')) return;
+    const open = node.getAttribute('aria-expanded') !== 'true';
+    node.setAttribute('aria-expanded', String(open));
+    const d = $('.details', node);
+    if (open && !d.innerHTML) d.innerHTML = detailsHtml(e, rink, who, price);
+    d.hidden = !open;
+  });
   $('.start', node).textContent = fmtTime(e.start);
   $('.end', node).textContent = fmtTime(e.end);
   $('.dur', node).textContent = fmtDuration(e.start, e.end);
@@ -449,6 +492,7 @@ function renderList() {
   }
   if (currentDay === today && !nowMarked) list.append(nowMark());
   if (countEl) countEl.textContent = `${dayCount} session${dayCount === 1 ? '' : 's'}`;
+  requestAnimationFrame(startMarquees);
 }
 
 // ---------------------------------------------------------------- load

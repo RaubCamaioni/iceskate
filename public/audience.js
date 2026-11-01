@@ -56,17 +56,3 @@ export function refineCategory(e) {
   if (/^Parent|^Little kids|^Homeschool|^Ages |^Under |^Youth|^High school/.test(a.text)) return 'family_skate';
   return 'public_skate';
 }
-
-// A short name for a session that goes by something other than its category,
-// e.g. "Cheapskate" or "Disco Skate". Generic titles return null.
-export function sessionLabel(e) {
-  let s = (e.title || '').trim();
-  if (!s) return null;
-  s = s.replace(/^public\s*(skate)?\s*[-:–]?\s*/i, '').replace(/\s*\(.*\)\s*$/, '').trim();
-  if (!s) return null;
-  if (/^(weekday|weekend|morning|afternoon|evening|am|pm|skate)\b/i.test(s)) return null;
-  const a = audience(e);
-  if (a && new RegExp(`^${a.text.replace(/[+&]/g, '.')}`, 'i').test(s)) return null; // badge already says it
-  if (/^(adults? ?only|adult swim|adult skate|parent and tot|playground on ice|homeschooling ice session)/i.test(s)) return null;
-  return s.length > 28 ? s.slice(0, 27).trimEnd() + '…' : s;
-}

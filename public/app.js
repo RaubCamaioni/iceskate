@@ -316,6 +316,30 @@ function renderRinkRows() {
   }));
 }
 
+// Popover under a card's "Restrictions apply" / "All ages" tag: the parsed rule, the
+// session's name and the rink's own description, plus a link to the rink.
+function toggleWhoPop(anchor, e, who, rink) {
+  const pop = $('#who-pop');
+  const key = `${e.rink}|${e.start}|${e.sheet}`;
+  if (!pop.hidden && pop.dataset.for === key) { hideWhoPop(); return; }
+  pop.dataset.for = key;
+  const rule = who.restricted ? `Only for: ${who.text}` : 'Anyone may skate';
+  const desc = e.subtitle ? escapeHtml(e.subtitle) : '<span class="muted">The rink gave no further description. Check its website before you go.</span>';
+  pop.innerHTML = `<div class="wp-head"><b>${who.restricted ? 'Restrictions apply' : 'Open to all ages'}</b><button type="button" class="wp-close" aria-label="Close">×</button></div>
+    <p class="wp-rule">${escapeHtml(rule)}</p>
+    <p class="wp-session">${escapeHtml(rink.name)} · ${escapeHtml(catLabel[e.category] || e.category)}${e.title ? ` · ${escapeHtml(e.title)}` : ''}</p>
+    <p class="wp-desc">${desc}</p>
+    ${rink.website ? `<a class="wp-link" href="${escapeHtml(rink.website)}" target="_blank" rel="noopener">Rink website</a>` : ''}`;
+  $('.wp-close', pop).addEventListener('click', hideWhoPop);
+  pop.hidden = false;
+  const r = anchor.getBoundingClientRect();
+  const width = Math.min(360, document.documentElement.clientWidth - 24);
+  pop.style.width = `${width}px`;
+  pop.style.top = `${r.bottom + 6 + window.scrollY}px`;
+  pop.style.left = `${Math.max(12, Math.min(r.left, document.documentElement.clientWidth - width - 12)) + window.scrollX}px`;
+}
+function hideWhoPop() { const pop = $('#who-pop'); pop.hidden = true; pop.dataset.for = ''; }
+
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
@@ -343,9 +367,15 @@ function fillCard(node, e, now) {
     drive.title = `${t.mode === 'drive' ? `${fmtMin(t.min)} drive, ${t.mi} mi` : `${t.mi} mi straight line`} from ${state.origin.label}`;
   }
   // Who the session is for (amber when not everyone can skate) and any special name.
+  // A general tag after the drive time; tapping it opens the rule and the rink's own wording.
   const who = audience(e), whoEl = $('.who', node);
   whoEl.hidden = !who;
-  if (who) { whoEl.textContent = who.text; whoEl.classList.toggle('open', !who.restricted); whoEl.title = who.restricted ? `Only for: ${who.text}. See the rink's description.` : 'Open to all ages'; }
+  if (who) {
+    whoEl.textContent = who.restricted ? 'Restrictions apply' : 'All ages';
+    whoEl.classList.toggle('open', !who.restricted);
+    whoEl.title = who.restricted ? `${who.text}. Tap for details.` : 'Open to all ages. Tap for details.';
+    whoEl.addEventListener('click', (ev) => { ev.stopPropagation(); toggleWhoPop(whoEl, e, who, rink); });
+  }
   const label = sessionLabel(e), labelEl = $('.label', node);
   labelEl.hidden = !label;
   if (label) { labelEl.textContent = label; labelEl.title = e.title; }
@@ -370,6 +400,7 @@ function fillCard(node, e, now) {
 }
 
 function renderList() {
+  hideWhoPop();
   const list = $('#list');
   const now = new Date();
   const tpl = $('#event-row');
@@ -469,6 +500,9 @@ async function load() {
 
 function init() {
   loadState();
+  // The restrictions popover closes on an outside tap, Escape, or when the list re-renders.
+  document.addEventListener('click', (ev) => { const pop = $('#who-pop'); if (!pop.hidden && !pop.contains(ev.target)) hideWhoPop(); });
+  document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') hideWhoPop(); });
   for (const b of $$('.range button')) b.addEventListener('click', () => { state.days = Number(b.dataset.days); saveState(); load(); });
   $('#hide-past').addEventListener('change', (ev) => { state.hidePast = ev.target.checked; saveState(); renderList(); });
   $('#use-location').addEventListener('click', useMyLocation);

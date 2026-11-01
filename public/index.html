@@ -52,7 +52,7 @@
             </section>
             <section>
               <h3><span class="dot" style="--c: var(--cat-adult_skate)"></span>Adult skate</h3>
-              <p>Public skates reserved for adults, so quieter ice with no small children. The card's amber badge gives the exact age floor, for example <span class="who demo">18+ only</span>.</p>
+              <p>Public skates reserved for adults, so quieter ice with no small children. Each card carries a red <span class="who demo">Restrictions apply</span> tag; tap it for the age floor and the rink's own wording.</p>
               <dl>
                 <dt>Adults only (18+), Adult Skate (18+ Skaters ONLY)</dt><dd>Cabin John, Wheaton and Ashburn, 18 and over.</dd>
                 <dt>Adults only (14+)</dt><dd>Mount Vernon's starred evening sessions, 14 and over.</dd>
@@ -62,7 +62,7 @@
             </section>
             <section>
               <h3><span class="dot" style="--c: var(--cat-family_skate)"></span>Kids &amp; family skate</h3>
-              <p>Public skates meant for small children with a grown-up, or for a particular group of families. The badge says who, for example <span class="who demo">Parent &amp; tot</span>.</p>
+              <p>Public skates meant for small children with a grown-up, or for a particular group of families. Tap the card's <span class="who demo">Restrictions apply</span> tag to see exactly who.</p>
               <dl>
                 <dt>Parent and Tot</dt><dd>One grown-up with a child aged 3 to 4; one $10 admission covers both and their rentals (Cabin John, Wheaton).</dd>
                 <dt>Playground on Ice</dt><dd>Ashburn's session for small children with play equipment on the ice; the price includes one adult and both rentals.</dd>
@@ -84,7 +84,7 @@
             </section>
             <section>
               <h3><span class="dot" style="--c: var(--cat-stick_and_puck)"></span>Stick &amp; puck</h3>
-              <p>Unstructured hockey practice: skate, pass and shoot at your own pace. Open to all ages unless the card shows an age badge. No games or scrimmages. Adults need at least a helmet, gloves and stick; players 17 and under need full gear. Goalies are often free.</p>
+              <p>Unstructured hockey practice: skate, pass and shoot at your own pace. Open to all ages unless the card shows a red Restrictions apply tag. No games or scrimmages. Adults need at least a helmet, gloves and stick; players 17 and under need full gear. Goalies are often free.</p>
               <dl>
                 <dt>Stick n Shoot, Stick &amp; Shoot, Stick Time</dt><dd>Different names for the same thing (Ashburn, Haymarket, Loudoun, Rockville).</dd>
                 <dt>Stick Time - Youth, 12U Stick and Shoot, Mini Stick n Shoot</dt><dd>Kids-only versions: 13 and under at Rockville, 12 and under at Haymarket, "Mini" at Capitals Iceplex.</dd>
@@ -92,7 +92,7 @@
             </section>
             <section>
               <h3><span class="dot" style="--c: var(--cat-pickup_hockey)"></span>Pick-up hockey</h3>
-              <p>Informal full-gear games with whoever shows up, split into teams on the spot. Adults only at most rinks (18 and over; 16 and over at Mount Vernon), even when a card carries no age badge. Capitals Iceplex and Fairfax sell spots online and cap goalies separately. Adult C/D or 40+ sessions are grouped by skill or age.</p>
+              <p>Informal full-gear games with whoever shows up, split into teams on the spot. Adults only at most rinks (18 and over; 16 and over at Mount Vernon), even when a card carries no Restrictions apply tag. Capitals Iceplex and Fairfax sell spots online and cap goalies separately. Adult C/D or 40+ sessions are grouped by skill or age.</p>
             </section>
             <section>
               <h3><span class="dot" style="--c: var(--cat-learn_to_skate)"></span>Lessons</h3>
@@ -135,11 +135,13 @@
     <p>Times are US Eastern. Schedules come straight from each rink's own system. Prices and regular times are in the project README. This site is not affiliated with any rink.</p>
   </footer>
 
+  <div id="who-pop" class="who-pop" hidden role="dialog" aria-label="Session restrictions"></div>
+
   <template id="event-row">
     <article class="event">
       <a class="rink" target="_blank" rel="noopener"><span class="rink-name"><svg class="pin" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a5 5 0 0 0-5 5c0 3.6 5 9 5 9s5-5.4 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg><span class="rink-text"></span></span><span class="sheet"></span></a>
       <span class="cat"></span>
-      <div class="body"><span class="who" hidden></span><span class="label" hidden></span><span class="drive" hidden></span></div>
+      <div class="body"><span class="label" hidden></span><span class="drive" hidden></span><button type="button" class="who" hidden></button></div>
       <div class="right">
         <span class="days"></span>
         <div class="time">

@@ -144,22 +144,39 @@ main { padding-bottom: 32px; }
 .drive::before { content: "🚗"; font-size: .9em; }
 .drive[hidden] { display: none; }
 .body { gap: 8px; }
-/* Who may skate: amber when the session is limited to one group, green when the rink says all ages */
+/* Who may skate: a red "Restrictions apply" tag after the drive time (tap for the rule and the
+   rink's wording), green "All ages" when the rink says everyone is welcome */
 .who {
-  display: inline-flex; align-items: center; gap: 5px; font-size: .82rem; font-weight: 800; white-space: nowrap;
-  background: #fde68a; color: #7c2d12; border: 1px solid #f59e0b; border-radius: 999px; padding: 3px 10px;
+  display: inline-flex; align-items: center; gap: 5px; font-size: .82rem; font-weight: 800; white-space: nowrap; font: inherit; font-size: .82rem; font-weight: 800;
+  background: #fee2e2; color: #991b1b; border: 1px solid #ef4444; border-radius: 999px; padding: 3px 10px; cursor: pointer; line-height: 1.2;
 }
 .who::before { content: "⚠"; font-size: .95em; }
+.who:hover, .who:focus-visible { filter: brightness(.96); text-decoration: underline; }
 .who.open { background: #dcfce7; color: #14532d; border-color: #22c55e; }
 .who.open::before { content: "✓"; }
-.who.demo { font-size: .78rem; padding: 1px 8px; vertical-align: 1px; }
+.who.demo { font-size: .78rem; padding: 1px 8px; vertical-align: 1px; cursor: default; }
 .who[hidden] { display: none; }
 /* The rink's own name for the session, when it is not just the category */
 .label { font-size: .88rem; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .label[hidden] { display: none; }
+/* Popover opened by the tag */
+.who-pop {
+  position: absolute; z-index: 1000; background: var(--surface); color: var(--text); border: 1px solid var(--line);
+  border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.25); padding: 12px 14px; font-size: .9rem; line-height: 1.45;
+}
+.who-pop[hidden] { display: none; }
+.who-pop .wp-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+.who-pop .wp-head b { color: #b91c1c; font-size: 1rem; }
+.who-pop .wp-close { border: 0; background: transparent; color: var(--muted); font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0 2px; }
+.who-pop .wp-rule { margin: 0 0 4px; font-weight: 700; }
+.who-pop .wp-session { margin: 0 0 6px; color: var(--muted); font-size: .85rem; }
+.who-pop .wp-desc { margin: 0 0 8px; white-space: pre-line; }
+.who-pop .muted { color: var(--muted); }
+.who-pop .wp-link { color: var(--accent); font-weight: 600; }
 @media (prefers-color-scheme: dark) {
-  .who { background: #451a03; color: #fde68a; border-color: #b45309; }
+  .who { background: #450a0a; color: #fecaca; border-color: #b91c1c; }
   .who.open { background: #052e16; color: #bbf7d0; border-color: #15803d; }
+  .who-pop .wp-head b { color: #fca5a5; }
 }
 /* Right side: "In N days" badge, then the time tile */
 .right { display: flex; align-items: center; gap: 12px; padding: 6px 8px 6px 0; background: var(--mid); }

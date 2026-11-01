@@ -52,7 +52,7 @@ export function normalize(icsText, { from, to } = {}) {
       start: e.start,
       end: e.end,
       title: category === 'public_skate' && /^public skat/i.test(title) ? '' : title,
-      subtitle: e.description.trim().slice(0, 160) || null,
+      subtitle: e.description.trim().slice(0, 400) || null,
       category,
       capacity: null,
       color,

@@ -22,9 +22,16 @@
 
   <div class="layout wrap">
   <aside id="sidebar" class="sidebar" aria-label="Filters">
-    <div class="sidebar-head"><span>Filters</span><button type="button" id="filters-close" class="chip">Done</button></div>
+    <div class="sidebar-head">
+      <div class="tabs" role="tablist" aria-label="Filter groups">
+        <button type="button" role="tab" class="tab" data-tab="location" aria-selected="true">Location</button>
+        <button type="button" role="tab" class="tab" data-tab="session" aria-selected="false">Session</button>
+        <button type="button" role="tab" class="tab" data-tab="when" aria-selected="false">When</button>
+      </div>
+      <button type="button" id="filters-close" class="chip done">Done</button>
+    </div>
     <div class="panels">
-      <fieldset class="panel">
+      <fieldset class="panel" data-panel="location" role="tabpanel">
         <legend>Location</legend>
         <div class="origin-row">
           <button type="button" id="use-location" class="chip">Use my location</button>
@@ -38,9 +45,10 @@
         <div id="map" class="map" hidden aria-label="Map of rinks"></div>
         <p id="rink-mode" class="hint rink-mode"></p>
         <ul id="sources" class="rinklist" aria-label="Rinks"></ul>
-        <p class="hint">Set a starting point to sort rinks by driving time; scroll the list for the rest. Switch a rink on or off to choose your own set. Colour = rink. Tap an address, or a rink on a session card, for directions. Your starting point is sent only to the OpenStreetMap routing and geocoding services.</p>
+        <button type="button" id="rinks-more" class="chip rinks-more" hidden></button>
+        <p class="hint">Set a starting point to sort rinks by driving time; the five closest are listed, with a button for the rest. Switch a rink on or off to choose your own set. Colour = rink. Tap an address, or a rink on a session card, for directions. Your starting point is sent only to the OpenStreetMap routing and geocoding services.</p>
       </fieldset>
-      <fieldset class="panel">
+      <fieldset class="panel" data-panel="session" role="tabpanel">
         <legend>Session</legend>
         <div class="group" id="category-filters" aria-label="Session types"></div>
         <p class="hint">Tap to show or hide a session type.</p>
@@ -119,7 +127,7 @@
           </div>
         </details>
       </fieldset>
-      <fieldset class="panel">
+      <fieldset class="panel" data-panel="when" role="tabpanel">
         <legend>When</legend>
         <div class="row when-row">
           <div class="group range" aria-label="Date range">

@@ -40,7 +40,7 @@ npm start
 Then open http://localhost:3000. The filters (location, session types, date range) sit in a
 sticky left column with the session list on the right; under 1100px wide the column becomes a
 drawer behind a Filters button in the header. Cards shed detail as the list column narrows
-(container queries on `.content`): under 820px the "Tomorrow" badge and cost go; under 560px a
+(container queries on `.content`): under 1200px the "Tomorrow" badge goes, under 1030px the cost, under 900px the drive time, under 690px the restrictions tag shrinks to its icon; under 560px a
 card is just rink, type (with a ⚠ when restricted) and start time, and the rest shows in the
 row that opens when the card is tapped. The page merges everything into one list, grouped by
 day, with rink and session-type filters, a date range, and a hide-finished toggle.

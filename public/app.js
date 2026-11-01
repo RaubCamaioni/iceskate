@@ -211,9 +211,8 @@ function popupHtml(r) {
   const drive = t ? `<div class="pop-drive">${t.mode === 'drive' ? `${fmtMin(t.min)} drive · ${t.mi} mi` : `${t.mi} mi away`}</div>` : '';
   const addr = r.address ? `<div class="pop-row"><a href="${mapsUrl(r)}" target="_blank" rel="noopener" title="Directions">${escapeHtml(r.address)}</a></div>` : '';
   const phone = r.phone ? `<div class="pop-row"><a href="tel:${r.phone.replace(/[^\d+]/g, '')}">${escapeHtml(r.phone)}</a></div>` : '';
-  const pay = r.onlinePay && r.registerUrl ? `<a href="${r.registerUrl}" target="_blank" rel="noopener">Pre-pay online</a>` : '';
   return `<div class="pop-name">${escapeHtml(r.name)}</div>${drive}${addr}${phone}
-    <div class="pop-links"><a href="${r.website}" target="_blank" rel="noopener">Website</a>${pay}
+    <div class="pop-links"><a href="${r.website}" target="_blank" rel="noopener">Website</a>
     <button type="button" class="chip${off ? '' : ' on'}" data-toggle="${r.slug}">${off ? 'Show sessions' : 'Showing sessions'}</button></div>`;
 }
 
@@ -290,13 +289,8 @@ function renderRinkRows() {
       const ad = document.createElement('a'); ad.className = 'rl-addr'; ad.href = mapsUrl(r); ad.target = '_blank'; ad.rel = 'noopener';
       ad.title = `Directions to ${r.name}`; ad.textContent = r.address; info.append(ad);
     }
-    // Plain hyperlinks: the website, plus an online checkout link where the rink sells sessions online.
+    // One plain hyperlink to the rink's own website.
     const links = document.createElement('span'); links.className = 'rl-links';
-    if (r.onlinePay && r.registerUrl) {
-      const pay = document.createElement('a'); pay.href = r.registerUrl; pay.target = '_blank'; pay.rel = 'noopener'; pay.className = 'rl-link';
-      pay.textContent = 'Pre-pay online';
-      links.append(pay);
-    }
     const web = document.createElement('a'); web.href = r.website; web.target = '_blank'; web.rel = 'noopener'; web.textContent = 'Website'; web.className = 'rl-link';
     links.append(web);
     li.append(sw, name, info, links);

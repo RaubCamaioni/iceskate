@@ -60,6 +60,11 @@ async function versionAssets() {
   const html = await fs.readFile(file, 'utf8');
   const out = html.replace(/(href|src)="(style\.css|app\.js)(\?v=[^"]*)?"/g, `$1="$2?v=${ver}"`);
   if (out !== html) await fs.writeFile(file, out);
+  // app.js imports sibling modules; stamp those too so GitHub Pages' cache cannot pair old and new files.
+  const appFile = path.join(ROOT, 'public', 'app.js');
+  const app = await fs.readFile(appFile, 'utf8');
+  const appOut = app.replace(/from '\.\/([a-z-]+\.js)(\?v=[^']*)?'/g, `from './$1?v=${ver}'`);
+  if (appOut !== app) await fs.writeFile(appFile, appOut);
   console.log(`[build] assets versioned ?v=${ver}`);
 }
 

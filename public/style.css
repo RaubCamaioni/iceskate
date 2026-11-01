@@ -141,6 +141,24 @@ main { padding-bottom: 32px; }
 }
 .drive::before { content: "🚗"; font-size: .9em; }
 .drive[hidden] { display: none; }
+.body { gap: 8px; }
+/* Who may skate: amber when the session is limited to one group, green when the rink says all ages */
+.who {
+  display: inline-flex; align-items: center; gap: 5px; font-size: .82rem; font-weight: 800; white-space: nowrap;
+  background: #fde68a; color: #7c2d12; border: 1px solid #f59e0b; border-radius: 999px; padding: 3px 10px;
+}
+.who::before { content: "⚠"; font-size: .95em; }
+.who.open { background: #dcfce7; color: #14532d; border-color: #22c55e; }
+.who.open::before { content: "✓"; }
+.who.demo { font-size: .78rem; padding: 1px 8px; vertical-align: 1px; }
+.who[hidden] { display: none; }
+/* The rink's own name for the session, when it is not just the category */
+.label { font-size: .88rem; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.label[hidden] { display: none; }
+@media (prefers-color-scheme: dark) {
+  .who { background: #451a03; color: #fde68a; border-color: #b45309; }
+  .who.open { background: #052e16; color: #bbf7d0; border-color: #15803d; }
+}
 /* Right side: "In N days" badge, then the time tile */
 .right { display: flex; align-items: center; gap: 12px; padding: 6px 8px 6px 0; background: var(--mid); }
 .days { font-size: .8rem; font-weight: 700; color: var(--muted); white-space: nowrap; text-transform: uppercase; letter-spacing: .4px; }
@@ -228,7 +246,11 @@ main { padding-bottom: 32px; }
   .time .lbl { font-size: .52rem; }
   .rink { padding: 6px 6px 6px 8px; font-size: .76rem; }
   .cat { font-size: .6rem; padding-right: 6px; letter-spacing: .3px; }
-  .body { padding: 6px 8px; }
+  .body { padding: 6px 6px; gap: 5px; flex-wrap: wrap; overflow: hidden; align-content: center; }
+  .who { font-size: .66rem; padding: 2px 7px; }
+  .label { font-size: .72rem; }
+  .drive { font-size: .7rem; padding: 2px 7px; }
+  .body:has(.who:not([hidden])) .label { display: none; }
   .time { padding: 2px 2px; margin: 0; }
   .right { gap: 6px; padding-right: 5px; }
   .days { font-size: .62rem; }

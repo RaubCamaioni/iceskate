@@ -38,6 +38,7 @@ const fmtDuration = (start, end) => {
 const catLabel = Object.fromEntries(CATEGORIES.map(([k, l]) => [k, l]));
 // Shorter labels for the fixed-width type block on cards.
 const catShort = { ...catLabel, hockey: 'Hockey', figure_skating: 'Figure skating' };
+import { audience, sessionLabel } from './audience.js';
 const catColor = (k) => getComputedStyle(document.documentElement).getPropertyValue(`--cat-${k}`).trim();
 const mapsUrl = (r) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ? `${r.name}, ${r.address}` : r.name)}`;
 
@@ -334,6 +335,13 @@ function fillCard(node, e, now) {
     drive.textContent = t.mode === 'drive' ? `${fmtMin(t.min)} drive` : `${t.mi} mi away`;
     drive.title = `${t.mode === 'drive' ? `${fmtMin(t.min)} drive, ${t.mi} mi` : `${t.mi} mi straight line`} from ${state.origin.label}`;
   }
+  // Who the session is for (amber when not everyone can skate) and any special name.
+  const who = audience(e), whoEl = $('.who', node);
+  whoEl.hidden = !who;
+  if (who) { whoEl.textContent = who.text; whoEl.classList.toggle('open', !who.restricted); whoEl.title = who.restricted ? `Only for: ${who.text}. See the rink's description.` : 'Open to all ages'; }
+  const label = sessionLabel(e), labelEl = $('.label', node);
+  labelEl.hidden = !label;
+  if (label) { labelEl.textContent = label; labelEl.title = e.title; }
   $('.cat', node).textContent = catShort[e.category] || e.category;
   $('.cat', node).title = catLabel[e.category] || e.category;
   $('.start', node).textContent = fmtTime(e.start);

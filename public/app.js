@@ -41,7 +41,7 @@ const catLabel = Object.fromEntries(CATEGORIES.map(([k, l]) => [k, l]));
 // Shorter labels for the fixed-width type block on cards.
 const catShort = { ...catLabel, family_skate: 'Kids & family', hockey: 'Hockey', figure_skating: 'Figure skating' };
 import { audience } from './audience.js';
-import { priceFor } from './pricing.js';
+import { priceFor, priceRows } from './pricing.js';
 const catColor = (k) => getComputedStyle(document.documentElement).getPropertyValue(`--cat-${k}`).trim();
 const mapsUrl = (r) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ? `${r.name}, ${r.address}` : r.name)}`;
 
@@ -417,7 +417,6 @@ function detailsHtml(e, rink, who, price) {
     `<span>${fmtTime(e.start)} to ${fmtTime(e.end)} <b>${fmtDuration(e.start, e.end)}</b></span>`,
     travel[e.rink] ? `<span>${travel[e.rink].mode === 'drive' ? `Drive <b>${fmtMin(travel[e.rink].min)}</b> (${travel[e.rink].mi} mi)` : `<b>${travel[e.rink].mi} mi</b> away`} from ${escapeHtml(state.origin.label)}</span>` : '',
     who ? `<span>Who <b>${escapeHtml(who.restricted ? who.text : 'All ages')}</b></span>` : '',
-    price ? `<span>Price <b>${escapeHtml(price.price)}</b>${price.note ? ` (${escapeHtml(price.label)}: ${escapeHtml(price.note)})` : ` (${escapeHtml(price.label)})`}</span>` : '',
     e.capacity ? `<span>Capacity <b>${e.capacity}${e.slots > 1 ? ' per slot' : ''}</b></span>` : '',
     e.slots > 1 ? `<span><b>${e.slots}</b> back-to-back slots merged</span>` : '',
   ].filter(Boolean).join('');
@@ -427,7 +426,15 @@ function detailsHtml(e, rink, who, price) {
     `<a href="${mapsUrl(rink)}" target="_blank" rel="noopener">Directions</a>`,
   ].filter(Boolean).join('');
   const desc = e.subtitle ? `<p class="d-desc">${escapeHtml(e.subtitle)}</p>` : '<p class="d-desc muted">The rink gave no description for this session.</p>';
-  return `<div class="d-title">${escapeHtml(e.title || catLabel[e.category] || e.category)}</div>${desc}<div class="d-facts">${facts}</div><div class="d-links">${links}</div>`;
+  // Cost as a tier list: who pays what, one line each, then remarks such as "rental included".
+  let cost;
+  if (price) {
+    const { rows, remarks } = priceRows(price);
+    cost = `<div class="d-prices"><div class="d-h">Cost</div><dl>${rows.map((r) => `<dt>${escapeHtml(r.label)}</dt><dd>${escapeHtml(r.amount)}</dd>`).join('')}</dl>${remarks.length ? `<div class="d-note">${remarks.map(escapeHtml).join(' · ')}</div>` : ''}</div>`;
+  } else {
+    cost = '<div class="d-prices"><div class="d-h">Cost</div><div class="d-note">Not published per session; check the rink.</div></div>';
+  }
+  return `<div class="d-title">${escapeHtml(e.title || catLabel[e.category] || e.category)}</div>${desc}<div class="d-facts">${facts}</div>${cost}<div class="d-links">${links}</div>`;
 }
 
 // Session names wider than the type block glide back and forth so the whole name can be read.

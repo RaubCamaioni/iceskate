@@ -146,6 +146,12 @@ main { padding-bottom: 32px; }
 .details .d-desc.muted { color: var(--muted); }
 .details .d-facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; color: var(--muted); }
 .details .d-facts b { color: var(--text); font-weight: 700; }
+.details .d-prices { margin-top: 10px; }
+.details .d-h { font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); margin-bottom: 3px; }
+.details .d-prices dl { display: grid; grid-template-columns: max-content max-content; gap: 2px 18px; margin: 0; }
+.details .d-prices dt { color: var(--text); }
+.details .d-prices dd { margin: 0; font-weight: 800; font-variant-numeric: tabular-nums; text-align: right; }
+.details .d-note { color: var(--muted); font-size: .85rem; margin-top: 3px; }
 .details .d-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 14px; }
 .details .d-links a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .rink {
@@ -196,7 +202,8 @@ main { padding-bottom: 32px; }
 }
 .drive::before { content: "🚗"; font-size: .9em; }
 .drive[hidden] { display: none; }
-.body { gap: 8px; }
+.body { gap: 8px; overflow: hidden; }
+.body > * { flex: none; }
 /* Who may skate: a red "Restrictions apply" tag after the drive time (tap for the rule and the
    rink's wording), green "All ages" when the rink says everyone is welcome */
 .who {
@@ -323,6 +330,9 @@ main { padding-bottom: 32px; }
 /* Cards shed detail as the list column narrows (container queries on .content, so the sidebar's
    width counts too). Medium: no "Tomorrow" badge or cost. Small: just rink, type and start time;
    everything else waits in the expanded row. */
+@container list (max-width: 1150px) {
+  .days { display: none; }
+}
 @container list (max-width: 820px) {
   .event { --time-w: 230px; }
   .days, .fee, .drive { display: none; }

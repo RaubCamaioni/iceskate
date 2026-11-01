@@ -71,6 +71,9 @@ test('ashburn: hides unpublished events', () => {
 test('ashburn: classify', () => {
   assert.equal(ashburn.classify('Public-Weekday Morning', 'Camp'), 'public_skate');
   assert.equal(ashburn.classify("Public- Friday Rockin' Skate", 'Camp'), 'public_skate');
+  assert.equal(ashburn.classify('Adult Skate (18+ Skaters ONLY)', 'Camp'), 'public_skate');
+  assert.equal(ashburn.classify('On Ice Stroking class', 'ACE'), 'learn_to_skate');
+  assert.equal(ashburn.classify('AXHC - 2014 practice', 'Camp'), 'hockey');
   assert.equal(ashburn.classify('Freestyle- Weekdays before 12pm', 'Camp'), 'freestyle');
   assert.equal(ashburn.classify('Stick n Shoot - Mornings', 'Camp'), 'stick_and_puck');
   assert.equal(ashburn.classify('Adult Pickup- Weekday Afternoon', 'Camp'), 'pickup_hockey');

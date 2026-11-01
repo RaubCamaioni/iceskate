@@ -45,10 +45,10 @@ export function classify(summaryName, eventTypeName) {
   const n = (summaryName || '').toLowerCase();
   const t = eventTypeName || '';
   if (/playground on ice/.test(n)) return 'public_skate';
-  if (/\bpublic\b|rockin/.test(n) || t === 'Public Skate' || t === 'Public Group Skate') return 'public_skate';
+  if (/\bpublic\b|rockin|\badult skate\b/.test(n) || t === 'Public Skate' || t === 'Public Group Skate') return 'public_skate';
   // Drop-in classes and ice-show rehearsals mention "Freeskate" levels but are not open freestyle ice.
   if (/ice show|ensemble|synchro|theater/.test(n)) return 'figure_skating';
-  if (/drop-? ?in|fast track|adaptive|through freeskate|pre-?freeskate/.test(n)) return 'learn_to_skate';
+  if (/drop-? ?in|fast track|adaptive|through freeskate|pre-?freeskate|\bclass\b/.test(n)) return 'learn_to_skate';
   if (/^freestyle\b|freestyle session|open freestyle/.test(n) || t === 'Freestyle') return 'freestyle';
   if (/stick\s*n\s*shoot|stick-n-shoot|stick and shoot|stick & puck/.test(n) || t === 'Stick-N-Shoot') return 'stick_and_puck';
   if (/pick\s*-?\s*up/.test(n) || t === 'Adult Pick-up Hockey') return 'pickup_hockey';
@@ -59,7 +59,7 @@ export function classify(summaryName, eventTypeName) {
   }
   if (HOCKEY_TYPES.has(t)) return 'hockey';
   if (FIGURE_TYPES.has(t)) return 'figure_skating';
-  if (/\bvs\.?\b/.test(n)) return 'hockey';
+  if (/\bvs\.?\b|\baxhc\b|xtreme|\bpractice\b/.test(n)) return 'hockey';
   return 'other';
 }
 

@@ -122,7 +122,7 @@ Instead, every drop-in session the public can register for is event type **`k`
 | Summary name contains | Category | Typical capacity |
 |-----------------------|----------|------------------|
 | "Public Skate" | public_skate | 300 |
-| "Adult" + "public skate" | public_skate (adults only) | 300 |
+| "Adult Skate (18+ Skaters ONLY)" | public_skate (adults only; the title never says "public", so the adapter matches "adult skate") | 300 |
 | "Playground on Ice" | public_skate (ages 2-8) | 150 |
 | "Freestyle" / "Freeskate" | freestyle | 28 |
 | "Fast Track", "Drop-in ... class" | learn_to_skate | 12-50 |

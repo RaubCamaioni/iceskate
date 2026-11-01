@@ -222,13 +222,14 @@ function renderRinkRows() {
       const ad = document.createElement('a'); ad.className = 'rl-addr'; ad.href = mapsUrl(r); ad.target = '_blank'; ad.rel = 'noopener';
       ad.title = `Directions to ${r.name}`; ad.textContent = r.address; info.append(ad);
     }
+    // Plain hyperlinks: the website, plus an online checkout link where the rink sells sessions online.
     const links = document.createElement('span'); links.className = 'rl-links';
-    if (r.registerUrl) {
-      const pay = document.createElement('a'); pay.href = r.registerUrl; pay.target = '_blank'; pay.rel = 'noopener'; pay.className = 'rl-web';
-      pay.textContent = r.onlinePay ? 'Pre-pay online' : 'Walk-in prices';
+    if (r.onlinePay && r.registerUrl) {
+      const pay = document.createElement('a'); pay.href = r.registerUrl; pay.target = '_blank'; pay.rel = 'noopener'; pay.className = 'rl-link';
+      pay.textContent = 'Pre-pay online';
       links.append(pay);
     }
-    const web = document.createElement('a'); web.href = r.website; web.target = '_blank'; web.rel = 'noopener'; web.textContent = 'Website'; web.className = 'rl-web';
+    const web = document.createElement('a'); web.href = r.website; web.target = '_blank'; web.rel = 'noopener'; web.textContent = 'Website'; web.className = 'rl-link';
     links.append(web);
     li.append(sw, name, info, links);
     return li;

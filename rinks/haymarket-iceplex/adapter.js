@@ -19,6 +19,14 @@ export const registerUrl = 'https://www.haymarketiceplex.com/page/show/8611769-p
 export const onlinePay = false;
 export const color = '#00838f';
 export const sheets = ['Rink - North', 'Rink - South'];
+// Per-session prices as published on 2026-10-31 (see README.md); shown in the rink row and map popup.
+export const prices = [
+  {"category": "public_skate", "label": "Public skate", "price": "$10"},
+  {"category": "rental", "label": "Skate rental", "price": "$4"},
+  {"category": "freestyle", "label": "Freestyle", "price": "$15"},
+  {"category": "stick_and_puck", "label": "Stick N Shoot", "price": "$15"},
+  {"category": "pass", "label": "Freestyle / Stick 10-pass", "price": "$135", "note": "$13.50 a session"},
+];
 
 // event_type_id -> category. Anything not listed is hidden (rentals, blocks, locker rooms, parties, private lessons).
 export const TYPE_CATEGORY = {
@@ -78,4 +86,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, prices, fetchEvents, normalize, classify };

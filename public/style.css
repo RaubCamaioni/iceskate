@@ -196,9 +196,15 @@ main { padding-bottom: 32px; }
 .rl-addr::before { content: "📍"; font-size: .8em; margin-right: 3px; }
 .rl-addr:hover, .rl-addr:focus-visible { color: var(--accent); text-decoration-style: solid; }
 .rl-links { gap: 14px; }
+/* Second row of a rink entry: per-session prices */
+.rl-prices { grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: 4px 14px; color: var(--muted); font-size: .82rem; }
+.rl-prices .price b { color: var(--text); font-weight: 700; }
+.rl-prices .price[title] { text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; }
+.pop-prices { display: flex; flex-wrap: wrap; gap: 2px 12px; margin-top: 6px; color: var(--muted); font-size: .85rem; }
+.pop-prices b { color: var(--text); }
 .rl-link { font-weight: 600; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 .rl-link:hover, .rl-link:focus-visible { text-decoration-thickness: 2px; }
-@media (max-width: 560px) { .rinklist li { grid-template-columns: auto 1fr; } .rl-info, .rl-links { grid-column: 1 / -1; } .rl-links { justify-content: flex-start; } }
+@media (max-width: 560px) { .rinklist li { grid-template-columns: auto 1fr; } .rl-info, .rl-links, .rl-prices { grid-column: 1 / -1; } .rl-links { justify-content: flex-start; } }
 .foot { color: var(--muted); font-size: .85rem; padding: 12px 16px 32px; border-top: 1px solid var(--line); }
 
 @media (max-width: 560px) {

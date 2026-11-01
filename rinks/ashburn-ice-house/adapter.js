@@ -21,6 +21,15 @@ export const registerUrl = 'https://apps.daysmartrecreation.com/dash/x/#/online/
 export const onlinePay = true; // registerUrl is an online checkout, not just price info
 export const color = '#1d6fb8';
 export const sheets = ['East Rink', 'West Rink', 'Outdoor Rink'];
+// Per-session prices as published on 2026-10-31 (see README.md); shown in the rink row and map popup.
+export const prices = [
+  {"category": "public_skate", "label": "Public skate", "price": "$15", "note": "child $8, senior $5; rental not included"},
+  {"category": "rental", "label": "Skate rental", "price": "$5"},
+  {"category": "freestyle", "label": "Freestyle", "price": "$10"},
+  {"category": "stick_and_puck", "label": "Stick n Shoot", "price": "$20"},
+  {"category": "pickup_hockey", "label": "Pick-up hockey", "price": "$20"},
+  {"category": "pass", "label": "Public skate pass", "price": "$72 for 11", "note": "$6.55 a session"},
+];
 
 // Event types that are internal scheduling noise, never shown.
 const HIDDEN_TYPES = new Set(['Block', 'Locker Room', 'Rental']);
@@ -98,4 +107,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, prices, fetchEvents, normalize, classify };

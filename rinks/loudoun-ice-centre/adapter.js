@@ -16,6 +16,12 @@ export const registerUrl = 'https://www.loudounice.com/public-skating'; // walk-
 export const onlinePay = false;
 export const color = '#2e7d32';
 export const sheets = ['Studio Rink'];
+// Per-session prices as published on 2026-10-31 (see README.md); shown in the rink row and map popup.
+export const prices = [
+  {"category": "public_skate", "label": "Public skate", "price": "$10", "note": "child 12 and under $8"},
+  {"category": "public_skate", "label": "Cheap Skate (selected weekdays)", "price": "$6", "note": "rental included"},
+  {"category": "rental", "label": "Skate rental", "price": "$5"},
+];
 
 export const CALENDAR_ID = 'scheduler@loudounice.com';
 export const ICS_URL = `https://calendar.google.com/calendar/ical/${encodeURIComponent(CALENDAR_ID)}/public/basic.ics`;
@@ -67,4 +73,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, prices, fetchEvents, normalize, classify };

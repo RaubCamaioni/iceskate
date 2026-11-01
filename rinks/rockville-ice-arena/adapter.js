@@ -18,6 +18,13 @@ export const registerUrl = website; // prices; public skate and stick time are p
 export const onlinePay = false;
 export const color = '#ef6c00';
 export const sheets = ['Ice Arena'];
+// Per-session prices as published on 2026-10-31 (see README.md); shown in the rink row and map popup.
+export const prices = [
+  {"category": "public_skate", "label": "Public skating", "price": "$11"},
+  {"category": "rental", "label": "Skate rental", "price": "$4"},
+  {"category": "stick_and_puck", "label": "Stick time", "price": "$18", "note": "goalies free"},
+  {"category": "freestyle", "label": "Freestyle", "price": "$18 an hour"},
+];
 
 export const TAGS = { publicSkating: 3080364, stickTime: 3080365 };
 export const ICS_URL = `https://www.rockvilleicearena.com/ical_feed?tags=${TAGS.publicSkating},${TAGS.stickTime}`;
@@ -58,4 +65,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, prices, fetchEvents, normalize, classify };

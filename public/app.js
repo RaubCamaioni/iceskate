@@ -211,7 +211,8 @@ function popupHtml(r) {
   const drive = t ? `<div class="pop-drive">${t.mode === 'drive' ? `${fmtMin(t.min)} drive · ${t.mi} mi` : `${t.mi} mi away`}</div>` : '';
   const addr = r.address ? `<div class="pop-row"><a href="${mapsUrl(r)}" target="_blank" rel="noopener" title="Directions">${escapeHtml(r.address)}</a></div>` : '';
   const phone = r.phone ? `<div class="pop-row"><a href="tel:${r.phone.replace(/[^\d+]/g, '')}">${escapeHtml(r.phone)}</a></div>` : '';
-  return `<div class="pop-name">${escapeHtml(r.name)}</div>${drive}${addr}${phone}
+  const prices = (r.prices ?? []).length ? `<div class="pop-prices">${r.prices.map((p) => `<span title="${escapeHtml(p.note ?? '')}">${escapeHtml(p.label)} <b>${escapeHtml(p.price)}</b></span>`).join('')}</div>` : '';
+  return `<div class="pop-name">${escapeHtml(r.name)}</div>${drive}${addr}${phone}${prices}
     <div class="pop-links"><a href="${r.website}" target="_blank" rel="noopener">Website</a>
     <button type="button" class="chip${off ? '' : ' on'}" data-toggle="${r.slug}">${off ? 'Show sessions' : 'Showing sessions'}</button></div>`;
 }
@@ -289,11 +290,20 @@ function renderRinkRows() {
       const ad = document.createElement('a'); ad.className = 'rl-addr'; ad.href = mapsUrl(r); ad.target = '_blank'; ad.rel = 'noopener';
       ad.title = `Directions to ${r.name}`; ad.textContent = r.address; info.append(ad);
     }
+    // Per-session prices on a second line of the row.
+    const prices = document.createElement('span'); prices.className = 'rl-prices';
+    for (const p of r.prices ?? []) {
+      const it = document.createElement('span'); it.className = 'price';
+      it.innerHTML = `${escapeHtml(p.label)} <b>${escapeHtml(p.price)}</b>`;
+      if (p.note) it.title = p.note;
+      prices.append(it);
+    }
     // One plain hyperlink to the rink's own website.
     const links = document.createElement('span'); links.className = 'rl-links';
     const web = document.createElement('a'); web.href = r.website; web.target = '_blank'; web.rel = 'noopener'; web.textContent = 'Website'; web.className = 'rl-link';
     links.append(web);
     li.append(sw, name, info, links);
+    if (prices.childElementCount) li.append(prices);
     return li;
   }));
 }

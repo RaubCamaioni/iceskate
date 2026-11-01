@@ -22,6 +22,14 @@ export const registerUrl = SEARCH_URL; // public, stick-and-puck and pickup sess
 export const onlinePay = true;
 export const color = '#6a1b9a';
 export const sheets = ['Red Rink', 'Blue Rink'];
+// Per-session prices as published on 2026-10-31 (see README.md); shown in the rink row and map popup.
+export const prices = [
+  {"category": "public_skate", "label": "Public skate, adult", "price": "$14", "note": "youth and senior $10, child 4 and under $4, family of 5 $40; rental included"},
+  {"category": "stick_and_puck", "label": "Stick and Puck", "price": "$17"},
+  {"category": "pickup_hockey", "label": "Pickup hockey", "price": "$17"},
+  {"category": "freestyle", "label": "Freestyle", "price": "$9"},
+  {"category": "pass", "label": "Discount book, adult", "price": "$90 for 10", "note": "$9 a session, no rental"},
+];
 
 const PDF_BASE = 'https://www.fairfaxcounty.gov/parks/sites/parks/files/Assets/documents/recenters/calendars/';
 // calendar file -> how its sessions are categorised (the hockey file is split by its PUH/SNP labels)
@@ -161,4 +169,4 @@ export async function fetchEvents({ from, to }) {
   return events.filter((e) => e.start >= lo && e.start <= hi);
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, prices, fetchEvents, normalize, classify };

@@ -21,6 +21,14 @@ export const registerUrl = `${portalUrl(COMPANY, 'event-registration')}?&program
 export const onlinePay = true;
 export const color = '#c62828';
 export const sheets = ['Capitals Rink', 'Arlington Rink'];
+// Per-session prices as published on 2026-10-31 (see README.md); shown in the rink row and map popup.
+export const prices = [
+  {"category": "public_skate", "label": "Public skate", "price": "$8 to $15", "note": "general $15; adult $9 and 12-and-under $8 sessions; paid online"},
+  {"category": "freestyle", "label": "Freestyle", "price": "$10"},
+  {"category": "stick_and_puck", "label": "Stick n Shoot", "price": "$20"},
+  {"category": "pickup_hockey", "label": "Pickup hockey 18+", "price": "$20", "note": "goalies free"},
+  {"category": "public_skate", "label": "Arlington Senior Skate", "price": "$1"},
+];
 
 const SPORT_CATEGORY = { 27: 'public_skate', 31: 'stick_and_puck', 32: 'pickup_hockey' };
 const HOCKEY_TYPES = new Set(['10', 'g', '9', '24', '25', '31', '15', '13', '26']); // practices, games, HS, county programs
@@ -89,4 +97,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, prices, fetchEvents, normalize, classify };

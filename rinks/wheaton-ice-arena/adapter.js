@@ -16,6 +16,15 @@ export const registerUrl = website; // public skating admission is in person onl
 export const onlinePay = false;
 export const color = '#4e342e';
 export const sheets = ['Rink'];
+// Per-session prices as published on 2026-10-31 (see README.md); shown in the rink row and map popup.
+export const prices = [
+  {"category": "public_skate", "label": "Public skate", "price": "$9", "note": "tots $5, senior $7 weekdays"},
+  {"category": "public_skate", "label": "Cheapskate", "price": "$9", "note": "rental included"},
+  {"category": "rental", "label": "Skate rental", "price": "$4"},
+  {"category": "stick_and_puck", "label": "Stick and Puck", "price": "$11 to $15", "note": "by session length"},
+  {"category": "freestyle", "label": "Freestyle", "price": "$9 per 30 min"},
+  {"category": "pass", "label": "Discount ticket book", "price": "$81 for 10", "note": "$8.10 a session"},
+];
 
 const BASE = 'https://montgomeryparks.org/parks-and-trails/wheaton-ice-arena/schedules-fees/';
 export const PAGES = { publicHtml: `${BASE}wheaton-ice-arena-public-skating-sessions/`, hockeyHtml: `${BASE}wheaton-ice-arena-hockey-sessions/`, figureHtml: `${BASE}wheaton-ice-arena-figure-skating-sessions/`, hoursHtml: BASE };
@@ -34,4 +43,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, prices, fetchEvents, normalize };

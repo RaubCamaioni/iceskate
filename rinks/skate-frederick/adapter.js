@@ -14,6 +14,15 @@ export const registerUrl = 'https://skatefrederick.com/public-skating/'; // pric
 export const onlinePay = false;
 export const color = '#ad1457';
 export const sheets = ['Sheet 1', 'Sheet 2'];
+// Per-session prices as published on 2026-10-31 (see README.md); shown in the rink row and map popup.
+export const prices = [
+  {"category": "public_skate", "label": "Public skate, weekday", "price": "$7.50", "note": "child $7, senior $6"},
+  {"category": "public_skate", "label": "Cheapskate (Tue, Thu)", "price": "$6"},
+  {"category": "public_skate", "label": "Friday Chill Out", "price": "$8"},
+  {"category": "public_skate", "label": "Public skate, weekend", "price": "$11", "note": "child $10, senior $8"},
+  {"category": "rental", "label": "Skate rental", "price": "$3 to $4"},
+  {"category": "stick_and_puck", "label": "Stick & Shoot", "price": "$12", "note": "goalies $6"},
+];
 
 const API = 'https://skatefrederick.com/wp-json/tribe/events/v1/events';
 
@@ -93,4 +102,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, prices, fetchEvents, normalize, classify };

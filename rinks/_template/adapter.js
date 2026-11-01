@@ -21,6 +21,8 @@ export const registerUrl = null; // online checkout, or a page with walk-in pric
 export const onlinePay = false; // true when registerUrl is an actual online checkout
 export const color = '#888888';
 export const sheets = [];
+// Per-session prices: [{ category, label, price, note? }]; category is a session category, 'rental' or 'pass'.
+export const prices = [];
 
 export function classify(/* vendor fields */) {
   return 'other';
@@ -41,4 +43,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, prices, fetchEvents, normalize, classify };

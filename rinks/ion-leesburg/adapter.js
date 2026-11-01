@@ -20,6 +20,10 @@ export const accountUrl = 'https://ionitc.finnlyconnect.com/Account/CreateAccoun
 export const onlinePay = false; // registerUrl is the price page; payment is at the door
 export const color = '#c0392b';
 export const sheets = ['Arena', 'Ion Rink'];
+// Per-session prices as published on 2026-10-31 (see README.md); shown in the rink row and map popup.
+export const prices = [
+  {"category": "public_skate", "label": "Public skate", "price": "$20", "note": "ages 12 and under $17; rental included"},
+];
 
 const HOCKEY_TYPES = /loudoun knights|lkhc|\bwlc\b|nvshl|tph|adult hockey|adult league|my hockey|hockey/i;
 const FIGURE_TYPES = /dance academy|developmental academy|future champs|ice prodigies|synchronized/i;
@@ -87,4 +91,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, accountUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, accountUrl, onlinePay, color, sheets, prices, fetchEvents, normalize, classify };

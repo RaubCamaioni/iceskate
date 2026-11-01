@@ -41,7 +41,8 @@ Then open http://localhost:3000. The page merges everything into one list, group
 day, with rink and session-type filters, a date range, and a hide-finished toggle.
 Rinks sort by driving time from a starting point, shown on each rink row and on every
 session card. The default starting point is Leesburg, VA (`DEFAULT_ORIGIN` in
-`public/app.js`); "Use my location" or a typed address or zip replaces it. "Show map" reveals a
+`public/app.js`); "Use my location" or a typed address or zip replaces it. Each rink row and map popup lists the rink's per-session prices (`prices` in its adapter,
+copied from the cost table in its README; hover a price for the fine print). "Show map" reveals a
 Leaflet map (OpenStreetMap tiles, loaded from cdnjs) with every rink as a marker in its
 colour; a marker's popup has the drive time, directions, phone, website and a switch for
 its sessions. Geocoding uses

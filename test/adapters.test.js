@@ -520,3 +520,11 @@ test('wheaton: table-style weekly template with a date-restricted Monday row', a
   assert.ok(events.filter((e) => e.start.startsWith('2026-12-24')).every((e) => e.start.slice(11) < '15:00:00'), 'Christmas Eve closes at 3pm');
   assert.ok(events.some((e) => e.category === 'stick_and_puck' && e.start === '2026-11-06T20:15:00'));
 });
+
+test('every rink adapter publishes per-session prices', async () => {
+  for (const a of await loadAdapters()) {
+    assert.ok(Array.isArray(a.prices) && a.prices.length > 0, `${a.slug} prices`);
+    assert.ok(a.prices.some((p) => p.category === 'public_skate'), `${a.slug} has a public skate price`);
+    for (const p of a.prices) assert.ok(p.label && /\$\d/.test(p.price), `${a.slug} price row ${JSON.stringify(p)}`);
+  }
+});

@@ -16,6 +16,13 @@ export const registerUrl = 'https://www.innovativesportsva.com/page/show/8780814
 export const onlinePay = false;
 export const color = '#283593';
 export const sheets = ['NHL', 'Olympic'];
+// Per-session prices as published on 2026-10-31 (see README.md); shown in the rink row and map popup.
+export const prices = [
+  {"category": "public_skate", "label": "Public skate", "price": "$10"},
+  {"category": "rental", "label": "Skate rental", "price": "$5"},
+  {"category": "freestyle", "label": "Freestyle", "price": "$14 an hour"},
+  {"category": "stick_and_puck", "label": "Stick-n-Shoot", "price": "$17"},
+];
 
 const BASE = 'https://pwice.frontline-connect.com/monthlysched.cfm?fac=pwice&facid=1';
 // Frontline session ids -> category
@@ -79,4 +86,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, prices, fetchEvents, normalize };

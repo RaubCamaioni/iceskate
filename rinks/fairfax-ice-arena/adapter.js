@@ -20,6 +20,14 @@ export const registerUrl = 'https://www.fairfaxicearena.com/public-skate-hours.h
 export const onlinePay = false;
 export const color = '#00695c';
 export const sheets = ['Main Rink'];
+// Per-session prices as published on 2026-10-31 (see README.md); shown in the rink row and map popup.
+export const prices = [
+  {"category": "public_skate", "label": "Public skate, weekday", "price": "$10.25"},
+  {"category": "public_skate", "label": "Public skate, weekend/holiday", "price": "$11.25"},
+  {"category": "rental", "label": "Skate rental", "price": "$4"},
+  {"category": "pickup_hockey", "label": "Pick-up hockey", "price": "$20"},
+  {"category": "pass", "label": "Public skate punch card", "price": "$83 for 10", "note": "$8.30 a session"},
+];
 export const pickupRegisterUrl = portalUrl(COMPANY, 'event-registration'); // pick-up hockey is sold here
 
 // event_type_id -> category. 8/16 "Freestyle Session" exist but are unused (freestyle lives in Mindbody).
@@ -77,4 +85,4 @@ export async function fetchEvents({ from, to }) {
   }
 }
 
-export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, fetchEvents, normalize, classify };
+export default { slug, name, shortName, address, lat, lng, phone, website, registerUrl, onlinePay, color, sheets, prices, fetchEvents, normalize, classify };

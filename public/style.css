@@ -60,11 +60,23 @@ a { color: var(--accent); }
   .filters-toggle .bars { width: 16px; height: 2px; background: currentColor; box-shadow: 0 -5px 0 currentColor, 0 5px 0 currentColor; }
   .sidebar {
     position: fixed; top: 0; bottom: 0; left: 0; width: min(92vw, 420px); max-height: none; z-index: 50;
-    background: var(--bg); padding: 12px 12px 24px; box-shadow: 4px 0 24px rgba(0,0,0,.35);
+    background: var(--bg); padding: 12px; box-shadow: 4px 0 24px rgba(0,0,0,.35);
     transform: translateX(-104%); transition: transform .22s ease-out;
   }
   .sidebar.open { transform: none; }
   .sidebar-head .done { display: inline-flex; }
+  /* Phone layout: full-width tab bar at the top, the panel scrolls in the middle (the only scroller
+     while the drawer is open), full-width Done button pinned at the bottom */
+  .sidebar { display: flex; flex-direction: column; gap: 12px; }
+  .sidebar-head { display: contents; }
+  .sidebar-head .tabs { order: 0; flex: none; gap: 6px; padding: 4px; }
+  .sidebar-head .tab { flex: 1 1 0; min-height: 50px; padding: 10px 6px; font-size: 1.08rem; }
+  .sidebar .panels { order: 1; flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .sidebar-head .done {
+    order: 2; flex: none; width: 100%; min-height: 52px; justify-content: center; align-items: center;
+    font-size: 1.08rem; font-weight: 700; background: var(--accent); border-color: var(--accent); color: #fff;
+    margin-bottom: env(safe-area-inset-bottom, 0);
+  }
 }
 @media (prefers-reduced-motion: reduce) { .sidebar { transition: none; } }
 body.drawer-open { overflow: hidden; }

@@ -20,8 +20,10 @@ a rink.
 | Mount Vernon RECenter | Alexandria, VA | Fairfax County PDF calendars + ticket store (US eDirect) | No, PDF grids parsed with pdfjs | [`rinks/mount-vernon-recenter/`](rinks/mount-vernon-recenter/README.md) |
 | Prince William Ice Center | Dale City, VA | Frontline Connect | No, HTML monthly pages | [`rinks/prince-william-ice-center/`](rinks/prince-william-ice-center/README.md) |
 | The St. James | Springfield, VA | own platform (hub.thestjames.com) | private API, not integrated | see "Not integrated" below |
+| SKATE Frederick | Frederick, MD | WordPress + The Events Calendar | Yes, open REST JSON, CORS enabled | [`rinks/skate-frederick/`](rinks/skate-frederick/README.md) |
+| Rockville Ice Arena | Rockville, MD | SportsEngine | ICS feed, no CORS | [`rinks/rockville-ice-arena/`](rinks/rockville-ice-arena/README.md) |
 
-Every indoor rink in Northern Virginia within about 50 miles of Leesburg. Findings verified live on 2026-10-31. Endpoints can change without notice.
+Every year-round indoor rink in Northern Virginia, plus the Maryland rinks closest to Leesburg (the site is centred on Leesburg; drive times default to it). Findings verified live on 2026-10-31. Endpoints can change without notice.
 
 ## Running the site
 
@@ -128,6 +130,8 @@ rinks/
   mount-vernon-recenter/       county ticket-store HTML
   prince-william-ice-center/   Frontline Connect HTML
   mount-vernon-recenter/pdf.js PDF month-grid parser (pdfjs)
+  skate-frederick/             The Events Calendar REST (WordPress)
+  rockville-ice-arena/         SportsEngine ICS feed
 lib/daysmart.js                shared DaySmart JSON:API client (five rinks use it)
 lib/ics.js                     iCalendar parser + recurrence expander
 ```
@@ -476,6 +480,65 @@ about nine times a week; freestyle daily in morning and midday blocks on both sh
 | Skate rental | pair | 1 | $5 | $5 |
 | Freestyle | hour | 1 | $14 | $14 |
 | Stick-n-Shoot | session | 1 | $17 | $17 |
+
+---
+
+## SKATE Frederick (Frederick, MD)
+
+| | |
+|---|---|
+| Address | 1288 Riverbend Way, Frederick, MD 21701 |
+| Phone | (301) 662-7362 |
+| Ice sheets | Sheet 1, Sheet 2 |
+| Register / pay | pay at the door; prices at https://skatefrederick.com/public-skating/ |
+| Source | The Events Calendar REST API on the rink's WordPress site |
+
+### Repeat times
+
+| Day | Session | Time |
+|-----|---------|------|
+| Mon, Wed, Fri | Public skate | 10:30am to 12:30pm |
+| Tue, Thu | Cheapskate public skate | 11:00am to 12:30pm |
+| Fri | Friday Chill Out public skate | 8:00 to 10:00pm |
+| Sat, Sun | Public skate | 2:00 to 5:00pm |
+| Mon to Fri | Freestyle | 6:00 to 9:00am and mid-afternoon |
+
+### Costs
+
+| Item | Unit | Sessions | Price | Per session |
+|------|------|----------|-------|-------------|
+| Public skate, weekday, child / adult / senior | admission | 1 | $7 / $7.50 / $6 | |
+| Cheapskate (Tue, Thu) | admission | 1 | $6 | $6 |
+| Friday Chill Out | admission | 1 | $8 | $8 |
+| Public skate, weekend, child / adult / senior | admission | 1 | $10 / $11 / $8 | |
+| Skate rental | pair | 1 | $3 to $4 | |
+| Stick & Shoot (goalies $6) | session | 1 | $12 | $12 |
+
+---
+
+## Rockville Ice Arena (Rockville, MD)
+
+| | |
+|---|---|
+| Address | 50 Southlawn Ct, Rockville, MD 20850 |
+| Phone | (301) 315-5650 |
+| Ice sheets | three; the schedule does not say which |
+| Register / pay | pay at the desk; prices at https://www.rockvilleicearena.com/page/show/2944804-public-and-stick-time-ice-schedules |
+| Source | SportsEngine ICS feed of the Public Skating and Stick Time tags; freestyle is only a monthly image and is not pulled |
+
+### Repeat times
+
+Public skating and stick time most days around midday (for example Mon and Fri 12:00 to
+2:00pm, Sat 11:30am), published about a month ahead. See the live list.
+
+### Costs
+
+| Item | Unit | Sessions | Price | Per session |
+|------|------|----------|-------|-------------|
+| Public skating | admission | 1 | $11 | $11 |
+| Skate rental | pair | 1 | $4 | $4 |
+| Stick time (goalies free) | session | 1 | $18 | $18 |
+| Freestyle | hour | 1 | $18 | $18 |
 
 ---
 

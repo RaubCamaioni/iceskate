@@ -396,10 +396,10 @@ test('fairfax: public skate by type id, pick-up hockey from Camp rows, rentals h
   assert.equal(fairfax.classify('r', 'Kilmer ES Skate Night'), null);
 });
 
-test('every rink adapter has coordinates in Northern Virginia for distance sorting', async () => {
+test('every rink adapter has coordinates within about 50 miles of Leesburg for distance sorting', async () => {
   for (const a of await loadAdapters()) {
     assert.ok(Number.isFinite(a.lat) && Number.isFinite(a.lng), `${a.slug} lat/lng`);
-    assert.ok(a.lat > 38.3 && a.lat < 39.4 && a.lng > -78 && a.lng < -76.8, `${a.slug} is in the DC area: ${a.lat},${a.lng}`);
+    assert.ok(a.lat > 38.3 && a.lat < 39.9 && a.lng > -78.3 && a.lng < -76.5, `${a.slug} is near Leesburg: ${a.lat},${a.lng}`);
   }
 });
 
@@ -438,4 +438,37 @@ test('mount vernon: ticket-store rows enrich matching PDF sessions with sign-up 
   assert.equal(e.capacity, 200);
   assert.match(e.registerUrl, /session_id=\d+$/);
   assert.equal(e.sheet, 'Red Rink', 'sheet comes from the PDF');
+});
+
+// ---------------------------------------------------------------- SKATE Frederick (The Events Calendar REST)
+import * as frederick from '../rinks/skate-frederick/adapter.js';
+
+test('frederick: classifies by category slug, reads the sheet from the description, dedupes', async () => {
+  const page = await readJson('rinks/skate-frederick/samples/events-sample.json');
+  const events = frederick.normalize(page);
+  assertNormalized(events, 'skate-frederick');
+  assert.deepEqual(events.map((e) => `${e.category} ${e.sheet} "${e.title}"`), [
+    'hockey Sheet 2 "Victory Hockey"', 'learn_to_skate Sheet 1 ""', 'freestyle Sheet 1 ""', 'public_skate Sheet 1 ""', 'stick_and_puck Sheet 1 ""',
+  ]);
+  assert.equal(events[3].start, '2026-10-31T14:00:00');
+  assert.equal(frederick.classify(['public-skating']), 'public_skate');
+  assert.equal(frederick.classify(['figure-skating', 'freestyle']), 'freestyle');
+  assert.equal(frederick.classify([]), null, 'uncategorised = private rental');
+  const twice = frederick.normalize({ events: [page.events[3], page.events[3]] });
+  assert.equal(twice.length, 1);
+});
+
+// ---------------------------------------------------------------- Rockville Ice Arena (SportsEngine ICS)
+import * as rockville from '../rinks/rockville-ice-arena/adapter.js';
+
+test('rockville: reads the tagged ICS feed', async () => {
+  const ics = await fs.readFile(path.join(ROOT, 'rinks/rockville-ice-arena/samples/feed-2026-10-31.ics'), 'utf8');
+  const events = rockville.normalize(ics, { from: '2026-11-01', to: '2026-11-30' });
+  assertNormalized(events, 'rockville-ice-arena');
+  assert.ok(events.length > 30, `november sessions: ${events.length}`);
+  assert.deepEqual([...new Set(events.map((e) => e.category))].sort(), ['public_skate', 'stick_and_puck']);
+  assert.ok(events.some((e) => e.title === 'Youth (13 and under)'));
+  assert.ok(events.every((e) => e.sourceId.startsWith('event_')), 'uids kept');
+  assert.deepEqual(rockville.classify('Public Skating'), ['public_skate', '']);
+  assert.deepEqual(rockville.classify('Stick Time - Youth'), ['stick_and_puck', 'Youth (13 and under)']);
 });

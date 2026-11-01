@@ -12,8 +12,16 @@ a rink.
 |------|----------|------------------|--------------|--------|
 | Ashburn Ice House | Ashburn, VA | DaySmart Recreation ("DASH") | Yes, open JSON:API, CORS enabled | [`rinks/ashburn-ice-house/`](rinks/ashburn-ice-house/README.md) |
 | ION International Training Center | Leesburg, VA | Custom widget + FinnlyConnect | Yes, open JSON, no CORS | [`rinks/ion-leesburg/`](rinks/ion-leesburg/README.md) |
+| Loudoun Ice Centre | Sterling, VA | Wix site + public Google Calendar | ICS feed, no CORS | [`rinks/loudoun-ice-centre/`](rinks/loudoun-ice-centre/README.md) |
+| Haymarket IcePlex | Haymarket, VA | DaySmart Recreation | Yes, open JSON:API, CORS enabled | [`rinks/haymarket-iceplex/`](rinks/haymarket-iceplex/README.md) |
+| SkateQuest | Reston, VA | DaySmart Recreation | Yes, open JSON:API, CORS enabled | [`rinks/skatequest-reston/`](rinks/skatequest-reston/README.md) |
+| MedStar Capitals Iceplex | Arlington, VA | DaySmart Recreation | Yes, open JSON:API, CORS enabled | [`rinks/medstar-capitals-iceplex/`](rinks/medstar-capitals-iceplex/README.md) |
+| Fairfax Ice Arena | Fairfax, VA | DaySmart Recreation (+ Mindbody for freestyle) | Yes for DASH; Mindbody is HTML | [`rinks/fairfax-ice-arena/`](rinks/fairfax-ice-arena/README.md) |
+| Mount Vernon RECenter | Alexandria, VA | Fairfax County ticket store (US eDirect) + PDF calendars | No, HTML listing | [`rinks/mount-vernon-recenter/`](rinks/mount-vernon-recenter/README.md) |
+| Prince William Ice Center | Dale City, VA | Frontline Connect | No, HTML monthly pages | [`rinks/prince-william-ice-center/`](rinks/prince-william-ice-center/README.md) |
+| The St. James | Springfield, VA | own platform (hub.thestjames.com) | private API, not integrated | see "Not integrated" below |
 
-Findings verified live on 2026-10-31. Endpoints can change without notice.
+Every indoor rink in Northern Virginia within about 50 miles of Leesburg. Findings verified live on 2026-10-31. Endpoints can change without notice.
 
 ## Running the site
 
@@ -99,6 +107,15 @@ rinks/
     README.md
     adapter.js
     samples/
+  loudoun-ice-centre/          Google Calendar ICS
+  haymarket-iceplex/           DaySmart
+  skatequest-reston/           DaySmart
+  medstar-capitals-iceplex/    DaySmart (league-based classification)
+  fairfax-ice-arena/           DaySmart
+  mount-vernon-recenter/       county ticket-store HTML
+  prince-william-ice-center/   Frontline Connect HTML
+lib/daysmart.js                shared DaySmart JSON:API client (four rinks use it)
+lib/ics.js                     iCalendar parser + recurrence expander
 ```
 
 ## Normalised event shape
@@ -220,6 +237,242 @@ account or at the front desk.
 | Multi-session passes | not published online | | | |
 
 ---
+
+## Loudoun Ice Centre (Sterling)
+
+| | |
+|---|---|
+| Address | 22149 Davis Dr, Suite 155, Sterling, VA 20164 |
+| Phone | (703) 444-0600 |
+| Ice sheets | one small studio rink |
+| Register / pay | pay at the door; prices at https://www.loudounice.com/public-skating |
+| Source | public Google Calendar (ICS feed), expanded by `lib/ics.js` |
+
+### Repeat times
+
+| Day | Session | Time |
+|-----|---------|------|
+| Tue | Stick & Shoot | 11:30am to 12:50pm |
+| Wed, Thu, Fri | Cheap Skate ($6 with rental) | 11:30am to 1:00pm |
+| Sat | Public skate | 7:00 to 8:30pm |
+| Sat, Sun | Goalie / Player Rookie Program | Sat 3:45pm, Sun 8:30am and 4:20pm |
+| Sun | Glow Broomball | 6:35 to 7:35pm |
+
+### Costs
+
+| Item | Unit | Sessions | Price | Per session |
+|------|------|----------|-------|-------------|
+| Public skate, child 12 and under | admission | 1 | $8 | $8 |
+| Public skate, adult | admission | 1 | $10 | $10 |
+| Skate rental | pair | 1 | $5 | $5 |
+| Cheap Skate (admission + rental, selected weekdays) | admission | 1 | $6 | $6 |
+
+---
+
+## Haymarket IcePlex
+
+| | |
+|---|---|
+| Address | 15155 Washington St, Haymarket, VA 20169 |
+| Phone | (703) 753-4423 |
+| Ice sheets | Rink - North, Rink - South |
+| Register / pay | pay at the door; 10-passes through a DASH account; prices at https://www.haymarketiceplex.com/page/show/8611769-pricing |
+| Source | DaySmart (`company=haymarketice`) |
+
+### Repeat times
+
+| Day | Session | Sheet | Time |
+|-----|---------|-------|------|
+| Mon | Stick and Shoot | North | 3:30 to 4:50pm |
+| Mon | Public skate | South | 4:30 to 6:00pm |
+| Tue, Wed | Stick and Shoot | North | 3:30 to 4:50pm |
+| Fri | Public skate | North | 3:30 to 4:50pm |
+| Fri | Stick and Shoot | North | 5:00 to 6:20pm |
+| Fri | Public skate | South | 7:30 to 8:50pm |
+| Sat | Public skate | South | 11:00am to 12:40pm |
+| Sat | Public skate | North or South | 6:00 to 7:30pm |
+| Sun | Public skate | South | 3:30 to 5:00pm |
+| Mon, Fri, Sat | Freestyle | South | afternoons |
+
+### Costs
+
+| Item | Unit | Sessions | Price | Per session |
+|------|------|----------|-------|-------------|
+| Public skating | admission | 1 | $10 | $10 |
+| Skate rental | pair | 1 | $4 | $4 |
+| Freestyle or Stick N Shoot | session | 1 | $15 | $15 |
+| Freestyle / Stick N Shoot package | 10-pass | 10 | $135 | $13.50 |
+
+---
+
+## SkateQuest (Reston)
+
+| | |
+|---|---|
+| Address | 1800 Michael Faraday Ct, Reston, VA 20190 |
+| Phone | (703) 709-1010 |
+| Ice sheets | NHL Rink, Olympic Rink |
+| Register / pay | pay at the door; prices at https://www.skatequest.com/public-events |
+| Source | DaySmart (`company=skatequest`) |
+
+### Repeat times
+
+| Day | Session | Sheet | Time |
+|-----|---------|-------|------|
+| Mon, Tue, Thu | Adult pick-up hockey | NHL | 11:40am to 1:00pm |
+| Wed, Fri | Public skate | NHL | 11:40am to 1:00pm |
+| Fri | Public skate | NHL | 7:30 to 9:30pm |
+| Sat | Public skate | NHL | 1:10 to 3:00pm |
+| Sun | Public skate | NHL | 3:10 to 5:10pm |
+| Mon to Fri | Freestyle | NHL, then Olympic | 5:40am through the afternoon |
+
+### Costs
+
+| Item | Unit | Sessions | Price | Per session |
+|------|------|----------|-------|-------------|
+| Public skate | admission | 1 | $10.00 | $10.00 |
+| Skate rental | pair | 1 | $4.00 | $4.00 |
+| Freestyle | session | 1 | $8.75 | $8.75 |
+| Stroking | session | 1 | $13.00 | $13.00 |
+| Adult pick-up hockey or Stick & Shoot | session | 1 | $15.00 | $15.00 |
+
+---
+
+## MedStar Capitals Iceplex (Arlington)
+
+| | |
+|---|---|
+| Address | 627 N Glebe Rd, Suite 800, Arlington, VA 22203 |
+| Phone | (571) 224-0555 |
+| Ice sheets | Capitals Rink, Arlington Rink |
+| Register / pay | every drop-in is pre-paid online in DASH: https://apps.daysmartrecreation.com/dash/x/#/online/capitals/event-registration?&program_types=3 |
+| Source | DaySmart (`company=capitals`), classified by league sport |
+
+### Repeat times
+
+Public skates are published a few weeks ahead around the Capitals' practice schedule and
+vary; typical slots on the Arlington Rink are Sunday 1:50 to 2:50pm ("Recess") and 3:00 to
+4:00pm, Tuesday 4:30 to 5:20pm, and the Monday 8:40am Arlington County Senior Skate ($1).
+Freestyle runs weekdays in 30-minute slots. Stick n Shoot and pickup hockey appear week by week.
+
+### Costs (DASH products catalog; the checkout is authoritative)
+
+| Item | Unit | Sessions | Price | Per session |
+|------|------|----------|-------|-------------|
+| Public skate, general | admission | 1 | $15 | $15 |
+| Public skate, adult / 12 and under / holiday | admission | 1 | $9 / $8 / $10 | |
+| Freestyle | session | 1 | $10 | $10 |
+| Stick n Shoot | session | 1 | $20 | $20 |
+| Pickup hockey 18+ (goalies free) | session | 1 | $20 | $20 |
+| Arlington Senior Skate | admission | 1 | $1 | $1 |
+
+---
+
+## Fairfax Ice Arena
+
+| | |
+|---|---|
+| Address | 3779 Pickett Rd, Fairfax, VA 22031 |
+| Phone | (703) 323-1132 |
+| Ice sheets | one (Main Rink) |
+| Register / pay | public skate at the box office only; pick-up hockey in DASH; prices at https://www.fairfaxicearena.com/public-skate-hours.html |
+| Source | DaySmart (`company=fairfax`); freestyle is in Mindbody and not pulled yet |
+
+### Repeat times
+
+Public skate hours are posted on the prices page and change seasonally; the live list is the
+authoritative schedule. Pick-up hockey is listed in DASH event registration.
+
+### Costs
+
+| Item | Unit | Sessions | Price | Per session |
+|------|------|----------|-------|-------------|
+| Public skate, weekday | admission | 1 | $10.25 | $10.25 |
+| Public skate, weekend / holiday | admission | 1 | $11.25 | $11.25 |
+| Public skate punch card | 10 admissions | 10 | $83 | $8.30 |
+| Skate rental | pair | 1 | $4 | $4 |
+| Pick-up hockey | session | 1 | $20 | $20 |
+| Freestyle credits | 40 / 180 credits (4 to 6 per session) | 7 to 45 | $124 / $406 | about $9 to $18 |
+
+---
+
+## Mount Vernon RECenter Ice Arena (Alexandria)
+
+| | |
+|---|---|
+| Address | 2017 Belle View Blvd, Alexandria, VA 22307 |
+| Phone | (703) 768-3224 |
+| Ice sheets | Red Rink, Blue Rink (the ticket store does not say which) |
+| Register / pay | pre-pay online in the county ticket store: https://fairfax.usedirect.com/FairfaxFCPAWeb/ACTIVITIES/Search.aspx?category_name=ice%20tickets&place_id=7949 |
+| Source | ticket store HTML (no API). The county's PDF calendars have the full schedule including door-only mornings and freestyle; not parsed yet. |
+
+### Repeat times (ticketed sessions)
+
+| Day | Session | Time |
+|-----|---------|------|
+| Mon to Fri | Stick and Puck | 5:15 or 5:30 to 7:00am |
+| Mon, Wed, Fri | Pickup hockey | 11:30am to 1:00pm (Wed 12:15pm) |
+| Mon | Public skate | 3:15 to 5:15pm; adults only 7:00 to 8:30pm |
+| Tue | Public skate | 12:15 to 2:15pm, 2:30 to 4:30pm |
+| Wed | Public skate | 2:30 to 4:00pm |
+| Thu | Public skate | 10:00am to 12:00pm, 3:15 to 5:15pm |
+| Fri | Public skate | 2:15 to 4:15pm |
+| Sat | Public skate | 10:45am to 12:00pm, 12:15 to 2:00pm |
+| Sun | Public skate | 12:00 to 2:00pm, 2:15 to 3:45pm |
+
+### Costs (public skate includes rental; members free)
+
+| Item | Unit | Sessions | Price | Per session |
+|------|------|----------|-------|-------------|
+| Public skate, child 4 and under | admission | 1 | $4 | $4 |
+| Public skate, youth 5 to 18 / senior 65+ | admission | 1 | $10 | $10 |
+| Public skate, adult 19+ | admission | 1 | $14 | $14 |
+| Public skate, family (up to 5) | admission | 1 | $40 | $8 |
+| Public skate discount book, youth/senior / adult | 10 visits | 10 | $54 / $90 | $5.40 / $9 |
+| Stick and Puck, Pickup Hockey, Ice Dance | session | 1 | $17 | $17 |
+| Specialty session pass | 10 visits | 10 | $153 | $15.30 |
+| Freestyle | session | 1 | $9 | $9 |
+
+---
+
+## Prince William Ice Center (Dale City)
+
+| | |
+|---|---|
+| Address | 5180 Dale Blvd, Woodbridge, VA 22193 |
+| Phone | (703) 730-8423 |
+| Ice sheets | NHL, Olympic |
+| Register / pay | pay at the door; prices at https://www.innovativesportsva.com/page/show/8780814-public-skate |
+| Source | Frontline Connect monthly HTML pages (public, stick-n-shoot, freestyle, pickup); lessons and leagues are not exposed |
+
+### Repeat times
+
+Public sessions most days: late morning on weekdays (about 11:50am to 1:10pm) and
+afternoons on weekends (12:10 to 1:30pm, 4:30 to 5:50pm), alternating sheets. Stick-n-Shoot
+about nine times a week; freestyle daily in morning and midday blocks on both sheets.
+
+### Costs
+
+| Item | Unit | Sessions | Price | Per session |
+|------|------|----------|-------|-------------|
+| Public skate | admission | 1 | $10 | $10 |
+| Skate rental | pair | 1 | $5 | $5 |
+| Freestyle | hour | 1 | $14 | $14 |
+| Stick-n-Shoot | session | 1 | $17 | $17 |
+
+---
+
+## Not integrated
+
+- **The St. James (Springfield)**, 6805 Industrial Rd, (703) 239-6870. Two NHL rinks. The
+  schedule page (https://www.thestjames.com/activities/spr/ice-house) is fed by a private
+  JSON API at hub.thestjames.com that requires an app client-id header; it was not pulled.
+  Public skate is Fridays 7:30 to 8:50pm ($10 non-members, members free), stick and puck
+  weekday late mornings ($16), adult pick-up Friday mornings ($20); book in the app or on
+  the site.
+- Seasonal outdoor rinks (Westpost/Pentagon Row in Arlington, Reston Town Center, Cameron
+  Run in Alexandria, Harris Pavilion in Manassas) are open-hours rinks rather than session
+  schedules and are not listed.
 
 ## Ground rules for using these feeds
 

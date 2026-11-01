@@ -1,0 +1,1270 @@
+{
+ "meta": {
+  "page": {
+   "current-page": 1,
+   "per-page": 500,
+   "from": 1,
+   "to": 61,
+   "total": 61,
+   "last-page": 1
+  }
+ },
+ "data": [
+  {
+   "type": "events",
+   "id": "17890",
+   "attributes": {
+    "repeat_id": 17878,
+    "resource_id": 1,
+    "resource_area_id": 0,
+    "desc": "Piedmont Hockey 2026-2027",
+    "event_type_id": "r",
+    "sub_type": "regular",
+    "start": "2026-10-31T08:00:00",
+    "start_gmt": "2026-10-31T12:00:00",
+    "end": "2026-10-31T09:00:00",
+    "end_gmt": "2026-10-31T13:00:00",
+    "hteam_id": null,
+    "vteam_id": null,
+    "league_id": null,
+    "home_score": null,
+    "visiting_score": null,
+    "publish": true,
+    "outcome": "",
+    "register_capacity": 0,
+    "created_user_type": "SIT_Employee",
+    "last_modified_user_type": "SIT_Employee",
+    "is_overtime": false,
+    "booking_id": 49,
+    "description": null,
+    "notice": null,
+    "last_resource_id": null,
+    "parent_event_id": null,
+    "has_gender_locker_rooms": 0,
+    "locker_room_type": null,
+    "includes_setup_time": false,
+    "includes_takedown_time": false,
+    "start_date": "2026-10-31T00:00:00",
+    "event_start_time": "08:00:00",
+    "best_description": null
+   },
+   "relationships": {
+    "registrants": {
+     "data": null
+    },
+    "registrations": {
+     "data": null
+    },
+    "eventType": {
+     "data": null
+    },
+    "subType": {
+     "data": null
+    },
+    "homeTeam": {
+     "data": null
+    },
+    "visitingTeam": {
+     "data": null
+    },
+    "summary": {
+     "data": {
+      "type": "event-summaries",
+      "id": "17890"
+     }
+    },
+    "league": {
+     "data": null
+    },
+    "booking": {
+     "data": null
+    },
+    "parentEvent": {
+     "data": null
+    },
+    "lockers": {
+     "data": null
+    },
+    "lastResource": {
+     "data": null
+    },
+    "resource": {
+     "data": {
+      "type": "resources",
+      "id": "1"
+     }
+    },
+    "resourceArea": {
+     "data": null
+    },
+    "tasks": {
+     "data": null
+    },
+    "teamGroups": {
+     "data": null
+    },
+    "eventSeries": {
+     "data": null
+    },
+    "statEvents": {
+     "data": null
+    },
+    "fees": {
+     "data": null
+    },
+    "invoices": {
+     "data": null
+    },
+    "seriesInvoices": {
+     "data": null
+    },
+    "invoiceItems": {
+     "data": null
+    },
+    "employees": {
+     "data": null
+    },
+    "eventEmployees": {
+     "data": null
+    },
+    "additionalResources": {
+     "data": null
+    },
+    "setupEvents": {
+     "data": null
+    },
+    "takedownEvents": {
+     "data": null
+    },
+    "comments": {
+     "data": null
+    },
+    "rsvpStates": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/events/17890"
+   },
+   "meta": null
+  },
+  {
+   "type": "events",
+   "id": "19075",
+   "attributes": {
+    "repeat_id": 19061,
+    "resource_id": 7,
+    "resource_area_id": 0,
+    "desc": "Learn to Skate",
+    "event_type_id": "19",
+    "sub_type": "regular",
+    "start": "2026-10-31T10:00:00",
+    "start_gmt": "2026-10-31T14:00:00",
+    "end": "2026-10-31T10:50:00",
+    "end_gmt": "2026-10-31T14:50:00",
+    "hteam_id": null,
+    "vteam_id": null,
+    "league_id": null,
+    "home_score": null,
+    "visiting_score": null,
+    "publish": true,
+    "outcome": "",
+    "register_capacity": 0,
+    "created_user_type": "SIT_Employee",
+    "last_modified_user_type": "SIT_Employee",
+    "is_overtime": false,
+    "booking_id": null,
+    "description": null,
+    "notice": null,
+    "last_resource_id": null,
+    "parent_event_id": null,
+    "has_gender_locker_rooms": 0,
+    "locker_room_type": null,
+    "includes_setup_time": false,
+    "includes_takedown_time": false,
+    "start_date": "2026-10-31T00:00:00",
+    "event_start_time": "10:00:00",
+    "best_description": null
+   },
+   "relationships": {
+    "registrants": {
+     "data": null
+    },
+    "registrations": {
+     "data": null
+    },
+    "eventType": {
+     "data": null
+    },
+    "subType": {
+     "data": null
+    },
+    "homeTeam": {
+     "data": null
+    },
+    "visitingTeam": {
+     "data": null
+    },
+    "summary": {
+     "data": {
+      "type": "event-summaries",
+      "id": "19075"
+     }
+    },
+    "league": {
+     "data": null
+    },
+    "booking": {
+     "data": null
+    },
+    "parentEvent": {
+     "data": null
+    },
+    "lockers": {
+     "data": null
+    },
+    "lastResource": {
+     "data": null
+    },
+    "resource": {
+     "data": {
+      "type": "resources",
+      "id": "7"
+     }
+    },
+    "resourceArea": {
+     "data": null
+    },
+    "tasks": {
+     "data": null
+    },
+    "teamGroups": {
+     "data": null
+    },
+    "eventSeries": {
+     "data": null
+    },
+    "statEvents": {
+     "data": null
+    },
+    "fees": {
+     "data": null
+    },
+    "invoices": {
+     "data": null
+    },
+    "seriesInvoices": {
+     "data": null
+    },
+    "invoiceItems": {
+     "data": null
+    },
+    "employees": {
+     "data": null
+    },
+    "eventEmployees": {
+     "data": null
+    },
+    "additionalResources": {
+     "data": null
+    },
+    "setupEvents": {
+     "data": null
+    },
+    "takedownEvents": {
+     "data": null
+    },
+    "comments": {
+     "data": null
+    },
+    "rsvpStates": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/events/19075"
+   },
+   "meta": null
+  },
+  {
+   "type": "events",
+   "id": "19037",
+   "attributes": {
+    "repeat_id": 19025,
+    "resource_id": 7,
+    "resource_area_id": 0,
+    "desc": "Public Skate- HALLOWEEN SKATE in costume",
+    "event_type_id": "8",
+    "sub_type": "regular",
+    "start": "2026-10-31T11:00:00",
+    "start_gmt": "2026-10-31T15:00:00",
+    "end": "2026-10-31T12:40:00",
+    "end_gmt": "2026-10-31T16:40:00",
+    "hteam_id": null,
+    "vteam_id": null,
+    "league_id": null,
+    "home_score": null,
+    "visiting_score": null,
+    "publish": true,
+    "outcome": "",
+    "register_capacity": 0,
+    "created_user_type": "SIT_Employee",
+    "last_modified_user_type": "SIT_Employee",
+    "is_overtime": false,
+    "booking_id": null,
+    "description": null,
+    "notice": null,
+    "last_resource_id": null,
+    "parent_event_id": null,
+    "has_gender_locker_rooms": 0,
+    "locker_room_type": null,
+    "includes_setup_time": false,
+    "includes_takedown_time": false,
+    "start_date": "2026-10-31T00:00:00",
+    "event_start_time": "11:00:00",
+    "best_description": null
+   },
+   "relationships": {
+    "registrants": {
+     "data": null
+    },
+    "registrations": {
+     "data": null
+    },
+    "eventType": {
+     "data": null
+    },
+    "subType": {
+     "data": null
+    },
+    "homeTeam": {
+     "data": null
+    },
+    "visitingTeam": {
+     "data": null
+    },
+    "summary": {
+     "data": {
+      "type": "event-summaries",
+      "id": "19037"
+     }
+    },
+    "league": {
+     "data": null
+    },
+    "booking": {
+     "data": null
+    },
+    "parentEvent": {
+     "data": null
+    },
+    "lockers": {
+     "data": null
+    },
+    "lastResource": {
+     "data": null
+    },
+    "resource": {
+     "data": {
+      "type": "resources",
+      "id": "7"
+     }
+    },
+    "resourceArea": {
+     "data": null
+    },
+    "tasks": {
+     "data": null
+    },
+    "teamGroups": {
+     "data": null
+    },
+    "eventSeries": {
+     "data": null
+    },
+    "statEvents": {
+     "data": null
+    },
+    "fees": {
+     "data": null
+    },
+    "invoices": {
+     "data": null
+    },
+    "seriesInvoices": {
+     "data": null
+    },
+    "invoiceItems": {
+     "data": null
+    },
+    "employees": {
+     "data": null
+    },
+    "eventEmployees": {
+     "data": null
+    },
+    "additionalResources": {
+     "data": null
+    },
+    "setupEvents": {
+     "data": null
+    },
+    "takedownEvents": {
+     "data": null
+    },
+    "comments": {
+     "data": null
+    },
+    "rsvpStates": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/events/19037"
+   },
+   "meta": null
+  },
+  {
+   "type": "events",
+   "id": "19842",
+   "attributes": {
+    "repeat_id": 19832,
+    "resource_id": 7,
+    "resource_area_id": 0,
+    "desc": "Freestyle",
+    "event_type_id": "12",
+    "sub_type": "regular",
+    "start": "2026-10-31T12:50:00",
+    "start_gmt": "2026-10-31T16:50:00",
+    "end": "2026-10-31T13:50:00",
+    "end_gmt": "2026-10-31T17:50:00",
+    "hteam_id": null,
+    "vteam_id": null,
+    "league_id": null,
+    "home_score": null,
+    "visiting_score": null,
+    "publish": true,
+    "outcome": "",
+    "register_capacity": 0,
+    "created_user_type": "SIT_Employee",
+    "last_modified_user_type": "SIT_Employee",
+    "is_overtime": false,
+    "booking_id": null,
+    "description": null,
+    "notice": null,
+    "last_resource_id": null,
+    "parent_event_id": null,
+    "has_gender_locker_rooms": 0,
+    "locker_room_type": null,
+    "includes_setup_time": false,
+    "includes_takedown_time": false,
+    "start_date": "2026-10-31T00:00:00",
+    "event_start_time": "12:50:00",
+    "best_description": null
+   },
+   "relationships": {
+    "registrants": {
+     "data": null
+    },
+    "registrations": {
+     "data": null
+    },
+    "eventType": {
+     "data": null
+    },
+    "subType": {
+     "data": null
+    },
+    "homeTeam": {
+     "data": null
+    },
+    "visitingTeam": {
+     "data": null
+    },
+    "summary": {
+     "data": {
+      "type": "event-summaries",
+      "id": "19842"
+     }
+    },
+    "league": {
+     "data": null
+    },
+    "booking": {
+     "data": null
+    },
+    "parentEvent": {
+     "data": null
+    },
+    "lockers": {
+     "data": null
+    },
+    "lastResource": {
+     "data": null
+    },
+    "resource": {
+     "data": {
+      "type": "resources",
+      "id": "7"
+     }
+    },
+    "resourceArea": {
+     "data": null
+    },
+    "tasks": {
+     "data": null
+    },
+    "teamGroups": {
+     "data": null
+    },
+    "eventSeries": {
+     "data": null
+    },
+    "statEvents": {
+     "data": null
+    },
+    "fees": {
+     "data": null
+    },
+    "invoices": {
+     "data": null
+    },
+    "seriesInvoices": {
+     "data": null
+    },
+    "invoiceItems": {
+     "data": null
+    },
+    "employees": {
+     "data": null
+    },
+    "eventEmployees": {
+     "data": null
+    },
+    "additionalResources": {
+     "data": null
+    },
+    "setupEvents": {
+     "data": null
+    },
+    "takedownEvents": {
+     "data": null
+    },
+    "comments": {
+     "data": null
+    },
+    "rsvpStates": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/events/19842"
+   },
+   "meta": null
+  },
+  {
+   "type": "events",
+   "id": "18983",
+   "attributes": {
+    "repeat_id": 18963,
+    "resource_id": 7,
+    "resource_area_id": 0,
+    "desc": "Public Skate",
+    "event_type_id": "8",
+    "sub_type": "regular",
+    "start": "2026-10-31T18:00:00",
+    "start_gmt": "2026-10-31T22:00:00",
+    "end": "2026-10-31T19:30:00",
+    "end_gmt": "2026-10-31T23:30:00",
+    "hteam_id": null,
+    "vteam_id": null,
+    "league_id": null,
+    "home_score": null,
+    "visiting_score": null,
+    "publish": true,
+    "outcome": "",
+    "register_capacity": 0,
+    "created_user_type": "SIT_Employee",
+    "last_modified_user_type": "SIT_Employee",
+    "is_overtime": false,
+    "booking_id": null,
+    "description": null,
+    "notice": null,
+    "last_resource_id": null,
+    "parent_event_id": null,
+    "has_gender_locker_rooms": 0,
+    "locker_room_type": null,
+    "includes_setup_time": false,
+    "includes_takedown_time": false,
+    "start_date": "2026-10-31T00:00:00",
+    "event_start_time": "18:00:00",
+    "best_description": null
+   },
+   "relationships": {
+    "registrants": {
+     "data": null
+    },
+    "registrations": {
+     "data": null
+    },
+    "eventType": {
+     "data": null
+    },
+    "subType": {
+     "data": null
+    },
+    "homeTeam": {
+     "data": null
+    },
+    "visitingTeam": {
+     "data": null
+    },
+    "summary": {
+     "data": {
+      "type": "event-summaries",
+      "id": "18983"
+     }
+    },
+    "league": {
+     "data": null
+    },
+    "booking": {
+     "data": null
+    },
+    "parentEvent": {
+     "data": null
+    },
+    "lockers": {
+     "data": null
+    },
+    "lastResource": {
+     "data": null
+    },
+    "resource": {
+     "data": {
+      "type": "resources",
+      "id": "7"
+     }
+    },
+    "resourceArea": {
+     "data": null
+    },
+    "tasks": {
+     "data": null
+    },
+    "teamGroups": {
+     "data": null
+    },
+    "eventSeries": {
+     "data": null
+    },
+    "statEvents": {
+     "data": null
+    },
+    "fees": {
+     "data": null
+    },
+    "invoices": {
+     "data": null
+    },
+    "seriesInvoices": {
+     "data": null
+    },
+    "invoiceItems": {
+     "data": null
+    },
+    "employees": {
+     "data": null
+    },
+    "eventEmployees": {
+     "data": null
+    },
+    "additionalResources": {
+     "data": null
+    },
+    "setupEvents": {
+     "data": null
+    },
+    "takedownEvents": {
+     "data": null
+    },
+    "comments": {
+     "data": null
+    },
+    "rsvpStates": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/events/18983"
+   },
+   "meta": null
+  },
+  {
+   "type": "events",
+   "id": "18024",
+   "attributes": {
+    "repeat_id": 18002,
+    "resource_id": 1,
+    "resource_area_id": 0,
+    "desc": "Stick n Shoot",
+    "event_type_id": "11",
+    "sub_type": "regular",
+    "start": "2026-11-02T15:30:00",
+    "start_gmt": "2026-11-02T20:30:00",
+    "end": "2026-11-02T16:50:00",
+    "end_gmt": "2026-11-02T21:50:00",
+    "hteam_id": null,
+    "vteam_id": null,
+    "league_id": null,
+    "home_score": null,
+    "visiting_score": null,
+    "publish": true,
+    "outcome": "",
+    "register_capacity": 0,
+    "created_user_type": "SIT_Employee",
+    "last_modified_user_type": "SIT_Employee",
+    "is_overtime": false,
+    "booking_id": null,
+    "description": null,
+    "notice": null,
+    "last_resource_id": null,
+    "parent_event_id": null,
+    "has_gender_locker_rooms": 0,
+    "locker_room_type": null,
+    "includes_setup_time": false,
+    "includes_takedown_time": false,
+    "start_date": "2026-11-02T00:00:00",
+    "event_start_time": "15:30:00",
+    "best_description": null
+   },
+   "relationships": {
+    "registrants": {
+     "data": null
+    },
+    "registrations": {
+     "data": null
+    },
+    "eventType": {
+     "data": null
+    },
+    "subType": {
+     "data": null
+    },
+    "homeTeam": {
+     "data": null
+    },
+    "visitingTeam": {
+     "data": null
+    },
+    "summary": {
+     "data": {
+      "type": "event-summaries",
+      "id": "18024"
+     }
+    },
+    "league": {
+     "data": null
+    },
+    "booking": {
+     "data": null
+    },
+    "parentEvent": {
+     "data": null
+    },
+    "lockers": {
+     "data": null
+    },
+    "lastResource": {
+     "data": null
+    },
+    "resource": {
+     "data": {
+      "type": "resources",
+      "id": "1"
+     }
+    },
+    "resourceArea": {
+     "data": null
+    },
+    "tasks": {
+     "data": null
+    },
+    "teamGroups": {
+     "data": null
+    },
+    "eventSeries": {
+     "data": null
+    },
+    "statEvents": {
+     "data": null
+    },
+    "fees": {
+     "data": null
+    },
+    "invoices": {
+     "data": null
+    },
+    "seriesInvoices": {
+     "data": null
+    },
+    "invoiceItems": {
+     "data": null
+    },
+    "employees": {
+     "data": null
+    },
+    "eventEmployees": {
+     "data": null
+    },
+    "additionalResources": {
+     "data": null
+    },
+    "setupEvents": {
+     "data": null
+    },
+    "takedownEvents": {
+     "data": null
+    },
+    "comments": {
+     "data": null
+    },
+    "rsvpStates": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/events/18024"
+   },
+   "meta": null
+  }
+ ],
+ "included": [
+  {
+   "type": "event-summaries",
+   "id": "17890",
+   "attributes": {
+    "name": "Piedmont Hockey 2026-2027",
+    "start_date": "2026-10-31T08:00:00-04:00",
+    "end_date": "2026-10-31T09:00:00-04:00",
+    "code": "r",
+    "color": "#201f1e",
+    "event_type": "Rental",
+    "publish": true,
+    "event_not_invoiced": true,
+    "free_trial_count": 0,
+    "attendance_count": 0,
+    "comment_count": 0,
+    "remaining_roster_slots": -1,
+    "free_trial_days_before": "0",
+    "free_trial_hours_before": 0,
+    "open_slots": -1,
+    "remaining_free_trial_slots": 0,
+    "has_invoicing": true,
+    "has_roster": false,
+    "has_home_team": false,
+    "has_away_team": false,
+    "registration_status": null,
+    "allows_drop_ins": false,
+    "allows_makeups": false,
+    "makeups_max_per_event": 0,
+    "makeups_above_roster_limit": 0,
+    "makeups_signup_start": null,
+    "makeups_signup_end": null,
+    "makeups_count": 0,
+    "makeups_remaining_slots": 0,
+    "composite_capacity": 0,
+    "free_trials_status": null,
+    "makeups_status": null
+   },
+   "relationships": {
+    "event": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-summaries/17890"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-summaries",
+   "id": "19075",
+   "attributes": {
+    "name": "Learn to Skate",
+    "start_date": "2026-10-31T10:00:00-04:00",
+    "end_date": "2026-10-31T10:50:00-04:00",
+    "code": "19",
+    "color": "#f40ec4",
+    "event_type": "LEARN TO SKATE CLASSES",
+    "publish": true,
+    "event_not_invoiced": false,
+    "free_trial_count": 0,
+    "attendance_count": 0,
+    "comment_count": 0,
+    "remaining_roster_slots": -1,
+    "free_trial_days_before": "0",
+    "free_trial_hours_before": 0,
+    "open_slots": -1,
+    "remaining_free_trial_slots": 0,
+    "has_invoicing": false,
+    "has_roster": false,
+    "has_home_team": false,
+    "has_away_team": false,
+    "registration_status": null,
+    "allows_drop_ins": false,
+    "allows_makeups": false,
+    "makeups_max_per_event": 0,
+    "makeups_above_roster_limit": 0,
+    "makeups_signup_start": null,
+    "makeups_signup_end": null,
+    "makeups_count": 0,
+    "makeups_remaining_slots": 0,
+    "composite_capacity": 0,
+    "free_trials_status": null,
+    "makeups_status": null
+   },
+   "relationships": {
+    "event": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-summaries/19075"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-summaries",
+   "id": "19037",
+   "attributes": {
+    "name": "Public Skate- HALLOWEEN SKATE in costume",
+    "start_date": "2026-10-31T11:00:00-04:00",
+    "end_date": "2026-10-31T12:40:00-04:00",
+    "code": "8",
+    "color": "#e921cf",
+    "event_type": "Public Skating Session",
+    "publish": true,
+    "event_not_invoiced": false,
+    "free_trial_count": 0,
+    "attendance_count": 0,
+    "comment_count": 2,
+    "remaining_roster_slots": -1,
+    "free_trial_days_before": "0",
+    "free_trial_hours_before": 0,
+    "open_slots": -1,
+    "remaining_free_trial_slots": 0,
+    "has_invoicing": false,
+    "has_roster": false,
+    "has_home_team": false,
+    "has_away_team": false,
+    "registration_status": null,
+    "allows_drop_ins": false,
+    "allows_makeups": false,
+    "makeups_max_per_event": 0,
+    "makeups_above_roster_limit": 0,
+    "makeups_signup_start": null,
+    "makeups_signup_end": null,
+    "makeups_count": 0,
+    "makeups_remaining_slots": 0,
+    "composite_capacity": 0,
+    "free_trials_status": null,
+    "makeups_status": null
+   },
+   "relationships": {
+    "event": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-summaries/19037"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-summaries",
+   "id": "19842",
+   "attributes": {
+    "name": "Freestyle",
+    "start_date": "2026-10-31T12:50:00-04:00",
+    "end_date": "2026-10-31T13:50:00-04:00",
+    "code": "12",
+    "color": "#efbff6",
+    "event_type": "Freestyle",
+    "publish": true,
+    "event_not_invoiced": false,
+    "free_trial_count": 0,
+    "attendance_count": 0,
+    "comment_count": 0,
+    "remaining_roster_slots": -1,
+    "free_trial_days_before": "0",
+    "free_trial_hours_before": 0,
+    "open_slots": -1,
+    "remaining_free_trial_slots": 0,
+    "has_invoicing": false,
+    "has_roster": false,
+    "has_home_team": false,
+    "has_away_team": false,
+    "registration_status": null,
+    "allows_drop_ins": false,
+    "allows_makeups": false,
+    "makeups_max_per_event": 0,
+    "makeups_above_roster_limit": 0,
+    "makeups_signup_start": null,
+    "makeups_signup_end": null,
+    "makeups_count": 0,
+    "makeups_remaining_slots": 0,
+    "composite_capacity": 0,
+    "free_trials_status": null,
+    "makeups_status": null
+   },
+   "relationships": {
+    "event": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-summaries/19842"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-summaries",
+   "id": "18983",
+   "attributes": {
+    "name": "Public Skate",
+    "start_date": "2026-10-31T18:00:00-04:00",
+    "end_date": "2026-10-31T19:30:00-04:00",
+    "code": "8",
+    "color": "#e921cf",
+    "event_type": "Public Skating Session",
+    "publish": true,
+    "event_not_invoiced": false,
+    "free_trial_count": 0,
+    "attendance_count": 0,
+    "comment_count": 0,
+    "remaining_roster_slots": -1,
+    "free_trial_days_before": "0",
+    "free_trial_hours_before": 0,
+    "open_slots": -1,
+    "remaining_free_trial_slots": 0,
+    "has_invoicing": false,
+    "has_roster": false,
+    "has_home_team": false,
+    "has_away_team": false,
+    "registration_status": null,
+    "allows_drop_ins": false,
+    "allows_makeups": false,
+    "makeups_max_per_event": 0,
+    "makeups_above_roster_limit": 0,
+    "makeups_signup_start": null,
+    "makeups_signup_end": null,
+    "makeups_count": 0,
+    "makeups_remaining_slots": 0,
+    "composite_capacity": 0,
+    "free_trials_status": null,
+    "makeups_status": null
+   },
+   "relationships": {
+    "event": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-summaries/18983"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-summaries",
+   "id": "18024",
+   "attributes": {
+    "name": "Stick n Shoot",
+    "start_date": "2026-11-02T15:30:00-05:00",
+    "end_date": "2026-11-02T16:50:00-05:00",
+    "code": "11",
+    "color": "#f6f503",
+    "event_type": "Stick and Shoot",
+    "publish": true,
+    "event_not_invoiced": false,
+    "free_trial_count": 0,
+    "attendance_count": 0,
+    "comment_count": 0,
+    "remaining_roster_slots": -1,
+    "free_trial_days_before": "0",
+    "free_trial_hours_before": 0,
+    "open_slots": -1,
+    "remaining_free_trial_slots": 0,
+    "has_invoicing": false,
+    "has_roster": false,
+    "has_home_team": false,
+    "has_away_team": false,
+    "registration_status": null,
+    "allows_drop_ins": false,
+    "allows_makeups": false,
+    "makeups_max_per_event": 0,
+    "makeups_above_roster_limit": 0,
+    "makeups_signup_start": null,
+    "makeups_signup_end": null,
+    "makeups_count": 0,
+    "makeups_remaining_slots": 0,
+    "composite_capacity": 0,
+    "free_trials_status": null,
+    "makeups_status": null
+   },
+   "relationships": {
+    "event": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-summaries/18024"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "1",
+   "attributes": {
+    "name": "Rink - North",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 2,
+    "lat": 38.812591,
+    "lng": -77.640083,
+    "booking_option_id": 1,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/1"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "7",
+   "attributes": {
+    "name": "Rink - South",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 2,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 1,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/7"
+   },
+   "meta": null
+  }
+ ]
+}

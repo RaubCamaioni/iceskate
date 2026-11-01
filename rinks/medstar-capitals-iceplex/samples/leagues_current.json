@@ -1,0 +1,3122 @@
+{
+ "meta": {
+  "page": {
+   "current-page": 1,
+   "per-page": 50,
+   "from": 1,
+   "to": 15,
+   "total": 15,
+   "last-page": 1
+  }
+ },
+ "links": {
+  "first": "http://apps.daysmartrecreation.com/api/v1/leagues?filter%5Bid__in%5D=2206%2C2341%2C2342%2C2344%2C2345%2C2384%2C2385%2C2386%2C2388%2C2389%2C2390%2C2392%2C2476%2C2320%2C2324&page%5Bnumber%5D=1&page%5Bsize%5D=50",
+  "last": "http://apps.daysmartrecreation.com/api/v1/leagues?filter%5Bid__in%5D=2206%2C2341%2C2342%2C2344%2C2345%2C2384%2C2385%2C2386%2C2388%2C2389%2C2390%2C2392%2C2476%2C2320%2C2324&page%5Bnumber%5D=1&page%5Bsize%5D=50"
+ },
+ "data": [
+  {
+   "type": "leagues",
+   "id": "2206",
+   "attributes": {
+    "sex": "c",
+    "season_id": 410,
+    "skill_level_id": 37,
+    "facility_id": 1,
+    "age_range_id": 14,
+    "start_date": "2026-07-01T00:00:00",
+    "min_birthdate": "1926-06-02T00:00:00",
+    "max_birthdate": "2009-07-01T00:00:00",
+    "sport_id": 24,
+    "name": "Coaches' Daily Reg.",
+    "description": "This is for coaches to let us know they are in the building.",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 18,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": 0,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": "total_price_only",
+    "min_age": 17,
+    "min_age_months": 0,
+    "max_age": 100,
+    "max_age_months": 0,
+    "best_description": "This is for coaches to let us know they are in the building.",
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/pejnrl8pma9re0o2r894cgnu.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "18"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "410"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "24"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2206"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2320",
+   "attributes": {
+    "sex": "c",
+    "season_id": 427,
+    "skill_level_id": 4,
+    "facility_id": 1,
+    "age_range_id": 24,
+    "start_date": "2026-09-19T00:00:00",
+    "min_birthdate": "2020-01-01T00:00:00",
+    "max_birthdate": "2022-12-31T00:00:00",
+    "sport_id": 20,
+    "name": "RHL 6U League 2020-2021",
+    "description": "<p><span data-contrast=\"auto\"><em><u><strong>PRIORITY REGISTRATION BEGINS NOVEMBER 1 @ 7PM!</strong></u></em></span><br />RHL 2026-2027</p>\n<p>RHL 6U, 2020-2021 birthyears WINTER 26-27 (December 2026 - February 2027)</p>\n<p>Anticipated Season Start Date:<br />December 15, 2026<br /><br /></p>\n<p><strong>Note Important Registration Timeline:</strong></p>\n<p><span data-contrast=\"auto\">November 1-9</span><span data-contrast=\"auto\">: RETURNING FALL </span><span data-contrast=\"auto\">2026 </span><span data-contrast=\"auto\">RHL 6U PLAYER PRIORITY REGISTRATION</span></p>\n<p>November 10: OPEN REGISTRATION.<br /><br />ALL PLAYERS MUST REGISTER FOR THEIR BIRTH YEAR, NO EXCEPTIONS.</p>\n<p><span data-contrast=\"auto\">Registration begins at 7pm for each time period.</span></p>\n<p><span data-contrast=\"auto\">Online registration is required. In-person registration is not available.</span></p>\n<p><span data-contrast=\"auto\">RHL fills quickly, so </span><strong>PLEASE REGISTER EARLY</strong><span data-contrast=\"auto\">. Once a level is full, a waitlist will be available. Ensure that you have your </span><span data-contrast=\"auto\">2026-2027 </span><span data-contrast=\"auto\">USA Hockey number available during registration. </span><span data-contrast=\"auto\">You are encouraged to have your </span><span data-contrast=\"auto\">2026-2027 </span><span data-contrast=\"auto\">USA Hockey number at least 24 hours in advance. Hint: the fourth digit will be a 7. membership.usahockey.com. </span>If you previously provided your number for the Fall 6U registration, you shouldn't have to enter it again.</p>\n<p>View all available program details https://www.medstarcapitalsiceplex.com/page/show/6321843-rooftop-hockey-league.<br /><br /><br /></p>\n<p><br />Refunds are not offered for RHL.</p>\n<p><span data-contrast=\"auto\">Questions about eligibility or enrollment? </span><span data-contrast=\"auto\">Contact </span><span data-contrast=\"none\">Hockey@MedStarCapitalsIceplex.com</span></p>\n<p>&nbsp;</p>",
+    "registration_prod_id": null,
+    "standings_type": 3,
+    "registration_closed": false,
+    "hide_private_teams": true,
+    "event_selection": false,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 2,
+    "program_id": 5,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 0,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": "https://dash-general.s3.amazonaws.com/capitals/3507b713-a435-4324-a89b-e7b9563b6953.jpg",
+    "days_of_week": [
+     "sa"
+    ],
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": null,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": "total_price_only",
+    "min_age": 3,
+    "min_age_months": 8,
+    "max_age": 6,
+    "max_age_months": 8,
+    "best_description": "<p><span data-contrast=\"auto\"><em><u><strong>PRIORITY REGISTRATION BEGINS NOVEMBER 1 @ 7PM!</strong></u></em></span><br />RHL 2026-2027</p>\n<p>RHL 6U, 2020-2021 birthyears WINTER 26-27 (December 2026 - February 2027)</p>\n<p>Anticipated Season Start Date:<br />December 15, 2026<br /><br /></p>\n<p><strong>Note Important Registration Timeline:</strong></p>\n<p><span data-contrast=\"auto\">November 1-9</span><span data-contrast=\"auto\">: RETURNING FALL </span><span data-contrast=\"auto\">2026 </span><span data-contrast=\"auto\">RHL 6U PLAYER PRIORITY REGISTRATION</span></p>\n<p>November 10: OPEN REGISTRATION.<br /><br />ALL PLAYERS MUST REGISTER FOR THEIR BIRTH YEAR, NO EXCEPTIONS.</p>\n<p><span data-contrast=\"auto\">Registration begins at 7pm for each time period.</span></p>\n<p><span data-contrast=\"auto\">Online registration is required. In-person registration is not available.</span></p>\n<p><span data-contrast=\"auto\">RHL fills quickly, so </span><strong>PLEASE REGISTER EARLY</strong><span data-contrast=\"auto\">. Once a level is full, a waitlist will be available. Ensure that you have your </span><span data-contrast=\"auto\">2026-2027 </span><span data-contrast=\"auto\">USA Hockey number available during registration. </span><span data-contrast=\"auto\">You are encouraged to have your </span><span data-contrast=\"auto\">2026-2027 </span><span data-contrast=\"auto\">USA Hockey number at least 24 hours in advance. Hint: the fourth digit will be a 7. membership.usahockey.com. </span>If you previously provided your number for the Fall 6U registration, you shouldn't have to enter it again.</p>\n<p>View all available program details https://www.medstarcapitalsiceplex.com/page/show/6321843-rooftop-hockey-league.<br /><br /><br /></p>\n<p><br />Refunds are not offered for RHL.</p>\n<p><span data-contrast=\"auto\">Questions about eligibility or enrollment? </span><span data-contrast=\"auto\">Contact </span><span data-contrast=\"none\">Hockey@MedStarCapitalsIceplex.com</span></p>\n<p>&nbsp;</p>",
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/3507b713-a435-4324-a89b-e7b9563b6953.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "5"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "3"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "427"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "20"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2320"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2324",
+   "attributes": {
+    "sex": "c",
+    "season_id": 427,
+    "skill_level_id": 4,
+    "facility_id": 1,
+    "age_range_id": 24,
+    "start_date": "2026-09-19T00:00:00",
+    "min_birthdate": "2010-01-01T00:00:00",
+    "max_birthdate": "2013-12-31T00:00:00",
+    "sport_id": 20,
+    "name": "RHL 14U/16U League 2010-2013",
+    "description": "<p><span data-contrast=\"auto\"><em><u><strong>PRIORITY REGISTRATION BEGINS JULY 1 @ 7PM!</strong></u></em></span><br />RHL 2026-2027</p>\n<p>RHL 14U/16U, 2010-2013 birthyears</p>\n<p>Anticipated Season Start Dates (to be confirmed later in the summer):<br />Week of Monday, September 14, 2026<br /><br /></p>\n<p>Preseason Training camp and evaluation skate held in late August - details will be available in late July or early August.</p>\n<p><strong><span data-contrast=\"auto\">Note Important Registration Timeline:</span></strong></p>\n<p><span data-contrast=\"auto\">July 1 - 8th</span><span data-contrast=\"auto\">: RETURNING FALL/WINTER </span><span data-contrast=\"auto\">2025-2026 </span><span data-contrast=\"auto\">RHL PLAYER PRIORITY REGISTRATION</span></p>\n<p><span data-contrast=\"auto\">July 9-15th: RETURNING RHL SPRING 2026 AND ELIGIBLE LTP PARTICIPANTS. (Must have completed at least 2 series of LTP <em>at</em> Medstar - or be enrolled in your second series of LTP at MedStar, or have participated in Spring 2026 or Previous RHL season.)</span></p>\n<p><span data-contrast=\"auto\">July 16th: OPEN REGISTRATION. Registrants must still meet the requirements of previous house league experience (at MedStar or other rink) or two LTP series experience (at MedStar or other rink. Future Caps is considered LTP.)</span></p>\n<p><span data-contrast=\"auto\">ALL PLAYERS/GOALIES MUST REGISTER FOR THEIR BIRTH YEAR, NO EXCEPTIONS.<br />Players and goalies use designated registration for 10U, 12U, and 14U/16U.<br />There are no designated goalies for 6U or 8U - all participants use the same registration for their age division.</span></p>\n<p><span data-contrast=\"auto\">Registration begins at 7pm for each time period.</span></p>\n<p><span data-contrast=\"auto\">Online registration is required. In-person registration is not available.</span></p>\n<p><span data-contrast=\"auto\">RHL fills quickly, so </span><strong>PLEASE REGISTER EARLY</strong><span data-contrast=\"auto\">. Once a level is full, a waitlist will be available. Ensure that you have your </span><span data-contrast=\"auto\">2026-2027 </span><span data-contrast=\"auto\">USA Hockey number available during registration. </span><span data-contrast=\"auto\">You are encouraged to have your </span><span data-contrast=\"auto\">2026-2027 </span><span data-contrast=\"auto\">USA Hockey number at least 24 hours in advance. Hint: the fourth digit will be a 7. membership.usahockey.com.</span></p>\n<p>View all available program details https://www.medstarcapitalsiceplex.com/page/show/6321843-rooftop-hockey-league.</p>\n<p><br />Refunds are not offered for RHL.</p>\n<p><span data-contrast=\"auto\">Questions about eligibility or enrollment? </span><span data-contrast=\"auto\">Contact </span><span data-contrast=\"none\">Hockey@MedStarCapitalsIceplex.com</span></p>\n<p>&nbsp;</p>",
+    "registration_prod_id": null,
+    "standings_type": 3,
+    "registration_closed": true,
+    "hide_private_teams": true,
+    "event_selection": false,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 4,
+    "program_id": 5,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": [
+     "sa"
+    ],
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": null,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": "total_price_only",
+    "min_age": 12,
+    "min_age_months": 8,
+    "max_age": 16,
+    "max_age_months": 8,
+    "best_description": "<p><span data-contrast=\"auto\"><em><u><strong>PRIORITY REGISTRATION BEGINS JULY 1 @ 7PM!</strong></u></em></span><br />RHL 2026-2027</p>\n<p>RHL 14U/16U, 2010-2013 birthyears</p>\n<p>Anticipated Season Start Dates (to be confirmed later in the summer):<br />Week of Monday, September 14, 2026<br /><br /></p>\n<p>Preseason Training camp and evaluation skate held in late August - details will be available in late July or early August.</p>\n<p><strong><span data-contrast=\"auto\">Note Important Registration Timeline:</span></strong></p>\n<p><span data-contrast=\"auto\">July 1 - 8th</span><span data-contrast=\"auto\">: RETURNING FALL/WINTER </span><span data-contrast=\"auto\">2025-2026 </span><span data-contrast=\"auto\">RHL PLAYER PRIORITY REGISTRATION</span></p>\n<p><span data-contrast=\"auto\">July 9-15th: RETURNING RHL SPRING 2026 AND ELIGIBLE LTP PARTICIPANTS. (Must have completed at least 2 series of LTP <em>at</em> Medstar - or be enrolled in your second series of LTP at MedStar, or have participated in Spring 2026 or Previous RHL season.)</span></p>\n<p><span data-contrast=\"auto\">July 16th: OPEN REGISTRATION. Registrants must still meet the requirements of previous house league experience (at MedStar or other rink) or two LTP series experience (at MedStar or other rink. Future Caps is considered LTP.)</span></p>\n<p><span data-contrast=\"auto\">ALL PLAYERS/GOALIES MUST REGISTER FOR THEIR BIRTH YEAR, NO EXCEPTIONS.<br />Players and goalies use designated registration for 10U, 12U, and 14U/16U.<br />There are no designated goalies for 6U or 8U - all participants use the same registration for their age division.</span></p>\n<p><span data-contrast=\"auto\">Registration begins at 7pm for each time period.</span></p>\n<p><span data-contrast=\"auto\">Online registration is required. In-person registration is not available.</span></p>\n<p><span data-contrast=\"auto\">RHL fills quickly, so </span><strong>PLEASE REGISTER EARLY</strong><span data-contrast=\"auto\">. Once a level is full, a waitlist will be available. Ensure that you have your </span><span data-contrast=\"auto\">2026-2027 </span><span data-contrast=\"auto\">USA Hockey number available during registration. </span><span data-contrast=\"auto\">You are encouraged to have your </span><span data-contrast=\"auto\">2026-2027 </span><span data-contrast=\"auto\">USA Hockey number at least 24 hours in advance. Hint: the fourth digit will be a 7. membership.usahockey.com.</span></p>\n<p>View all available program details https://www.medstarcapitalsiceplex.com/page/show/6321843-rooftop-hockey-league.</p>\n<p><br />Refunds are not offered for RHL.</p>\n<p><span data-contrast=\"auto\">Questions about eligibility or enrollment? </span><span data-contrast=\"auto\">Contact </span><span data-contrast=\"none\">Hockey@MedStarCapitalsIceplex.com</span></p>\n<p>&nbsp;</p>",
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/r9bsfrc45se2rovn820p8md8.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "5"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "3"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "427"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "20"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2324"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2341",
+   "attributes": {
+    "sex": "c",
+    "season_id": 432,
+    "skill_level_id": 1,
+    "facility_id": 1,
+    "age_range_id": 14,
+    "start_date": "2026-08-24T00:00:00",
+    "min_birthdate": "1927-07-25T00:00:00",
+    "max_birthdate": "2022-08-24T00:00:00",
+    "sport_id": 24,
+    "name": "SHSA On Ice Classes",
+    "description": "<p>These Sky High Skating Academy classes will be ON the ice.</p>",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 13,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": 0,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": null,
+    "min_age": 4,
+    "min_age_months": 0,
+    "max_age": 99,
+    "max_age_months": 0,
+    "best_description": "<p>These Sky High Skating Academy classes will be ON the ice.</p>",
+    "best_image_url": "https://dash-general.s3.us-west-2.amazonaws.com/capitals/q0jjt0n5pd6gok8ch517b96p.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "13"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "432"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "24"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2341"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2342",
+   "attributes": {
+    "sex": "c",
+    "season_id": 432,
+    "skill_level_id": 1,
+    "facility_id": 1,
+    "age_range_id": 25,
+    "start_date": "2026-09-01T00:00:00",
+    "min_birthdate": "1927-07-25T00:00:00",
+    "max_birthdate": "2008-08-24T00:00:00",
+    "sport_id": 24,
+    "name": "SHSA Adult Only Classes",
+    "description": "<p>These Sky High Skating Academy classes are for adults 18 and older.</p>",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 13,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": 0,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": null,
+    "min_age": 18,
+    "min_age_months": 0,
+    "max_age": 99,
+    "max_age_months": 0,
+    "best_description": "<p>These Sky High Skating Academy classes are for adults 18 and older.</p>",
+    "best_image_url": "https://dash-general.s3.us-west-2.amazonaws.com/capitals/q0jjt0n5pd6gok8ch517b96p.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "13"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "432"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "24"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2342"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2344",
+   "attributes": {
+    "sex": "c",
+    "season_id": 432,
+    "skill_level_id": 2,
+    "facility_id": 1,
+    "age_range_id": 14,
+    "start_date": "2026-08-24T00:00:00",
+    "min_birthdate": "1927-07-25T00:00:00",
+    "max_birthdate": "2022-08-24T00:00:00",
+    "sport_id": 24,
+    "name": "SHSA Off Ice Classes",
+    "description": "<p>These Sky High Skating Academy classes will be OFF the ice.</p>",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 13,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": 0,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": null,
+    "min_age": 4,
+    "min_age_months": 0,
+    "max_age": 99,
+    "max_age_months": 0,
+    "best_description": "<p>These Sky High Skating Academy classes will be OFF the ice.</p>",
+    "best_image_url": "https://dash-general.s3.us-west-2.amazonaws.com/capitals/q0jjt0n5pd6gok8ch517b96p.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "13"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "432"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "24"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2344"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2345",
+   "attributes": {
+    "sex": "c",
+    "season_id": 432,
+    "skill_level_id": 2,
+    "facility_id": 1,
+    "age_range_id": 14,
+    "start_date": "2026-08-24T00:00:00",
+    "min_birthdate": "1927-07-25T00:00:00",
+    "max_birthdate": "2022-08-24T00:00:00",
+    "sport_id": 24,
+    "name": "SHSA Developmental Classes",
+    "description": "<p>These Sky High Skating Academy classes will be on the ice for Pewter, Bronze, Silver, and Gold level skaters.</p>",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 13,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": 0,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": null,
+    "min_age": 4,
+    "min_age_months": 0,
+    "max_age": 99,
+    "max_age_months": 0,
+    "best_description": "<p>These Sky High Skating Academy classes will be on the ice for Pewter, Bronze, Silver, and Gold level skaters.</p>",
+    "best_image_url": "https://dash-general.s3.us-west-2.amazonaws.com/capitals/q0jjt0n5pd6gok8ch517b96p.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "13"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "432"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "24"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2345"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2384",
+   "attributes": {
+    "sex": "c",
+    "season_id": 439,
+    "skill_level_id": 37,
+    "facility_id": 1,
+    "age_range_id": 14,
+    "start_date": "2026-09-01T00:00:00",
+    "min_birthdate": "1927-10-01T00:00:00",
+    "max_birthdate": "2023-11-01T00:00:00",
+    "sport_id": 27,
+    "name": "Public Skate",
+    "description": "Public Skate admission includes skate rental.    You will receive an email receipt with a QR code on it that you will need to present when entering MedStar Capitals Iceplex for this activity.",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 3,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": null,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": "total_price_only",
+    "min_age": 2,
+    "min_age_months": 10,
+    "max_age": 98,
+    "max_age_months": 11,
+    "best_description": "Public Skate admission includes skate rental.    You will receive an email receipt with a QR code on it that you will need to present when entering MedStar Capitals Iceplex for this activity.",
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/pug375qofjb2t1ac17dqkclg.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "3"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "439"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "27"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2384"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2385",
+   "attributes": {
+    "sex": "c",
+    "season_id": 439,
+    "skill_level_id": 37,
+    "facility_id": 1,
+    "age_range_id": 14,
+    "start_date": "2026-09-01T00:00:00",
+    "min_birthdate": "1927-09-02T00:00:00",
+    "max_birthdate": "2022-11-01T00:00:00",
+    "sport_id": 31,
+    "name": "Stick n Shoot",
+    "description": "    <b>Stick n Shoot</b> is open to all ages and abilities.  Each participant that skates is required to purchase.  You can only add people in your account but you can share to your friends to invite them to join you!<br /><br />\r\n<ul>\r\n<li><b>Full Gear Is Required</b> - This includes helmet, shoulder pads, elbow pads, gloves, pants, shin guards, protective cup, and hockey skates.</li>\r\n<li><b>Helmets must be worn at all times</b> while on the ice and while on the bench.</li>\r\n<li>Face masks are required at all times.</li>\r\n</ul>",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 3,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": false,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": null,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": null,
+    "min_age": 3,
+    "min_age_months": 10,
+    "max_age": 98,
+    "max_age_months": 11,
+    "best_description": "    <b>Stick n Shoot</b> is open to all ages and abilities.  Each participant that skates is required to purchase.  You can only add people in your account but you can share to your friends to invite them to join you!<br /><br />\r\n<ul>\r\n<li><b>Full Gear Is Required</b> - This includes helmet, shoulder pads, elbow pads, gloves, pants, shin guards, protective cup, and hockey skates.</li>\r\n<li><b>Helmets must be worn at all times</b> while on the ice and while on the bench.</li>\r\n<li>Face masks are required at all times.</li>\r\n</ul>",
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/pug375qofjb2t1ac17dqkclg.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "3"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "439"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "31"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2385"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2386",
+   "attributes": {
+    "sex": "c",
+    "season_id": 439,
+    "skill_level_id": 37,
+    "facility_id": 1,
+    "age_range_id": 25,
+    "start_date": "2026-09-01T00:00:00",
+    "min_birthdate": "1927-09-02T00:00:00",
+    "max_birthdate": "2008-11-01T00:00:00",
+    "sport_id": 32,
+    "name": "Adult Pickup Hockey",
+    "description": "Adult pickup hockey is open to ages 18 and older.<br />\n<ul>\n<li><b>Full Gear Is Required</b> - This includes helmet, shoulder pads, elbow pads, gloves, pants, shin guards, protective cup, and hockey skates.</li>\n<li><b>Helmets must be worn at all times</b> while on the ice and while on the bench.</li>\n<li>Face masks are required at all times.</li>\n<li>Locker rooms are not currently open due to COVID restrictions</li>\n</ul>",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 3,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": false,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": null,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": null,
+    "min_age": 17,
+    "min_age_months": 10,
+    "max_age": 98,
+    "max_age_months": 11,
+    "best_description": "Adult pickup hockey is open to ages 18 and older.<br />\n<ul>\n<li><b>Full Gear Is Required</b> - This includes helmet, shoulder pads, elbow pads, gloves, pants, shin guards, protective cup, and hockey skates.</li>\n<li><b>Helmets must be worn at all times</b> while on the ice and while on the bench.</li>\n<li>Face masks are required at all times.</li>\n<li>Locker rooms are not currently open due to COVID restrictions</li>\n</ul>",
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/pug375qofjb2t1ac17dqkclg.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "3"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "439"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "32"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2386"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2388",
+   "attributes": {
+    "sex": "c",
+    "season_id": 439,
+    "skill_level_id": 37,
+    "facility_id": 1,
+    "age_range_id": 24,
+    "start_date": "2026-09-01T00:00:00",
+    "min_birthdate": "2016-09-02T00:00:00",
+    "max_birthdate": "2022-11-01T00:00:00",
+    "sport_id": 31,
+    "name": "Mini Stick n Shoot",
+    "description": "Mini Stick n Shoot - only kids on this one!&nbsp;<br />ages 10 and under",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 3,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": false,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": null,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": null,
+    "min_age": 3,
+    "min_age_months": 10,
+    "max_age": 9,
+    "max_age_months": 11,
+    "best_description": "Mini Stick n Shoot - only kids on this one!&nbsp;<br />ages 10 and under",
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/pug375qofjb2t1ac17dqkclg.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "3"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "439"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "31"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2388"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2389",
+   "attributes": {
+    "sex": "c",
+    "season_id": 439,
+    "skill_level_id": 4,
+    "facility_id": 1,
+    "age_range_id": 24,
+    "start_date": "2026-09-01T00:00:00",
+    "min_birthdate": "2016-03-02T00:00:00",
+    "max_birthdate": "2024-10-01T00:00:00",
+    "sport_id": 27,
+    "name": "Recess",
+    "description": "Recess on the rink for kids under 10",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 3,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": 0,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": null,
+    "min_age": 1,
+    "min_age_months": 11,
+    "max_age": 10,
+    "max_age_months": 5,
+    "best_description": "Recess on the rink for kids under 10",
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/pug375qofjb2t1ac17dqkclg.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "3"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "439"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "27"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2389"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2390",
+   "attributes": {
+    "sex": "c",
+    "season_id": 439,
+    "skill_level_id": 4,
+    "facility_id": 1,
+    "age_range_id": 26,
+    "start_date": "2026-09-07T00:00:00",
+    "min_birthdate": "1926-09-02T00:00:00",
+    "max_birthdate": "1971-11-01T00:00:00",
+    "sport_id": 27,
+    "name": "Arlington County Senior Skate",
+    "description": "Arlington County sponsored senior skate.&nbsp; Participants must be &nbsp;55 years or older.&nbsp; Advance signup is required.",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": null,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": 0,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": null,
+    "min_age": 54,
+    "min_age_months": 10,
+    "max_age": 99,
+    "max_age_months": 11,
+    "best_description": "Arlington County sponsored senior skate.&nbsp; Participants must be &nbsp;55 years or older.&nbsp; Advance signup is required.",
+    "best_image_url": "https://dash-platform-assets.s3.us-west-2.amazonaws.com/img/program-finder/default_ds_rec.png",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "439"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "27"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2390"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2392",
+   "attributes": {
+    "sex": "c",
+    "season_id": 439,
+    "skill_level_id": 5,
+    "facility_id": 1,
+    "age_range_id": 25,
+    "start_date": "2026-09-01T00:00:00",
+    "min_birthdate": "1927-09-02T00:00:00",
+    "max_birthdate": "2008-10-01T00:00:00",
+    "sport_id": 27,
+    "name": "Adult Swim",
+    "description": "<p><strong>Adult Swim</strong></p>\n<p>Sick of being on the ice with rowdy children? WE GOT YOU! Now introducing Adult Swim. If you&rsquo;re 18+ and wanting to work on your hockey skills, figure skating elements, OR JUST WANT TO SKATE come on up.</p>\n<p>Adult swim is geared toward the adult beginning skater that wants to work on their skills without the intimidation of experienced skaters whirling all around them. Lessons are permitted on Adult Swim. Cost $15.</p>",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 3,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": 0,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": null,
+    "min_age": 17,
+    "min_age_months": 11,
+    "max_age": 98,
+    "max_age_months": 11,
+    "best_description": "<p><strong>Adult Swim</strong></p>\n<p>Sick of being on the ice with rowdy children? WE GOT YOU! Now introducing Adult Swim. If you&rsquo;re 18+ and wanting to work on your hockey skills, figure skating elements, OR JUST WANT TO SKATE come on up.</p>\n<p>Adult swim is geared toward the adult beginning skater that wants to work on their skills without the intimidation of experienced skaters whirling all around them. Lessons are permitted on Adult Swim. Cost $15.</p>",
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/pug375qofjb2t1ac17dqkclg.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "3"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "439"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "27"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2392"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2476",
+   "attributes": {
+    "sex": "c",
+    "season_id": 460,
+    "skill_level_id": 1,
+    "facility_id": 1,
+    "age_range_id": 14,
+    "start_date": "2026-11-01T00:00:00",
+    "min_birthdate": "1927-10-01T00:00:00",
+    "max_birthdate": "2021-10-01T00:00:00",
+    "sport_id": 24,
+    "name": "Freestyle- November 2026",
+    "description": "<p>THIS IS NOT A PUBLIC SKATE SESSION. Freestyle sessions are for figure skaters in level Freeskate 1 and above. Hybrid sessions are for skaters Basic 3 and above.</p>\n<p>Single Freestyle Session Availability.<br />Schedule subject to change.</p>",
+    "registration_prod_id": null,
+    "standings_type": 0,
+    "registration_closed": false,
+    "hide_private_teams": false,
+    "event_selection": true,
+    "event_selection_weekly": false,
+    "prorating": false,
+    "max_teams": 0,
+    "program_id": 13,
+    "rosters_lock_date": null,
+    "rosters_lock_date_gmt": null,
+    "display_standings": 1,
+    "is_flat_fee": 0,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "image_url": null,
+    "days_of_week": null,
+    "free_trial_days_before": null,
+    "free_trial_opt_out": true,
+    "sportsninja_schedule_id": null,
+    "free_trial_hours_before": null,
+    "default_registration_option": "Player",
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "member_app_cost_display_mode": "total_price_only",
+    "min_age": 5,
+    "min_age_months": 1,
+    "max_age": 99,
+    "max_age_months": 1,
+    "best_description": "<p>THIS IS NOT A PUBLIC SKATE SESSION. Freestyle sessions are for figure skaters in level Freeskate 1 and above. Hybrid sessions are for skaters Basic 3 and above.</p>\n<p>Single Freestyle Session Availability.<br />Schedule subject to change.</p>",
+    "best_image_url": "https://dash-general.s3.us-west-2.amazonaws.com/capitals/q0jjt0n5pd6gok8ch517b96p.jpg",
+    "best_max_free_trials": null,
+    "best_free_trial_cutoff": null,
+    "best_free_trial_days_before": null,
+    "best_free_trial_hours_before": null,
+    "best_is_makeups_enabled": false,
+    "best_makeups_max_per_event": null,
+    "best_makeups_above_roster_limit": null,
+    "best_makeups_signup_start_hours_before": null,
+    "best_makeups_signup_end_hours_before": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": {
+      "type": "programs",
+      "id": "13"
+     }
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": {
+      "type": "program-types",
+      "id": "1"
+     }
+    },
+    "season": {
+     "data": {
+      "type": "seasons",
+      "id": "460"
+     }
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": {
+      "type": "sports",
+      "id": "24"
+     }
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2476"
+   },
+   "meta": null
+  }
+ ],
+ "included": [
+  {
+   "type": "programs",
+   "id": "18",
+   "attributes": {
+    "name": "Coaches",
+    "active": true,
+    "online": true,
+    "is_team_management": false,
+    "allow_event_registration": false,
+    "description": "<p>MedStar Coaches Only</p>",
+    "image_url": "https://dash-general.s3.amazonaws.com/capitals/pejnrl8pma9re0o2r894cgnu.jpg",
+    "external_registration_url": null,
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/pejnrl8pma9re0o2r894cgnu.jpg"
+   },
+   "relationships": {
+    "seasons": {
+     "data": null
+    },
+    "leagues": {
+     "data": null
+    },
+    "products": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/programs/18"
+   },
+   "meta": null
+  },
+  {
+   "type": "program-types",
+   "id": "1",
+   "attributes": {
+    "name": "Camp",
+    "billing_type": "per-day",
+    "old_team_type_code": "k",
+    "is_active": true
+   },
+   "relationships": {
+    "teams": {
+     "data": null
+    },
+    "seasons": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/program-types/1"
+   },
+   "meta": null
+  },
+  {
+   "type": "seasons",
+   "id": "410",
+   "attributes": {
+    "name": "Coaches' Private Lesson Registrations 26-27",
+    "start_date": "2026-07-01T00:00:00",
+    "end_date": "2027-06-30T00:00:00",
+    "signup_start": "2026-07-01T04:00:00",
+    "signup_start_gmt": "2026-07-01T08:00:00",
+    "signup_end": "2027-01-02T03:59:00",
+    "signup_end_gmt": "2027-01-02T08:59:00",
+    "is_team_registration": false,
+    "team_type": "k",
+    "description": "This registration is for MedStar Capitals Iceplex coaches ONLY, and approved guest coaches. Coaches must register for each day they plan to teach private lessons. Public Skate, Freestyle, OR off ice.",
+    "deposit": null,
+    "high_privacy": false,
+    "online_registration_enabled": true,
+    "image_url": null,
+    "is_free_trial_enabled": false,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "free_trial_days_before": null,
+    "enable_team_export": true,
+    "free_trial_hours_before": null,
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "makeups_email_template_id": null,
+    "best_is_makeups_enabled": false
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "programType": {
+     "data": null
+    },
+    "priorSeason": {
+     "data": null
+    },
+    "priorYearSeason": {
+     "data": null
+    },
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "priorities": {
+     "data": null
+    },
+    "activatesPriorities": {
+     "data": null
+    },
+    "responsibleEmployee": {
+     "data": null
+    },
+    "approvalPendingTemplate": {
+     "data": null
+    },
+    "approvalDeclinedTemplate": {
+     "data": null
+    },
+    "approvalAcceptedTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "freeTrialTemplate": {
+     "data": null
+    },
+    "makeUpsTemplate": {
+     "data": null
+    },
+    "timeOfYear": {
+     "data": null
+    },
+    "timeOfYearRef": {
+     "data": null
+    },
+    "customForm": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/seasons/410"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "24",
+   "attributes": {
+    "name": "Figure Skating",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/24"
+   },
+   "meta": null
+  },
+  {
+   "type": "programs",
+   "id": "5",
+   "attributes": {
+    "name": "RHL",
+    "active": true,
+    "online": true,
+    "is_team_management": true,
+    "allow_event_registration": false,
+    "description": "<p>Rooftop Hockey League is for players 6U to 16U!</p>\r\n<p>The mission of RHL is to provide a fun, competitive, and safe hockey environment which improves skills, develops self-confidence and respect for others, and fosters teamwork in our student athletes.</p>\r\n<p>RHL is committed to the development of hockey players and teaching life skills through individual and team concepts, resulting in a lifelong enjoyment of hockey. Our program is desigend to provide the oppotunity to play for enjoyment and healthy competition.</p>\r\n<p>You can view season details <a href=\"https://www.medstarcapitalsiceplex.com/page/show/6321843-rooftop-hockey-league-2022-2023\" target=\"_blank\" rel=\"noopener\">HERE</a>.</p>",
+    "image_url": "https://dash-general.s3.amazonaws.com/capitals/r9bsfrc45se2rovn820p8md8.jpg",
+    "external_registration_url": null,
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/r9bsfrc45se2rovn820p8md8.jpg"
+   },
+   "relationships": {
+    "seasons": {
+     "data": null
+    },
+    "leagues": {
+     "data": null
+    },
+    "products": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/programs/5"
+   },
+   "meta": null
+  },
+  {
+   "type": "program-types",
+   "id": "3",
+   "attributes": {
+    "name": "Team",
+    "billing_type": "team",
+    "old_team_type_code": "t",
+    "is_active": true
+   },
+   "relationships": {
+    "teams": {
+     "data": null
+    },
+    "seasons": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/program-types/3"
+   },
+   "meta": null
+  },
+  {
+   "type": "seasons",
+   "id": "427",
+   "attributes": {
+    "name": "RHL Fall/Winter 2026-2027",
+    "start_date": "2026-09-14T00:00:00",
+    "end_date": "2027-03-07T00:00:00",
+    "signup_start": "2026-11-01T19:00:00",
+    "signup_start_gmt": "2026-11-02T00:00:00",
+    "signup_end": "2026-11-30T23:59:00",
+    "signup_end_gmt": "2026-12-01T04:59:00",
+    "is_team_registration": false,
+    "team_type": "t",
+    "description": "<p><span data-contrast=\"auto\"><em><u><strong>PRIORITY REGISTRATION BEGINS NOVEMBER 1 @ 7PM!</strong></u></em></span><br />RHL 2026-2027</p>\n<p>RHL 6U, 2020-2021 birthyears WINTER 26-27 (December 2026 - February 2027)</p>\n<p>Anticipated Season Start Date:<br />December 15, 2026<br /><br /></p>\n<p><strong>Note Important Registration Timeline:</strong></p>\n<p><span data-contrast=\"auto\">November 1-9</span><span data-contrast=\"auto\">: RETURNING FALL </span><span data-contrast=\"auto\">2026 </span><span data-contrast=\"auto\">RHL 6U PLAYER PRIORITY REGISTRATION</span></p>\n<p>November 10: OPEN REGISTRATION.<br /><br />ALL PLAYERS MUST REGISTER FOR THEIR BIRTH YEAR, NO EXCEPTIONS.</p>\n<p><span data-contrast=\"auto\">Registration begins at 7pm for each time period.</span></p>\n<p><span data-contrast=\"auto\">Online registration is required. In-person registration is not available.</span></p>\n<p><span data-contrast=\"auto\">RHL fills quickly, so </span><strong>PLEASE REGISTER EARLY</strong><span data-contrast=\"auto\">. Once a level is full, a waitlist will be available. Ensure that you have your </span><span data-contrast=\"auto\">2026-2027 </span><span data-contrast=\"auto\">USA Hockey number available during registration. </span><span data-contrast=\"auto\">You are encouraged to have your </span><span data-contrast=\"auto\">2026-2027 </span><span data-contrast=\"auto\">USA Hockey number at least 24 hours in advance. Hint: the fourth digit will be a 7. membership.usahockey.com. </span>If you previously provided your number for the Fall 6U registration, you shouldn't have to enter it again.</p>\n<p>View all available program details https://www.medstarcapitalsiceplex.com/page/show/6321843-rooftop-hockey-league.<br /><br /><br /></p>\n<p><br />Refunds are not offered for RHL.</p>\n<p><span data-contrast=\"auto\">Questions about eligibility or enrollment? </span><span data-contrast=\"auto\">Contact </span><span data-contrast=\"none\">Hockey@MedStarCapitalsIceplex.com</span></p>\n<p>&nbsp;</p>",
+    "deposit": null,
+    "high_privacy": false,
+    "online_registration_enabled": true,
+    "image_url": null,
+    "is_free_trial_enabled": false,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "free_trial_days_before": null,
+    "enable_team_export": false,
+    "free_trial_hours_before": null,
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "makeups_email_template_id": null,
+    "best_is_makeups_enabled": false
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "programType": {
+     "data": null
+    },
+    "priorSeason": {
+     "data": null
+    },
+    "priorYearSeason": {
+     "data": null
+    },
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "priorities": {
+     "data": null
+    },
+    "activatesPriorities": {
+     "data": null
+    },
+    "responsibleEmployee": {
+     "data": null
+    },
+    "approvalPendingTemplate": {
+     "data": null
+    },
+    "approvalDeclinedTemplate": {
+     "data": null
+    },
+    "approvalAcceptedTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "freeTrialTemplate": {
+     "data": null
+    },
+    "makeUpsTemplate": {
+     "data": null
+    },
+    "timeOfYear": {
+     "data": null
+    },
+    "timeOfYearRef": {
+     "data": null
+    },
+    "customForm": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/seasons/427"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "20",
+   "attributes": {
+    "name": "Learn Hockey-Youth",
+    "stat_table": 1,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/20"
+   },
+   "meta": null
+  },
+  {
+   "type": "programs",
+   "id": "13",
+   "attributes": {
+    "name": "Sky High Skating Academy",
+    "active": true,
+    "online": true,
+    "is_team_management": false,
+    "allow_event_registration": false,
+    "description": "<p>Click here to book freestyles and Aspire Classes. To learn more about our Sky High Skating Academy, visit the SHSA Page on our website.</p>",
+    "image_url": "https://dash-general.s3.us-west-2.amazonaws.com/capitals/q0jjt0n5pd6gok8ch517b96p.jpg",
+    "external_registration_url": null,
+    "best_image_url": "https://dash-general.s3.us-west-2.amazonaws.com/capitals/q0jjt0n5pd6gok8ch517b96p.jpg"
+   },
+   "relationships": {
+    "seasons": {
+     "data": null
+    },
+    "leagues": {
+     "data": null
+    },
+    "products": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/programs/13"
+   },
+   "meta": null
+  },
+  {
+   "type": "seasons",
+   "id": "432",
+   "attributes": {
+    "name": "SHSA Classes- Fall 2026",
+    "start_date": "2026-08-24T00:00:00",
+    "end_date": "2026-11-30T00:00:00",
+    "signup_start": "2026-08-10T04:00:00",
+    "signup_start_gmt": "2026-08-10T08:00:00",
+    "signup_end": "2026-11-30T23:59:00",
+    "signup_end_gmt": "2026-12-01T04:59:00",
+    "is_team_registration": false,
+    "team_type": "k",
+    "description": "<p>Class selection for Sky High Skating Academy Classes. These classes are for our figure skaters interested in both on ice and off ice specific skills. Level requirements for each class are listed in their respective description.</p>\r\n<p>Customer may request to be transfered from one class to another by visiting the desk BEFORE the start of the class. No refunds will be given for missed classes.</p>",
+    "deposit": null,
+    "high_privacy": false,
+    "online_registration_enabled": true,
+    "image_url": null,
+    "is_free_trial_enabled": false,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "free_trial_days_before": null,
+    "enable_team_export": true,
+    "free_trial_hours_before": null,
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "makeups_email_template_id": null,
+    "best_is_makeups_enabled": false
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "programType": {
+     "data": null
+    },
+    "priorSeason": {
+     "data": null
+    },
+    "priorYearSeason": {
+     "data": null
+    },
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "priorities": {
+     "data": null
+    },
+    "activatesPriorities": {
+     "data": null
+    },
+    "responsibleEmployee": {
+     "data": null
+    },
+    "approvalPendingTemplate": {
+     "data": null
+    },
+    "approvalDeclinedTemplate": {
+     "data": null
+    },
+    "approvalAcceptedTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "freeTrialTemplate": {
+     "data": null
+    },
+    "makeUpsTemplate": {
+     "data": null
+    },
+    "timeOfYear": {
+     "data": null
+    },
+    "timeOfYearRef": {
+     "data": null
+    },
+    "customForm": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/seasons/432"
+   },
+   "meta": null
+  },
+  {
+   "type": "programs",
+   "id": "3",
+   "attributes": {
+    "name": "Drop-In Activites",
+    "active": true,
+    "online": true,
+    "is_team_management": true,
+    "allow_event_registration": false,
+    "description": "<p>Drop-in for public skate, stick-n-shoot, pick up hockey, and other recreational activities!</p>",
+    "image_url": "https://dash-general.s3.amazonaws.com/capitals/pug375qofjb2t1ac17dqkclg.jpg",
+    "external_registration_url": null,
+    "best_image_url": "https://dash-general.s3.amazonaws.com/capitals/pug375qofjb2t1ac17dqkclg.jpg"
+   },
+   "relationships": {
+    "seasons": {
+     "data": null
+    },
+    "leagues": {
+     "data": null
+    },
+    "products": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/programs/3"
+   },
+   "meta": null
+  },
+  {
+   "type": "seasons",
+   "id": "439",
+   "attributes": {
+    "name": "Drop-in Fall 26",
+    "start_date": "2026-09-01T00:00:00",
+    "end_date": "2026-11-30T00:00:00",
+    "signup_start": "2026-08-26T04:00:00",
+    "signup_start_gmt": "2026-08-26T08:00:00",
+    "signup_end": "2026-12-01T04:59:00",
+    "signup_end_gmt": "2026-12-01T09:59:00",
+    "is_team_registration": false,
+    "team_type": "k",
+    "description": "Drop in events that are open to the public.<br />No refunds are given for these events.",
+    "deposit": null,
+    "high_privacy": false,
+    "online_registration_enabled": true,
+    "image_url": null,
+    "is_free_trial_enabled": false,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "free_trial_days_before": null,
+    "enable_team_export": true,
+    "free_trial_hours_before": null,
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "makeups_email_template_id": null,
+    "best_is_makeups_enabled": false
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "programType": {
+     "data": null
+    },
+    "priorSeason": {
+     "data": null
+    },
+    "priorYearSeason": {
+     "data": null
+    },
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "priorities": {
+     "data": null
+    },
+    "activatesPriorities": {
+     "data": null
+    },
+    "responsibleEmployee": {
+     "data": null
+    },
+    "approvalPendingTemplate": {
+     "data": null
+    },
+    "approvalDeclinedTemplate": {
+     "data": null
+    },
+    "approvalAcceptedTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "freeTrialTemplate": {
+     "data": null
+    },
+    "makeUpsTemplate": {
+     "data": null
+    },
+    "timeOfYear": {
+     "data": null
+    },
+    "timeOfYearRef": {
+     "data": null
+    },
+    "customForm": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/seasons/439"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "27",
+   "attributes": {
+    "name": "Public Skating",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/27"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "31",
+   "attributes": {
+    "name": "Stick n Shoot",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/31"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "32",
+   "attributes": {
+    "name": "Pickup Hockey",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/32"
+   },
+   "meta": null
+  },
+  {
+   "type": "seasons",
+   "id": "460",
+   "attributes": {
+    "name": "Freestyle-November 2026",
+    "start_date": "2026-11-01T00:00:00",
+    "end_date": "2026-11-30T00:00:00",
+    "signup_start": "2026-10-15T00:00:00",
+    "signup_start_gmt": "2026-10-15T04:00:00",
+    "signup_end": "2026-10-31T23:59:00",
+    "signup_end_gmt": "2026-11-01T03:59:00",
+    "is_team_registration": false,
+    "team_type": "k",
+    "description": "<p>THIS IS NOT A PUBLIC SKATE SESSION. Freestyle sessions are for figure skaters in level Freeskate 1 and above. Hybrid sessions are for skaters Basic 3 and above.</p>\r\n<p>Single Freestyle Session Availability.<br />Schedule subject to change.</p>\r\n<p>Customers will be contacted to move to another date if rink needs to cancel.<br />No refunds are given.<br /><br /></p>",
+    "deposit": null,
+    "high_privacy": false,
+    "online_registration_enabled": true,
+    "image_url": null,
+    "is_free_trial_enabled": false,
+    "max_free_trials": null,
+    "free_trial_cutoff": null,
+    "free_trial_days_before": null,
+    "enable_team_export": true,
+    "free_trial_hours_before": null,
+    "is_makeups_enabled": false,
+    "makeups_max_per_event": null,
+    "makeups_above_roster_limit": null,
+    "makeups_signup_start_hours_before": null,
+    "makeups_signup_end_hours_before": null,
+    "makeups_email_template_id": null,
+    "best_is_makeups_enabled": false
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "programType": {
+     "data": null
+    },
+    "priorSeason": {
+     "data": null
+    },
+    "priorYearSeason": {
+     "data": null
+    },
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "priorities": {
+     "data": null
+    },
+    "activatesPriorities": {
+     "data": null
+    },
+    "responsibleEmployee": {
+     "data": null
+    },
+    "approvalPendingTemplate": {
+     "data": null
+    },
+    "approvalDeclinedTemplate": {
+     "data": null
+    },
+    "approvalAcceptedTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "freeTrialTemplate": {
+     "data": null
+    },
+    "makeUpsTemplate": {
+     "data": null
+    },
+    "timeOfYear": {
+     "data": null
+    },
+    "timeOfYearRef": {
+     "data": null
+    },
+    "customForm": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/seasons/460"
+   },
+   "meta": null
+  }
+ ]
+}

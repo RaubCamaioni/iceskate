@@ -1,0 +1,1314 @@
+{
+ "meta": {
+  "page": {
+   "current-page": 1,
+   "per-page": 100,
+   "from": 1,
+   "to": 18,
+   "total": 18,
+   "last-page": 1
+  }
+ },
+ "links": {
+  "first": "http://apps.daysmartrecreation.com/api/v1/resources?page%5Bnumber%5D=1&page%5Bsize%5D=100",
+  "last": "http://apps.daysmartrecreation.com/api/v1/resources?page%5Bnumber%5D=1&page%5Bsize%5D=100"
+ },
+ "data": [
+  {
+   "type": "resources",
+   "id": "0",
+   "attributes": {
+    "name": "Unscheduled",
+    "desc": "The Unscheduled Resource",
+    "facility_id": 0,
+    "type_id": null,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/0"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "1",
+   "attributes": {
+    "name": "Main Rink",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 2,
+    "lat": 38.848647,
+    "lng": -77.27244,
+    "booking_option_id": 1,
+    "terms_and_conditions_id": 5,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/1"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "2",
+   "attributes": {
+    "name": "Party- Room 1 (Capacity-up to 30 people)",
+    "desc": "Party can be reserved no more than 3 months in advance and no less than 3 days out. Please contact office manager for reservations within 3 days of party date.<br /><br />Birthday Party Package includes:<br />\n<ul>\n<li>10 Admissions</li>\n<li>10 Skate rentals</li>\n<li>2 XL Pizza (8 slices)</li>\n<li>10 drinks</li>\n<li>Set-up &amp; Clean-Up</li>\n<li>Benches, Tables &amp; Tablecloth</li>\n<li>Plates, Napkins, Utensils</li>\n<li>Invitations can be picked up at the rink</li>\n</ul>\nParty Buddy or One Time group must be requested at least 2 weeks in advance",
+    "facility_id": 1,
+    "type_id": 3,
+    "lat": 38.848647,
+    "lng": -77.27244,
+    "booking_option_id": 2,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/2"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "3",
+   "attributes": {
+    "name": "Party- Room 2 (Capacity-up to 30 people)",
+    "desc": "Party can be reserved no more than 3 months in advance and no less than 3 days out. Please contact office manager for reservations within 3 days of party date.<br /><br />Birthday Party Package includes:<br />\n<ul>\n<li>10 Admissions</li>\n<li>10 Skate rentals</li>\n<li>2 XL Pizza (8 slices)</li>\n<li>10 drinks</li>\n<li>Set-up &amp; Clean-Up</li>\n<li>Benches, Tables &amp; Tablecloth</li>\n<li>Plates, Napkins, Utensils</li>\n<li>Invitations can be picked up at the rink</li>\n</ul>\nParty Buddy or One Time group must be requested at least 2 weeks in advance",
+    "facility_id": 1,
+    "type_id": 3,
+    "lat": 38.848647,
+    "lng": -77.27244,
+    "booking_option_id": 2,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/3"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "4",
+   "attributes": {
+    "name": "Party- Room 3 (Capacity-up to 20 people)",
+    "desc": "Party can be reserved no more than 3 months in advance and no less than 3 days out. Please contact office manager for reservations within 3 days of party date.<br /><br />Birthday Party Package includes:<br />\n<ul>\n<li>10 Admissions</li>\n<li>10 Skate rentals</li>\n<li>2 XL Pizza (8 slices)</li>\n<li>10 drinks</li>\n<li>Set-up &amp; Clean-Up</li>\n<li>Benches, Tables &amp; Tablecloth</li>\n<li>Plates, Napkins, Utensils</li>\n<li>Invitations can be picked up at the rink</li>\n</ul>\nParty Buddy or One Time group must be requested at least 2 weeks in advance",
+    "facility_id": 1,
+    "type_id": 3,
+    "lat": 38.848647,
+    "lng": -77.27244,
+    "booking_option_id": 2,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/4"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "5",
+   "attributes": {
+    "name": "Party- Room 4 (Capacity-up to 17 people)",
+    "desc": "Party can be reserved no more than 3 months in advance and no less than 3 days out. Please contact office manager for reservations within 3 days of party date.<br /><br />Birthday Party Package includes:<br />\n<ul>\n<li>10 Admissions</li>\n<li>10 Skate rentals</li>\n<li>2 XL Pizza (8 slices)</li>\n<li>10 drinks</li>\n<li>Set-up &amp; Clean-Up</li>\n<li>Benches, Tables &amp; Tablecloth</li>\n<li>Plates, Napkins, Utensils</li>\n<li>Invitations can be picked up at the rink</li>\n</ul>\nParty Buddy or One Time group must be requested at least 2 weeks in advance",
+    "facility_id": 1,
+    "type_id": 3,
+    "lat": 38.848647,
+    "lng": -77.27244,
+    "booking_option_id": 2,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/5"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "6",
+   "attributes": {
+    "name": "Party-Open Area 1 (Capacity-up to 15 people)",
+    "desc": "Party can be reserved no more than 3 months in advance and no less than 3 days out. Please contact office manager for reservations within 3 days of party date.<br /><br />Birthday Party Package includes:<br />\n<ul>\n<li>10 Admissions</li>\n<li>10 Skate rentals</li>\n<li>2 XL Pizza (8 slices)</li>\n<li>10 drinks</li>\n<li>Set-up &amp; Clean-Up</li>\n<li>Benches, Tables &amp; Tablecloth</li>\n<li>Plates, Napkins, Utensils</li>\n<li>Invitations can be picked up at the rink</li>\n</ul>\nParty Buddy or One Time group must be requested at least 2 weeks in advance",
+    "facility_id": 1,
+    "type_id": 3,
+    "lat": 38.848647,
+    "lng": -77.27244,
+    "booking_option_id": 2,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/6"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "7",
+   "attributes": {
+    "name": "Party-Open Area 2 (Capacity-up to 50 people)",
+    "desc": "Party can be reserved no more than 3 months in advance and no less than 3 days out. Please contact office manager for reservations within 3 days of party date.<br /><br />Birthday Party Package includes:<br />\n<ul>\n<li>10 Admissions</li>\n<li>10 Skate rentals</li>\n<li>2 XL Pizza (8 slices)</li>\n<li>10 drinks</li>\n<li>Set-up &amp; Clean-Up</li>\n<li>Benches, Tables &amp; Tablecloth</li>\n<li>Plates, Napkins, Utensils</li>\n<li>Invitations can be picked up at the rink</li>\n</ul>\nParty Buddy or One Time group must be requested at least 2 weeks in advance",
+    "facility_id": 1,
+    "type_id": 3,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 2,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/7"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "8",
+   "attributes": {
+    "name": "Off-Ice Room",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": null,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/8"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "9",
+   "attributes": {
+    "name": "Group Public Skating Reservation Slot 1",
+    "desc": "Groups of 7 or more only. You can make a reservations for your group to receive a discounted admission. Reservations must 24 hours in advance be made to receive discount.",
+    "facility_id": 1,
+    "type_id": 4,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 7,
+    "terms_and_conditions_id": 3,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/9"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "10",
+   "attributes": {
+    "name": "Group Public Skating Reservation Slot 2",
+    "desc": "Reservations for Groups of 7 or more people receive a discounted admission. Reservations must 24 hours in advance be made to receive discount.<br /><br />Weekday Admission $6.00<br />Weekend Admission $6.75<br />Skate Rentals $4.00",
+    "facility_id": 1,
+    "type_id": 4,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 7,
+    "terms_and_conditions_id": 3,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/10"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "11",
+   "attributes": {
+    "name": "Group Public Skating Reservation Slot 3",
+    "desc": "Reservations for Groups of 7 or more people receive a discounted admission. Reservations must 24 hours in advance be made to receive discount.<br /><br />Weekday Admission $6.00<br />Weekend Admission $6.75<br />Skate Rentals $4.00",
+    "facility_id": 1,
+    "type_id": 4,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 7,
+    "terms_and_conditions_id": 3,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/11"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "12",
+   "attributes": {
+    "name": "Private Lessons",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 5,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/12"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "13",
+   "attributes": {
+    "name": "Group Public Skating Reservation Slot 4",
+    "desc": "Reservations for Groups of 7 or more people receive a discounted admission. Reservations must 24 hours in advance be made to receive discount.<br /><br />Weekday Admission $6.00<br />Weekend Admission $6.75<br />Skate Rentals $4.00",
+    "facility_id": 1,
+    "type_id": 4,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 7,
+    "terms_and_conditions_id": 3,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/13"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "14",
+   "attributes": {
+    "name": "Group Public Skating Reservation Slot 5",
+    "desc": "Reservations for Groups of 7 or more people receive a discounted admission. Reservations must 24 hours in advance be made to receive discount.<br /><br />Weekday Admission $6.00<br />Weekend Admission $6.75<br />Skate Rentals $4.00",
+    "facility_id": 1,
+    "type_id": 4,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 7,
+    "terms_and_conditions_id": 3,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/14"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "15",
+   "attributes": {
+    "name": "Camps",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 2,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/15"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "16",
+   "attributes": {
+    "name": "Party-Rink View Room (Max Room Capacity-15 People)",
+    "desc": "Party can be reserved no more than 3 months in advance and no less than 3 days out. Please contact office manager for reservations within 3 days of party date.<br /><br />Birthday Party Package includes:<br />\n<ul>\n<li>10 Admissions</li>\n<li>10 Skate rentals</li>\n<li>2 XL Pizza (8 slices)</li>\n<li>10 drinks</li>\n<li>Set-up &amp; Clean-Up</li>\n<li>Benches, Tables &amp; Tablecloth</li>\n<li>Plates, Napkins, Utensils</li>\n<li>Invitations can be picked up at the rink</li>\n</ul>\nParty Buddy or One Time group must be requested at least 2 weeks in advance",
+    "facility_id": 1,
+    "type_id": 3,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 2,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/16"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "17",
+   "attributes": {
+    "name": "Group Public Skating Reservation Slot 6",
+    "desc": "Reservations for Groups of 7 or more people receive a discounted admission. Reservations must 24 hours in advance be made to receive discount.<br /><br />Weekday Admission $6.00<br />Weekend Admission $6.75<br />Skate Rentals $4.00",
+    "facility_id": 1,
+    "type_id": 4,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 7,
+    "terms_and_conditions_id": 3,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/17"
+   },
+   "meta": null
+  }
+ ]
+}

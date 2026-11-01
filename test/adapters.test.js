@@ -123,10 +123,12 @@ test('ion: classify', () => {
   assert.equal(ion.classify('Curling League', 'Curling League'), 'other');
 });
 
-test('server: discovers both adapters and skips the template', async () => {
+test('server: discovers every rink adapter and skips the template', async () => {
   const adapters = await loadAdapters();
   const slugs = adapters.map((a) => a.slug);
-  assert.deepEqual(slugs.sort(), ['ashburn-ice-house', 'ion-leesburg']);
+  for (const s of ['ashburn-ice-house', 'ion-leesburg', 'loudoun-ice-centre', 'haymarket-iceplex', 'skatequest-reston']) assert.ok(slugs.includes(s), s);
+  assert.ok(!slugs.includes('rink-slug'), 'template skipped');
+  assert.equal(new Set(slugs).size, slugs.length, 'slugs unique');
 });
 
 test('server: selectRange is inclusive on both ends', () => {
@@ -206,4 +208,176 @@ test('buildSnapshot: merges every rink, sorts, and reports failures without thro
   assert.deepEqual(snap.events.map((e) => e.start), ['2026-11-01T10:00:00', '2026-11-02T10:00:00']);
   assert.deepEqual(snap.errors, [{ rink: 'b', message: 'boom', stale: false }]);
   assert.ok(ISO_LOCAL.test(snap.generatedAt.replace(/\.\d+Z$/, '')) || snap.generatedAt.endsWith('Z'));
+});
+
+// ---------------------------------------------------------------- ICS expander + Loudoun Ice Centre
+import { expandICS, parseICS } from '../lib/ics.js';
+import * as loudoun from '../rinks/loudoun-ice-centre/adapter.js';
+
+const SYNTHETIC_ICS = [
+  'BEGIN:VCALENDAR', 'X-WR-TIMEZONE:America/New_York',
+  // weekly Wed+Fri series, one date excluded, one occurrence moved by an override
+  'BEGIN:VEVENT', 'UID:a', 'SUMMARY:Cheap Skate', 'DTSTART;TZID=America/New_York:20261104T113000', 'DTEND;TZID=America/New_York:20261104T130000',
+  'RRULE:FREQ=WEEKLY;WKST=MO;BYDAY=WE,FR', 'EXDATE;TZID=America/New_York:20261111T113000', 'END:VEVENT',
+  'BEGIN:VEVENT', 'UID:a', 'RECURRENCE-ID;TZID=America/New_York:20261113T113000', 'SUMMARY:Cheap Skate (moved)', 'DTSTART;TZID=America/New_York:20261113T100000', 'DTEND;TZID=America/New_York:20261113T110000', 'END:VEVENT',
+  // expired series with a date-only UNTIL (Google writes these) must not leak into the window
+  'BEGIN:VEVENT', 'UID:b', 'SUMMARY:Old Skate', 'DTSTART;TZID=America/New_York:20220328T110000', 'DTEND;TZID=America/New_York:20220328T123000', 'RRULE:FREQ=WEEKLY;UNTIL=20220531;BYDAY=MO', 'END:VEVENT',
+  // UTC-stamped single event: 20:00Z on Nov 7 is 3pm EST (after the DST change on Nov 1)
+  'BEGIN:VEVENT', 'UID:c', 'SUMMARY:Public Skate', 'DTSTART:20261107T200000Z', 'DTEND:20261107T213000Z', 'END:VEVENT',
+  // all-day closure is skipped; cancelled instance is skipped
+  'BEGIN:VEVENT', 'UID:d', 'SUMMARY:CLOSED', 'DTSTART;VALUE=DATE:20261105', 'DTEND;VALUE=DATE:20261106', 'END:VEVENT',
+  'BEGIN:VEVENT', 'UID:e', 'SUMMARY:Stick & Shoot', 'STATUS:CANCELLED', 'DTSTART;TZID=America/New_York:20261106T100000', 'DTEND;TZID=America/New_York:20261106T110000', 'END:VEVENT',
+  // COUNT-limited daily series
+  'BEGIN:VEVENT', 'UID:f', 'SUMMARY:Camp', 'DTSTART;TZID=America/New_York:20261102T090000', 'DTEND;TZID=America/New_York:20261102T120000', 'RRULE:FREQ=DAILY;COUNT=3', 'END:VEVENT',
+  'END:VCALENDAR',
+].join('\r\n');
+
+test('expandICS: weekly BYDAY with EXDATE and RECURRENCE-ID override', () => {
+  const ev = expandICS(SYNTHETIC_ICS, { from: '2026-11-02', to: '2026-11-15' }).filter((e) => e.uid === 'a');
+  assert.deepEqual(ev.map((e) => `${e.start} ${e.summary}`), [
+    '2026-11-04T11:30:00 Cheap Skate',
+    '2026-11-06T11:30:00 Cheap Skate',
+    // 11-11 excluded by EXDATE
+    '2026-11-13T10:00:00 Cheap Skate (moved)',
+  ]);
+  assert.equal(ev[0].end, '2026-11-04T13:00:00');
+});
+
+test('expandICS: date-only UNTIL ends a series; COUNT; UTC conversion; all-day and cancelled skipped', () => {
+  const ev = expandICS(SYNTHETIC_ICS, { from: '2026-11-01', to: '2026-11-30' });
+  assert.ok(!ev.some((e) => e.uid === 'b'), 'expired series leaked');
+  assert.deepEqual(ev.filter((e) => e.uid === 'f').map((e) => e.start.slice(0, 10)), ['2026-11-02', '2026-11-03', '2026-11-04']);
+  const utc = ev.find((e) => e.uid === 'c');
+  assert.equal(utc.start, '2026-11-07T15:00:00');
+  assert.equal(utc.end, '2026-11-07T16:30:00');
+  assert.ok(!ev.some((e) => e.uid === 'd' || e.uid === 'e'));
+});
+
+test('parseICS unfolds lines and unescapes text', () => {
+  const [e] = parseICS('BEGIN:VEVENT\r\nSUMMARY:Public\r\n  Skate\, Fri\r\nDTSTART:20261107T200000Z\r\nEND:VEVENT\r\n');
+  assert.equal(e.summary, 'Public Skate, Fri');
+  assert.equal(e.dtstart.tz, 'UTC');
+});
+
+test('loudoun: classify', () => {
+  assert.equal(loudoun.classify('Cheap Skate'), 'public_skate');
+  assert.equal(loudoun.classify('Halloween Public Skate'), 'public_skate');
+  assert.equal(loudoun.classify("Stick N' Shoot"), 'stick_and_puck');
+  assert.equal(loudoun.classify('Learn to Skate'), 'learn_to_skate');
+  assert.equal(loudoun.classify('GLOW BROOMBALL'), 'hockey');
+  assert.equal(loudoun.classify('Goalie Rookie Program'), 'hockey');
+  assert.equal(loudoun.classify('Youth Open Hockey'), 'pickup_hockey');
+  assert.equal(loudoun.classify('CLOSED - Happy Easter!'), null);
+});
+
+test('loudoun: normalize the trimmed real sample', async () => {
+  const ics = await fs.readFile(path.join(ROOT, 'rinks/loudoun-ice-centre/samples/basic-trimmed.ics'), 'utf8');
+  const events = loudoun.normalize(ics, { from: '2026-01-01', to: '2026-12-31' });
+  assertNormalized(events, 'loudoun-ice-centre');
+  assert.ok(events.every((e) => e.sheet === 'Studio Rink'));
+  assert.ok(!events.some((e) => /closed/i.test(e.title)), 'closures are not sessions');
+  const utc = events.find((e) => e.sourceId.includes('2026-05-10'));
+  assert.equal(utc?.start, '2026-05-10T11:15:00', '15:15Z in May is 11:15 EDT');
+});
+
+// ---------------------------------------------------------------- Haymarket IcePlex + SkateQuest (DaySmart)
+import * as haymarket from '../rinks/haymarket-iceplex/adapter.js';
+import * as skatequest from '../rinks/skatequest-reston/adapter.js';
+import { plainTitle, rows } from '../lib/daysmart.js';
+
+test('daysmart: plainTitle blanks titles that only repeat the category', () => {
+  assert.equal(plainTitle('Public Skate', 'public_skate'), '');
+  assert.equal(plainTitle('Public Skate Session', 'public_skate'), '');
+  assert.equal(plainTitle('Frestyle ', 'freestyle'), 'Frestyle');
+  assert.equal(plainTitle('Freestyle', 'freestyle'), '');
+  assert.equal(plainTitle('Stick n Shoot', 'stick_and_puck'), '');
+  assert.equal(plainTitle('Public Skate- HALLOWEEN SKATE in costume', 'public_skate'), 'Public Skate- HALLOWEEN SKATE in costume');
+  assert.equal(plainTitle('Public Skate', 'other'), 'Public Skate');
+});
+
+test('haymarket: normalises the sample, classifies by event type id, keeps only ice sheets', async () => {
+  const page = await readJson('rinks/haymarket-iceplex/samples/events-sample.json');
+  const events = haymarket.normalize(page);
+  assertNormalized(events, 'haymarket-iceplex');
+  assert.ok(events.every((e) => haymarket.sheets.includes(e.sheet)), 'only North/South');
+  const raw = [...rows(page)];
+  const expected = raw.filter((r) => r.a.publish && [1, 7].includes(Number(r.a.resource_id)) && haymarket.classify(r.typeId)).length;
+  assert.equal(events.length, expected);
+  assert.equal(haymarket.classify('8'), 'public_skate');
+  assert.equal(haymarket.classify(12), 'freestyle');
+  assert.equal(haymarket.classify('L'), null);
+  assert.equal(haymarket.classify('13'), null, 'private lessons hidden');
+});
+
+test('skatequest: normalises the sample and classifies by event type id', async () => {
+  const page = await readJson('rinks/skatequest-reston/samples/events-sample.json');
+  const events = skatequest.normalize(page);
+  assertNormalized(events, 'skatequest-reston');
+  assert.ok(events.every((e) => skatequest.sheets.includes(e.sheet)), 'only NHL/Olympic');
+  assert.equal(skatequest.classify('8'), 'public_skate');
+  assert.equal(skatequest.classify('26'), 'freestyle');
+  assert.equal(skatequest.classify('10'), 'pickup_hockey');
+  assert.equal(skatequest.classify('14'), null, 'ice maintenance hidden');
+});
+
+// ---------------------------------------------------------------- Capitals, Mount Vernon, Prince William
+import * as capitals from '../rinks/medstar-capitals-iceplex/adapter.js';
+import * as mountvernon from '../rinks/mount-vernon-recenter/adapter.js';
+import * as pwic from '../rinks/prince-william-ice-center/adapter.js';
+
+test('capitals: classifies drop-ins by league sport, hides private/goalie/virtual rows', async () => {
+  const page = await readJson('rinks/medstar-capitals-iceplex/samples/events-sample.json');
+  const events = capitals.normalize(page);
+  assertNormalized(events, 'medstar-capitals-iceplex');
+  assert.deepEqual(events.map((e) => e.category).sort(), ['freestyle', 'public_skate', 'stick_and_puck']);
+  assert.ok(events.every((e) => e.title === ''), 'plain drop-in titles are blanked');
+  assert.ok(events.every((e) => e.registerUrl === capitals.registerUrl), 'drop-ins link to DASH checkout');
+  assert.deepEqual(capitals.classify({ typeId: 'k', sportId: 27, title: 'Recess PM Nov' }), ['public_skate', 'Recess PM Nov']);
+  assert.deepEqual(capitals.classify({ typeId: 'k', sportId: 24, title: 'Hybrid Freestyle' }), ['freestyle', 'Hybrid Freestyle']);
+  assert.equal(capitals.classify({ typeId: 'k', sportId: 24, title: 'Virtual Testing' }), null);
+  assert.equal(capitals.classify({ typeId: 'k', sportId: 32, title: 'Adult Pickup Hockey Goalie - Evening' }), null);
+  assert.deepEqual(capitals.classify({ typeId: 'c', sportId: null, title: 'Basic 1- Sunday 4:15pm' }), ['learn_to_skate', 'Basic 1- Sunday 4:15pm']);
+  assert.equal(capitals.classify({ typeId: '36', sportId: null, title: 'Private' }), null);
+});
+
+test('mount vernon: parses the usedirect ticket listing', async () => {
+  const html = await fs.readFile(path.join(ROOT, 'rinks/mount-vernon-recenter/samples/usedirect-search-sample.html'), 'utf8');
+  const events = mountvernon.normalize(html);
+  assertNormalized(events, 'mount-vernon-recenter');
+  assert.equal(events.length, 12);
+  assert.deepEqual([...new Set(events.map((e) => e.category))].sort(), ['pickup_hockey', 'public_skate', 'stick_and_puck']);
+  const first = events[0];
+  assert.match(first.registerUrl, /Details\.aspx\?session_id=\d+$/);
+  assert.equal(first.start, '2026-11-01T12:00:00');
+  assert.equal(first.end, '2026-11-01T14:00:00');
+  assert.deepEqual(mountvernon.classify('Adult PS 7:00 PM'), ['public_skate', 'Adults only (14+)']);
+});
+
+test('prince william: parses a Frontline monthly page', async () => {
+  const html = await fs.readFile(path.join(ROOT, 'rinks/prince-william-ice-center/samples/monthly-public-2026-11.html'), 'utf8');
+  const events = pwic.normalize(html, 'public_skate');
+  assertNormalized(events, 'prince-william-ice-center');
+  assert.ok(events.length >= 30, `expected a month of public sessions, got ${events.length}`);
+  assert.ok(events.every((e) => ['NHL', 'Olympic'].includes(e.sheet)), 'sheet is NHL or Olympic');
+  // the month grid also shows the trailing days of December; fetchEvents trims to the requested range
+  assert.ok(events.filter((e) => e.start.startsWith('2026-11-')).length >= 30);
+  assert.ok(events.every((e) => /^2026-1[12]-/.test(e.start)));
+  const stick = pwic.normalize(await fs.readFile(path.join(ROOT, 'rinks/prince-william-ice-center/samples/monthly-stick-2026-11.html'), 'utf8'), 'stick_and_puck');
+  assert.ok(stick.length > 0 && stick.every((e) => e.category === 'stick_and_puck'));
+});
+
+// ---------------------------------------------------------------- Fairfax Ice Arena (DaySmart)
+import * as fairfax from '../rinks/fairfax-ice-arena/adapter.js';
+
+test('fairfax: public skate by type id, pick-up hockey from Camp rows, rentals hidden', async () => {
+  const page = await readJson('rinks/fairfax-ice-arena/samples/events-sample.json');
+  const events = fairfax.normalize(page);
+  assertNormalized(events, 'fairfax-ice-arena');
+  assert.deepEqual(events.map((e) => e.category).sort(), ['learn_to_skate', 'pickup_hockey', 'public_skate', 'public_skate']);
+  const pickup = events.find((e) => e.category === 'pickup_hockey');
+  assert.equal(pickup.registerUrl, fairfax.pickupRegisterUrl);
+  assert.equal(pickup.capacity, 30);
+  assert.ok(events.filter((e) => e.category === 'public_skate').every((e) => e.title === ''));
+  assert.equal(fairfax.classify('k', 'Pick-Up Hockey Goalies - Friday'), null);
+  assert.equal(fairfax.classify('r', 'Kilmer ES Skate Night'), null);
 });

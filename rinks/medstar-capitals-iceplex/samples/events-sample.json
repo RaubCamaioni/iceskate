@@ -1,0 +1,732 @@
+{
+ "_note": "Trimmed sample from GET .../events?company=capitals&filter[start__gte]=2026-11-02T00:00:00&filter[start__lte]=2026-11-03T00:00:00&filter[resource_id__in]=1,2&include=summary,resource,league&page[size]=500&sort=start (meta/links kept; data trimmed to 4 events; included trimmed to matching records; league attrs trimmed)",
+ "meta": {
+  "page": {
+   "current-page": 1,
+   "per-page": 500,
+   "from": 1,
+   "to": 51,
+   "total": 51,
+   "last-page": 1
+  }
+ },
+ "links": {
+  "first": "http://apps.daysmartrecreation.com/api/v1/events?filter%5Bstart__gte%5D=2026-11-02T00%3A00%3A00&filter%5Bstart__lte%5D=2026-11-03T00%3A00%3A00&filter%5Bresource_id__in%5D=1%2C2&sort=start&page%5Bnumber%5D=1&page%5Bsize%5D=500",
+  "last": "http://apps.daysmartrecreation.com/api/v1/events?filter%5Bstart__gte%5D=2026-11-02T00%3A00%3A00&filter%5Bstart__lte%5D=2026-11-03T00%3A00%3A00&filter%5Bresource_id__in%5D=1%2C2&sort=start&page%5Bnumber%5D=1&page%5Bsize%5D=500"
+ },
+ "data": [
+  {
+   "type": "events",
+   "id": "267000",
+   "attributes": {
+    "repeat_id": 267000,
+    "resource_id": 2,
+    "resource_area_id": 0,
+    "desc": "",
+    "event_type_id": "k",
+    "sub_type": "regular",
+    "start": "2026-11-02T06:00:00",
+    "start_gmt": "2026-11-02T11:00:00",
+    "end": "2026-11-02T06:30:00",
+    "end_gmt": "2026-11-02T11:30:00",
+    "hteam_id": 6191,
+    "vteam_id": null,
+    "league_id": 2476,
+    "home_score": null,
+    "visiting_score": null,
+    "publish": true,
+    "outcome": "",
+    "register_capacity": 28,
+    "created_user_type": "SIT_Employee",
+    "last_modified_user_type": "SIT_Employee",
+    "is_overtime": false,
+    "booking_id": null,
+    "description": null,
+    "notice": null,
+    "last_resource_id": null,
+    "parent_event_id": null,
+    "has_gender_locker_rooms": 0,
+    "locker_room_type": null,
+    "includes_setup_time": false,
+    "includes_takedown_time": false,
+    "start_date": "2026-11-02T00:00:00",
+    "event_start_time": "06:00:00",
+    "best_description": "<p>THIS IS NOT A PUBLIC SKATE SESSION. Freestyle sessions are for figure skaters in level Freeskate 1 and above. Hybrid sessions are for skaters Basic 3 and above.</p>\n<p>Single Freestyle Session Avai"
+   },
+   "relationships": {
+    "eventType": {
+     "data": {
+      "type": "event-types",
+      "id": "k"
+     }
+    },
+    "summary": {
+     "data": {
+      "type": "event-summaries",
+      "id": "267000"
+     }
+    },
+    "league": {
+     "data": {
+      "type": "leagues",
+      "id": "2476"
+     }
+    },
+    "resource": {
+     "data": {
+      "type": "resources",
+      "id": "2"
+     }
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/events/267000"
+   },
+   "meta": null
+  },
+  {
+   "type": "events",
+   "id": "256029",
+   "attributes": {
+    "repeat_id": 255947,
+    "resource_id": 1,
+    "resource_area_id": 0,
+    "desc": "",
+    "event_type_id": "k",
+    "sub_type": "regular",
+    "start": "2026-11-02T14:00:00",
+    "start_gmt": "2026-11-02T19:00:00",
+    "end": "2026-11-02T15:20:00",
+    "end_gmt": "2026-11-02T20:20:00",
+    "hteam_id": 6197,
+    "vteam_id": null,
+    "league_id": 2384,
+    "home_score": null,
+    "visiting_score": null,
+    "publish": true,
+    "outcome": "",
+    "register_capacity": 200,
+    "created_user_type": "SIT_Employee",
+    "last_modified_user_type": "SIT_Employee",
+    "is_overtime": false,
+    "booking_id": null,
+    "description": null,
+    "notice": null,
+    "last_resource_id": null,
+    "parent_event_id": null,
+    "has_gender_locker_rooms": 0,
+    "locker_room_type": null,
+    "includes_setup_time": false,
+    "includes_takedown_time": false,
+    "start_date": "2026-11-02T00:00:00",
+    "event_start_time": "14:00:00",
+    "best_description": "Public Skate admission includes skate rental.    You will receive an email receipt with a QR code on it that you will need to present when entering MedStar Capitals Iceplex for this activity."
+   },
+   "relationships": {
+    "eventType": {
+     "data": {
+      "type": "event-types",
+      "id": "k"
+     }
+    },
+    "summary": {
+     "data": {
+      "type": "event-summaries",
+      "id": "256029"
+     }
+    },
+    "league": {
+     "data": {
+      "type": "leagues",
+      "id": "2384"
+     }
+    },
+    "resource": {
+     "data": {
+      "type": "resources",
+      "id": "1"
+     }
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/events/256029"
+   },
+   "meta": null
+  },
+  {
+   "type": "events",
+   "id": "268182",
+   "attributes": {
+    "repeat_id": null,
+    "resource_id": 1,
+    "resource_area_id": 0,
+    "desc": "",
+    "event_type_id": "k",
+    "sub_type": "regular",
+    "start": "2026-11-02T15:30:00",
+    "start_gmt": "2026-11-02T20:30:00",
+    "end": "2026-11-02T16:40:00",
+    "end_gmt": "2026-11-02T21:40:00",
+    "hteam_id": 5926,
+    "vteam_id": null,
+    "league_id": 2385,
+    "home_score": null,
+    "visiting_score": null,
+    "publish": true,
+    "outcome": "",
+    "register_capacity": 36,
+    "created_user_type": "SIT_Employee",
+    "last_modified_user_type": "SIT_Employee",
+    "is_overtime": false,
+    "booking_id": null,
+    "description": null,
+    "notice": null,
+    "last_resource_id": null,
+    "parent_event_id": null,
+    "has_gender_locker_rooms": 0,
+    "locker_room_type": null,
+    "includes_setup_time": false,
+    "includes_takedown_time": false,
+    "start_date": "2026-11-02T00:00:00",
+    "event_start_time": "15:30:00",
+    "best_description": "    <b>Stick n Shoot</b> is open to all ages and abilities.  Each participant that skates is required to purchase.  You can only add people in your account but you can share to your friends to invite "
+   },
+   "relationships": {
+    "eventType": {
+     "data": {
+      "type": "event-types",
+      "id": "k"
+     }
+    },
+    "summary": {
+     "data": {
+      "type": "event-summaries",
+      "id": "268182"
+     }
+    },
+    "league": {
+     "data": {
+      "type": "leagues",
+      "id": "2385"
+     }
+    },
+    "resource": {
+     "data": {
+      "type": "resources",
+      "id": "1"
+     }
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/events/268182"
+   },
+   "meta": null
+  }
+ ],
+ "included": [
+  {
+   "type": "event-summaries",
+   "id": "267000",
+   "attributes": {
+    "name": "Freestyle- Weekdays",
+    "start_date": "2026-11-02T06:00:00-05:00",
+    "end_date": "2026-11-02T06:30:00-05:00",
+    "code": "k",
+    "event_type": "Camp",
+    "color": "#b6c431",
+    "publish": true,
+    "open_slots": 28,
+    "registration_status": "open",
+    "composite_capacity": 28
+   },
+   "relationships": {
+    "event": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-summaries/267000"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "2",
+   "attributes": {
+    "name": "Arlington Rink",
+    "desc": "NHL size ice rink with 4 locker rooms.&nbsp; Slapshot Party room is rink level and adjacent to the ice.",
+    "facility_id": 1,
+    "type_id": 2,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 4,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/2"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2476",
+   "attributes": {
+    "name": "Freestyle- November 2026",
+    "sport_id": 24,
+    "program_id": 13,
+    "season_id": 460,
+    "start_date": "2026-11-01T00:00:00",
+    "registration_prod_id": null,
+    "registration_closed": false,
+    "best_description": "<p>THIS IS NOT A PUBLIC SKATE SESSION. Freestyle sessions are for figure skaters in level Freeskate 1 and above. Hybrid sessions are for skaters Basic 3 and above.</p>\n<p>Single Freestyle Session Avai"
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": null
+    },
+    "season": {
+     "data": null
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": null
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2476"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-summaries",
+   "id": "256029",
+   "attributes": {
+    "name": "Public Skate Mid Week PM Daytime Nov",
+    "start_date": "2026-11-02T14:00:00-05:00",
+    "end_date": "2026-11-02T15:20:00-05:00",
+    "code": "k",
+    "event_type": "Camp",
+    "color": "#b6c431",
+    "publish": true,
+    "open_slots": 198,
+    "registration_status": "open",
+    "composite_capacity": 200
+   },
+   "relationships": {
+    "event": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-summaries/256029"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "1",
+   "attributes": {
+    "name": "Capitals Rink",
+    "desc": "The official practice rink of the <b>Washington Capitals</b>. There are bleachers to accomodate approximately 1,500 people.&nbsp; The Capitals Party room is on the 9th level balcony overlooking the rink.",
+    "facility_id": 1,
+    "type_id": 2,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 4,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/1"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2384",
+   "attributes": {
+    "name": "Public Skate",
+    "sport_id": 27,
+    "program_id": 3,
+    "season_id": 439,
+    "start_date": "2026-09-01T00:00:00",
+    "registration_prod_id": null,
+    "registration_closed": false,
+    "best_description": "Public Skate admission includes skate rental.    You will receive an email receipt with a QR code on it that you will need to present when entering MedStar Capitals Iceplex for this activity."
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": null
+    },
+    "season": {
+     "data": null
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": null
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2384"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-summaries",
+   "id": "268182",
+   "attributes": {
+    "name": "Stick n Shoot-Afternoon",
+    "start_date": "2026-11-02T15:30:00-05:00",
+    "end_date": "2026-11-02T16:40:00-05:00",
+    "code": "k",
+    "event_type": "Camp",
+    "color": "#b6c431",
+    "publish": true,
+    "open_slots": 36,
+    "registration_status": "open",
+    "composite_capacity": 36
+   },
+   "relationships": {
+    "event": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-summaries/268182"
+   },
+   "meta": null
+  },
+  {
+   "type": "leagues",
+   "id": "2385",
+   "attributes": {
+    "name": "Stick n Shoot",
+    "sport_id": 31,
+    "program_id": 3,
+    "season_id": 439,
+    "start_date": "2026-09-01T00:00:00",
+    "registration_prod_id": null,
+    "registration_closed": false,
+    "best_description": "    <b>Stick n Shoot</b> is open to all ages and abilities.  Each participant that skates is required to purchase.  You can only add people in your account but you can share to your friends to invite "
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "teamProduct": {
+     "data": null
+    },
+    "programType": {
+     "data": null
+    },
+    "season": {
+     "data": null
+    },
+    "facility": {
+     "data": null
+    },
+    "prereqLevel": {
+     "data": null
+    },
+    "priorLeague": {
+     "data": null
+    },
+    "priorYearLeague": {
+     "data": null
+    },
+    "skillLevel": {
+     "data": null
+    },
+    "ageRange": {
+     "data": null
+    },
+    "sport": {
+     "data": null
+    },
+    "individualProduct": {
+     "data": null
+    },
+    "houseProduct": {
+     "data": null
+    },
+    "registrationProduct": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "playoffEvents": {
+     "data": null
+    },
+    "info": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "registrationEmailTemplate": {
+     "data": null
+    },
+    "freeTrialEmailTemplate": {
+     "data": null
+    },
+    "makeupsEmailTemplate": {
+     "data": null
+    },
+    "emailTemplate": {
+     "data": null
+    },
+    "paymentPlan": {
+     "data": null
+    },
+    "leagueDetails": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/leagues/2385"
+   },
+   "meta": null
+  }
+ ]
+}

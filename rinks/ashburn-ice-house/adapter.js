@@ -1,10 +1,12 @@
 // Ashburn Ice House — DaySmart Recreation ("DASH") JSON:API adapter.
-// See README.md in this folder for the endpoint research.
+// See README.md in this folder for the endpoint research. Shared client: lib/daysmart.js.
 
-const BASE = 'https://apps.daysmartrecreation.com/dash/jsonapi/api/v1';
+import { fetchPages, stripHtml, truncate } from '../../lib/daysmart.js';
+
+export { truncate };
+
 const COMPANY = 'ashburn';
 const ICE_RESOURCES = [1, 2, 8]; // East Rink, West Rink, Outdoor Rink
-const PAGE_SIZE = 500;
 
 export const slug = 'ashburn-ice-house';
 export const name = 'Ashburn Ice House';
@@ -50,17 +52,6 @@ export function classify(summaryName, eventTypeName) {
   return 'other';
 }
 
-function stripHtml(s) {
-  if (s == null || typeof s === 'object') s = '';
-  return String(s).replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
-}
-
-export function truncate(s, max = 140) {
-  if (s.length <= max) return s;
-  const cut = s.slice(0, max);
-  return `${cut.slice(0, Math.max(cut.lastIndexOf(' '), 40)).replace(/[,;:.\s]+$/, '')}…`;
-}
-
 // Pure: JSON:API page -> normalised events. Exported for tests.
 export function normalize(page) {
   const included = new Map();
@@ -95,33 +86,10 @@ export function normalize(page) {
   return out;
 }
 
-async function getPage(from, to, pageNumber) {
-  const qs = new URLSearchParams({
-    company: COMPANY,
-    'filter[start__gte]': `${from}T00:00:00`,
-    'filter[start__lte]': `${to}T23:59:59`,
-    'filter[resource_id__in]': ICE_RESOURCES.join(','),
-    include: 'summary,resource',
-    'page[size]': String(PAGE_SIZE),
-    'page[number]': String(pageNumber),
-  });
-  const res = await fetch(`${BASE}/events?${qs}`, { headers: { accept: 'application/vnd.api+json' } });
-  if (!res.ok) throw new Error(`DaySmart ${res.status} ${res.statusText}`);
-  return res.json();
-}
-
 export async function fetchEvents({ from, to }) {
   try {
-    const events = [];
-    let pageNumber = 1;
-    let last = 1;
-    do {
-      const page = await getPage(from, to, pageNumber);
-      events.push(...normalize(page));
-      last = page.meta?.page?.['last-page'] ?? 1;
-      pageNumber += 1;
-    } while (pageNumber <= last && pageNumber <= 10);
-    return events;
+    const pages = await fetchPages({ company: COMPANY, from, to, resources: ICE_RESOURCES });
+    return pages.flatMap(normalize);
   } catch (err) {
     err.adapterSlug = slug;
     throw err;

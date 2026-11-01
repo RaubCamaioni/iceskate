@@ -1,0 +1,714 @@
+{
+ "meta": {
+  "page": {
+   "current-page": 1,
+   "per-page": 500,
+   "from": 1,
+   "to": 29,
+   "total": 29,
+   "last-page": 1
+  }
+ },
+ "links": {
+  "first": "http://apps.daysmartrecreation.com/api/v1/sports?page%5Bnumber%5D=1&page%5Bsize%5D=500",
+  "last": "http://apps.daysmartrecreation.com/api/v1/sports?page%5Bnumber%5D=1&page%5Bsize%5D=500"
+ },
+ "data": [
+  {
+   "type": "sports",
+   "id": "1",
+   "attributes": {
+    "name": "Hockey-Small Group L",
+    "stat_table": 2,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/1"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "2",
+   "attributes": {
+    "name": "Learn Hockey-Adult",
+    "stat_table": 1,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/2"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "3",
+   "attributes": {
+    "name": "Football",
+    "stat_table": 3,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/3"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "4",
+   "attributes": {
+    "name": "Volleyball",
+    "stat_table": 0,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/4"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "5",
+   "attributes": {
+    "name": "Basketball",
+    "stat_table": 0,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/5"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "6",
+   "attributes": {
+    "name": "Lacrosse",
+    "stat_table": 1,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/6"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "8",
+   "attributes": {
+    "name": "Team-Adult",
+    "stat_table": 1,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/8"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "9",
+   "attributes": {
+    "name": "Futsal",
+    "stat_table": 0,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/9"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "10",
+   "attributes": {
+    "name": "Flag Football",
+    "stat_table": 3,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/10"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "11",
+   "attributes": {
+    "name": "Wiffle Ball",
+    "stat_table": 0,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/11"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "12",
+   "attributes": {
+    "name": "Golf",
+    "stat_table": 0,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/12"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "13",
+   "attributes": {
+    "name": "Baseball",
+    "stat_table": 0,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/13"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "14",
+   "attributes": {
+    "name": "Kickball",
+    "stat_table": 0,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/14"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "15",
+   "attributes": {
+    "name": "Dodgeball",
+    "stat_table": 0,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/15"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "20",
+   "attributes": {
+    "name": "Learn Hockey-Youth",
+    "stat_table": 1,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/20"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "21",
+   "attributes": {
+    "name": "Learn Hockey-All Age",
+    "stat_table": 1,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/21"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "22",
+   "attributes": {
+    "name": "Soccer, Outdoor",
+    "stat_table": 2,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/22"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "23",
+   "attributes": {
+    "name": "Softball",
+    "stat_table": 0,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/23"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "24",
+   "attributes": {
+    "name": "Figure Skating",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/24"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "25",
+   "attributes": {
+    "name": "Other",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/25"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "26",
+   "attributes": {
+    "name": "Roller Derby",
+    "stat_table": 0,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/26"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "27",
+   "attributes": {
+    "name": "Public Skating",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/27"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "28",
+   "attributes": {
+    "name": "Broomball",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/28"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "29",
+   "attributes": {
+    "name": "Learn to Skate USA",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/29"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "30",
+   "attributes": {
+    "name": "Skating Camps",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/30"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "31",
+   "attributes": {
+    "name": "Stick n Shoot",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/31"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "32",
+   "attributes": {
+    "name": "Pickup Hockey",
+    "stat_table": 0,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/32"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "33",
+   "attributes": {
+    "name": "POD",
+    "stat_table": 0,
+    "active": false
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/33"
+   },
+   "meta": null
+  },
+  {
+   "type": "sports",
+   "id": "34",
+   "attributes": {
+    "name": "Team-Youth",
+    "stat_table": 1,
+    "active": true
+   },
+   "relationships": {
+    "leagues": {
+     "data": null
+    },
+    "teams": {
+     "data": null
+    },
+    "stats": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/sports/34"
+   },
+   "meta": null
+  }
+ ]
+}

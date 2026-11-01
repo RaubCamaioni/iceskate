@@ -1,0 +1,1242 @@
+{
+ "meta": {
+  "page": {
+   "current-page": 1,
+   "per-page": 100,
+   "from": 1,
+   "to": 17,
+   "total": 17,
+   "last-page": 1
+  }
+ },
+ "links": {
+  "first": "http://apps.daysmartrecreation.com/api/v1/resources?page%5Bnumber%5D=1&page%5Bsize%5D=100",
+  "last": "http://apps.daysmartrecreation.com/api/v1/resources?page%5Bnumber%5D=1&page%5Bsize%5D=100"
+ },
+ "data": [
+  {
+   "type": "resources",
+   "id": "0",
+   "attributes": {
+    "name": "Unscheduled",
+    "desc": "The Unscheduled Resource",
+    "facility_id": 0,
+    "type_id": null,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/0"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "1",
+   "attributes": {
+    "name": "Rink - North",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 2,
+    "lat": 38.812591,
+    "lng": -77.640083,
+    "booking_option_id": 1,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/1"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "2",
+   "attributes": {
+    "name": "Locker Room 1",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": 38.812591,
+    "lng": -77.640083,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/2"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "3",
+   "attributes": {
+    "name": "Locker Room 2",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": 38.812591,
+    "lng": -77.640083,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/3"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "4",
+   "attributes": {
+    "name": "Locker Room 3",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": 38.812591,
+    "lng": -77.640083,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/4"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "5",
+   "attributes": {
+    "name": "Locker Room 4",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": 38.812591,
+    "lng": -77.640083,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/5"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "7",
+   "attributes": {
+    "name": "Rink - South",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 2,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 1,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/7"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "8",
+   "attributes": {
+    "name": "Party Room",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": null,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 3,
+    "terms_and_conditions_id": 1,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/8"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "9",
+   "attributes": {
+    "name": "Upstairs Room",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 4,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": 1,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/9"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "10",
+   "attributes": {
+    "name": "LR 01 Away",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/10"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "11",
+   "attributes": {
+    "name": "LR 02 Away",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/11"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "12",
+   "attributes": {
+    "name": "LR 03 Home",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/12"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "13",
+   "attributes": {
+    "name": "LR 04 Home",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/13"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "14",
+   "attributes": {
+    "name": "LR 08 Home",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/14"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "15",
+   "attributes": {
+    "name": "LR 09 Home",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/15"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "16",
+   "attributes": {
+    "name": "LR 10 Away",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/16"
+   },
+   "meta": null
+  },
+  {
+   "type": "resources",
+   "id": "17",
+   "attributes": {
+    "name": "LR 11 Away",
+    "desc": "",
+    "facility_id": 1,
+    "type_id": 1,
+    "lat": null,
+    "lng": null,
+    "booking_option_id": null,
+    "terms_and_conditions_id": null,
+    "has_agreed_terms_and_conditions": null
+   },
+   "relationships": {
+    "facility": {
+     "data": null
+    },
+    "resourceAreas": {
+     "data": null
+    },
+    "resourceGroups": {
+     "data": null
+    },
+    "resourceType": {
+     "data": null
+    },
+    "eventTypes": {
+     "data": null
+    },
+    "address": {
+     "data": null
+    },
+    "employee": {
+     "data": null
+    },
+    "inventories": {
+     "data": null
+    },
+    "amenities": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "bookingOption": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "termsAndConditionsResponses": {
+     "data": null
+    },
+    "blockedResources": {
+     "data": null
+    },
+    "blockedResourceAreas": {
+     "data": null
+    },
+    "blockingRules": {
+     "data": null
+    },
+    "flattenedBlockingRules": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/resources/17"
+   },
+   "meta": null
+  }
+ ]
+}

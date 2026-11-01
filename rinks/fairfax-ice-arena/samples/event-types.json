@@ -1,0 +1,1072 @@
+{
+ "meta": {
+  "page": {
+   "current-page": 1,
+   "per-page": 100,
+   "from": 1,
+   "to": 17,
+   "total": 17,
+   "last-page": 1
+  }
+ },
+ "links": {
+  "first": "http://apps.daysmartrecreation.com/api/v1/event-types?page%5Bnumber%5D=1&page%5Bsize%5D=100",
+  "last": "http://apps.daysmartrecreation.com/api/v1/event-types?page%5Bnumber%5D=1&page%5Bsize%5D=100"
+ },
+ "data": [
+  {
+   "type": "event-types",
+   "id": "10",
+   "attributes": {
+    "code": "10",
+    "name": "Public Skate Weekday",
+    "color": "#a5e748",
+    "product_id": 4,
+    "description": null,
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": "01:15:00",
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/10"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "11",
+   "attributes": {
+    "code": "11",
+    "name": "Public Skate Weekend/Holiday",
+    "color": "#a5e748",
+    "product_id": 8,
+    "description": null,
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": "03:00:00",
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/11"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "12",
+   "attributes": {
+    "code": "12",
+    "name": "Birthday Parties",
+    "color": "#ff7300",
+    "product_id": null,
+    "description": "Parties can be held during public skating hours.\n\nWeekday Pricing: $185 \n\nWeekend* & Holiday Pricing: $245\n(*Friday Night-Sunday)",
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": "02:00:00",
+    "active": true,
+    "member_app_display_name": "Birthday Parties during Public Skating"
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/12"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "13",
+   "attributes": {
+    "code": "13",
+    "name": "Group Reservation",
+    "color": "#5886ff",
+    "product_id": null,
+    "description": "Groups of 7 or more only. You can make a reservations for your group to receive a discounted admission. Reservations must 24 hours in advance be made to receive discount.\n\nWeekday Admission $6.00\nWeekend Admission $6.75\nSkate Rentals $4.00",
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": "02:00:00",
+    "active": true,
+    "member_app_display_name": "Reservations-Groups of 7+ for Public Skating"
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/13"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "14",
+   "attributes": {
+    "code": "14",
+    "name": "Private Lesson Payment",
+    "color": null,
+    "product_id": null,
+    "description": null,
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": null,
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/14"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "15",
+   "attributes": {
+    "code": "15",
+    "name": "Fundraiser",
+    "color": "#3caf84",
+    "product_id": null,
+    "description": null,
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": null,
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/15"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "16",
+   "attributes": {
+    "code": "16",
+    "name": "Figure Skate Freestyle Session",
+    "color": "#ef00fe",
+    "product_id": 118,
+    "description": null,
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": true,
+    "length": "00:40:00",
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/16"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "17",
+   "attributes": {
+    "code": "17",
+    "name": "Early Morning Rentals",
+    "color": "#FFFFFF",
+    "product_id": null,
+    "description": null,
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": "00:00:00",
+    "active": true,
+    "member_app_display_name": "Early Morning Ice Rentals"
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/17"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "7",
+   "attributes": {
+    "code": "7",
+    "name": "EnterName",
+    "color": "#fa0000",
+    "product_id": null,
+    "description": null,
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": true,
+    "length": "01:15:00",
+    "active": false,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/7"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "8",
+   "attributes": {
+    "code": "8",
+    "name": "Freestyle Session",
+    "color": "#9a0676",
+    "product_id": null,
+    "description": null,
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": "00:40:00",
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/8"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "9",
+   "attributes": {
+    "code": "9",
+    "name": "Pick-Up Hockey",
+    "color": "#e4f92b",
+    "product_id": null,
+    "description": null,
+    "has_team_home": true,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": "01:30:00",
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/9"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "b",
+   "attributes": {
+    "code": "b",
+    "name": "Block",
+    "color": "#f42424",
+    "product_id": null,
+    "description": null,
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": "01:00:00",
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/b"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "c",
+   "attributes": {
+    "code": "c",
+    "name": "Class",
+    "color": "#04ba00",
+    "product_id": null,
+    "description": null,
+    "has_team_home": true,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": "00:50:00",
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/c"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "g",
+   "attributes": {
+    "code": "g",
+    "name": "Game",
+    "color": "#0C3CE8",
+    "product_id": null,
+    "description": null,
+    "has_team_home": true,
+    "has_team_away": true,
+    "has_roster": false,
+    "length": "01:00:00",
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/g"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "k",
+   "attributes": {
+    "code": "k",
+    "name": "Camp",
+    "color": "#6231c4",
+    "product_id": null,
+    "description": null,
+    "has_team_home": true,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": "08:00:00",
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/k"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "L",
+   "attributes": {
+    "code": "L",
+    "name": "Locker Room",
+    "color": "#57c7cb",
+    "product_id": null,
+    "description": null,
+    "has_team_home": true,
+    "has_team_away": true,
+    "has_roster": false,
+    "length": null,
+    "active": true,
+    "member_app_display_name": null
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/L"
+   },
+   "meta": null
+  },
+  {
+   "type": "event-types",
+   "id": "r",
+   "attributes": {
+    "code": "r",
+    "name": "Rental",
+    "color": "#ff5e49",
+    "product_id": null,
+    "description": null,
+    "has_team_home": false,
+    "has_team_away": false,
+    "has_roster": false,
+    "length": "02:00:00",
+    "active": true,
+    "member_app_display_name": "Private Ice Rentals"
+   },
+   "relationships": {
+    "customForm": {
+     "data": null
+    },
+    "product": {
+     "data": null
+    },
+    "reminderEmailTemplate": {
+     "data": null
+    },
+    "program": {
+     "data": null
+    },
+    "events": {
+     "data": null
+    },
+    "facilities": {
+     "data": null
+    },
+    "assignedFacilities": {
+     "data": null
+    },
+    "termsAndConditions": {
+     "data": null
+    },
+    "files": {
+     "data": null
+    },
+    "eventTypeFees": {
+     "data": null
+    },
+    "setupTaskAction": {
+     "data": null
+    },
+    "takedownTaskAction": {
+     "data": null
+    },
+    "resources": {
+     "data": null
+    }
+   },
+   "links": {
+    "self": "http://apps.daysmartrecreation.com/api/v1/event-types/r"
+   },
+   "meta": null
+  }
+ ]
+}

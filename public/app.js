@@ -130,7 +130,11 @@ function renderRinkRows() {
       const tel = document.createElement('a'); tel.href = `tel:${r.phone.replace(/[^\d+]/g, '')}`; tel.textContent = r.phone; tel.className = 'rl-phone';
       info.append(tel);
     }
-    if (r.address) { const ad = document.createElement('span'); ad.className = 'rl-addr'; ad.textContent = r.address; info.append(ad); }
+    if (r.address) {
+      // The address opens directions in Google Maps, like the rink block on each card.
+      const ad = document.createElement('a'); ad.className = 'rl-addr'; ad.href = mapsUrl(r); ad.target = '_blank'; ad.rel = 'noopener';
+      ad.title = `Directions to ${r.name}`; ad.textContent = r.address; info.append(ad);
+    }
     const links = document.createElement('span'); links.className = 'rl-links';
     if (r.registerUrl) {
       const pay = document.createElement('a'); pay.href = r.registerUrl; pay.target = '_blank'; pay.rel = 'noopener'; pay.className = 'rl-web';

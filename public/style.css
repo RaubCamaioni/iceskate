@@ -155,6 +155,9 @@ main { padding-bottom: 32px; }
 .rl-name { font-weight: 700; color: var(--text); white-space: nowrap; }
 .rl-info { display: flex; flex-wrap: wrap; gap: 4px 14px; color: var(--muted); }
 .rl-phone { font-weight: 600; text-decoration: none; }
+.rl-addr { color: var(--muted); text-decoration: underline dotted; text-underline-offset: 3px; }
+.rl-addr::before { content: "📍"; font-size: .8em; margin-right: 3px; }
+.rl-addr:hover, .rl-addr:focus-visible { color: var(--accent); text-decoration-style: solid; }
 .rl-web { font-weight: 700; text-decoration: none; border: 1px solid var(--accent); border-radius: 6px; padding: 5px 12px; white-space: nowrap; }
 .rl-web:hover { background: var(--accent); color: #fff; }
 @media (max-width: 560px) { .rinklist li { grid-template-columns: auto 1fr; } .rl-info, .rl-links { grid-column: 1 / -1; } .rl-links { justify-content: flex-start; } }

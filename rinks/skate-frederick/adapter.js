@@ -61,15 +61,28 @@ export function normalize(page) {
   return [...new Map(out.map((e) => [e.sourceId, e])).values()];
 }
 
+// The site sits behind a WAF that sometimes answers an HTML challenge page instead of JSON
+// (seen once from a GitHub runner). Ask like a browser and retry once after a pause.
+const HEADERS = { accept: 'application/json, text/plain, */*', 'accept-language': 'en-US,en;q=0.9', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' };
+async function getJson(url, attempt = 1) {
+  const res = await fetch(url, { headers: HEADERS });
+  if (res.status === 400) return null;
+  const text = await res.text();
+  const looksJson = res.ok && /^\s*[{[]/.test(text);
+  if (!looksJson) {
+    if (attempt < 3) { await new Promise((r) => setTimeout(r, 4000 * attempt)); return getJson(url, attempt + 1); }
+    throw new Error(`Tribe events ${res.status}${res.ok ? ' (HTML instead of JSON; blocked?)' : ''}`);
+  }
+  return JSON.parse(text);
+}
+
 export async function fetchEvents({ from, to }) {
   try {
     const events = [];
     for (let page = 1; page <= 20; page++) {
       const qs = new URLSearchParams({ start_date: from, end_date: to, per_page: '50', page: String(page) });
-      const res = await fetch(`${API}?${qs}`, { headers: { accept: 'application/json', 'user-agent': 'Mozilla/5.0 (nova-ice-schedules)' } });
-      if (res.status === 400 && page > 1) break; // past the last page
-      if (!res.ok) throw new Error(`Tribe events ${res.status}`);
-      const body = await res.json();
+      const body = await getJson(`${API}?${qs}`);
+      if (body === null) break; // past the last page
       events.push(...normalize(body));
       if (page >= (body.total_pages ?? 1)) break;
     }

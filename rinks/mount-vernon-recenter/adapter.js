@@ -20,6 +20,8 @@ export const sheets = ['Ice Arena'];
 
 // search_text -> what the store returns. Freestyle and ice dance currently return nothing.
 const SEARCHES = ['public', 'stick and puck', 'pickup hockey'];
+// The store's WAF answered 403 to a custom user agent from a GitHub runner; look like a browser.
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
 
 // Session codes in the listing: PS / Adult PS = public skate, SNP = stick and puck, PUH = pickup hockey.
 export function classify(sessionCode) {
@@ -84,7 +86,7 @@ export async function fetchEvents({ from, to }) {
     const hi = `${to}T23:59:59`;
     const events = [];
     for (const q of SEARCHES) {
-      const res = await fetch(`${SEARCH_URL}&search_text=${encodeURIComponent(q)}`, { headers: { 'user-agent': 'Mozilla/5.0 (nova-ice-schedules)', accept: 'text/html' } });
+      const res = await fetch(`${SEARCH_URL}&search_text=${encodeURIComponent(q)}`, { headers: { 'user-agent': UA, accept: 'text/html,application/xhtml+xml', 'accept-language': 'en-US,en;q=0.9' } });
       if (!res.ok) throw new Error(`usedirect ${res.status} for "${q}"`);
       events.push(...normalize(await res.text()));
     }

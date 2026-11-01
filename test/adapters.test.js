@@ -207,7 +207,21 @@ test('buildSnapshot: merges every rink, sorts, and reports failures without thro
   assert.deepEqual(snap.rinks.map((r) => r.slug), ['a', 'b']);
   assert.deepEqual(snap.events.map((e) => e.start), ['2026-11-01T10:00:00', '2026-11-02T10:00:00']);
   assert.deepEqual(snap.errors, [{ rink: 'b', message: 'boom', stale: false }]);
-  assert.ok(ISO_LOCAL.test(snap.generatedAt.replace(/\.\d+Z$/, '')) || snap.generatedAt.endsWith('Z'));
+  assert.ok(snap.generatedAt.endsWith('Z'));
+});
+
+test('buildSnapshot: a failed rink reuses its events from the previous snapshot and is flagged stale', async () => {
+  const ok = { slug: 'a', name: 'A', fetchEvents: async () => [{ rink: 'a', sheet: '1', start: '2026-11-02T10:00:00', end: '2026-11-02T11:00:00' }] };
+  const bad = { slug: 'b', name: 'B', fetchEvents: async () => { throw new Error('403'); } };
+  const previous = { fetchedAt: '2026-10-31T09:00:00.000Z', events: [
+    { rink: 'b', sheet: '1', start: '2026-11-03T10:00:00', end: '2026-11-03T11:00:00' },
+    { rink: 'b', sheet: '1', start: '2026-12-25T10:00:00', end: '2026-12-25T11:00:00' }, // outside the window
+    { rink: 'a', sheet: '1', start: '2026-11-04T10:00:00', end: '2026-11-04T11:00:00' }, // not reused: a succeeded
+  ] };
+  const snap = await buildSnapshot([ok, bad], { from: '2026-11-01', to: '2026-11-30', previous });
+  assert.deepEqual(snap.events.map((e) => `${e.rink} ${e.start}`), ['a 2026-11-02T10:00:00', 'b 2026-11-03T10:00:00']);
+  assert.deepEqual(snap.errors, [{ rink: 'b', message: '403', stale: true }]);
+  assert.equal(snap.fetchedAt, '2026-10-31T09:00:00.000Z', 'fetchedAt is the oldest data shown');
 });
 
 // ---------------------------------------------------------------- ICS expander + Loudoun Ice Centre

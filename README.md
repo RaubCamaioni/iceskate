@@ -69,7 +69,9 @@ workflow (`.github/workflows/publish.yml`) runs every morning at 09:00 UTC
 1. `npm test`
 2. `node scripts/build-static.js` fetches every rink for today through 35 days ahead
    and writes `public/data/schedule.json` in the same shape `/api/events` returns.
-   If any rink fails the step exits non-zero and the previous day's deploy stays live.
+   A rink that fails keeps its events from the previously published snapshot (read
+   from the live site) and is flagged stale on the page; the build fails only if
+   every rink fails.
 3. `public/` is uploaded and deployed to GitHub Pages.
 
 The frontend asks for `api/events` first; when that is missing (a static host) it

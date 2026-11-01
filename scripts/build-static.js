@@ -3,28 +3,53 @@
 // today .. today+HORIZON_DAYS. The frontend falls back to this file when api/events is missing.
 //
 // Run:  node scripts/build-static.js        (TZ should be America/New_York; the workflow sets it)
-// Exits non-zero when any rink fails so a failed sync keeps the previous deploy live.
+//
+// A rink whose fetch fails keeps its events from the previously published snapshot
+// (PREVIOUS_SNAPSHOT_URL, default: the live site) and is reported as stale, so one flaky
+// rink never blocks the daily deploy. The build fails only when every rink fails.
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadAdapters, publicRinkInfo, todayISO, addDaysISO, sortEvents } from '../server/server.js';
+import { loadAdapters, publicRinkInfo, todayISO, addDaysISO, sortEvents, selectRange } from '../server/server.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT_FILE = path.join(ROOT, 'public', 'data', 'schedule.json');
 const HORIZON_DAYS = Number(process.env.CACHE_HORIZON_DAYS) || 35;
+const PREVIOUS_URL = process.env.PREVIOUS_SNAPSHOT_URL ?? 'https://raubcamaioni.github.io/iceskate/data/schedule.json';
 
-// Pure apart from the adapter calls: fetch every rink for [from, to] and assemble the response body.
-export async function buildSnapshot(adapters, { from, to }) {
+// Fetch every rink for [from, to] and assemble the response body. `previous` (an earlier snapshot)
+// supplies the events of any rink that fails; those rinks are listed in `errors` with stale: true.
+export async function buildSnapshot(adapters, { from, to, previous = null }) {
   const results = await Promise.allSettled(adapters.map((a) => a.fetchEvents({ from, to })));
   const events = [];
   const errors = [];
+  let fetchedAt = new Date().toISOString();
   results.forEach((r, i) => {
-    if (r.status === 'fulfilled') events.push(...r.value);
-    else errors.push({ rink: adapters[i].slug, message: String(r.reason?.message ?? r.reason), stale: false });
+    const slug = adapters[i].slug;
+    if (r.status === 'fulfilled') { events.push(...r.value); return; }
+    const message = String(r.reason?.message ?? r.reason);
+    const old = previous?.events?.filter((e) => e.rink === slug) ?? [];
+    if (old.length) {
+      events.push(...selectRange(old, from, to));
+      if (previous.fetchedAt && previous.fetchedAt < fetchedAt) fetchedAt = previous.fetchedAt;
+    }
+    errors.push({ rink: slug, message, stale: old.length > 0 });
   });
-  const now = new Date().toISOString();
-  return { generatedAt: now, fetchedAt: now, source: 'static', from, to, rinks: adapters.map(publicRinkInfo), events: sortEvents(events), errors };
+  return { generatedAt: new Date().toISOString(), fetchedAt, source: 'static', from, to, rinks: adapters.map(publicRinkInfo), events: sortEvents(events), errors };
+}
+
+async function loadPrevious() {
+  try {
+    const res = await fetch(PREVIOUS_URL, { headers: { accept: 'application/json' } });
+    if (!res.ok) return null;
+    const snap = await res.json();
+    console.log(`[build] previous snapshot from ${PREVIOUS_URL}: ${snap.events?.length ?? 0} events, generated ${snap.generatedAt}`);
+    return snap;
+  } catch (err) {
+    console.warn(`[build] no previous snapshot (${err.message})`);
+    return null;
+  }
 }
 
 async function main() {
@@ -32,15 +57,16 @@ async function main() {
   const from = todayISO();
   const to = addDaysISO(from, HORIZON_DAYS);
   const started = Date.now();
-  const snap = await buildSnapshot(adapters, { from, to });
-  for (const e of snap.errors) console.error(`[build] ${e.rink} failed: ${e.message}`);
-  if (snap.errors.length) {
-    console.error(`[build] ${snap.errors.length}/${adapters.length} rinks failed; not writing a partial snapshot`);
+  const previous = await loadPrevious();
+  const snap = await buildSnapshot(adapters, { from, to, previous });
+  for (const e of snap.errors) console.error(`[build] ${e.rink} failed: ${e.message}${e.stale ? ' (reusing previous data)' : ' (no previous data; rink omitted)'}`);
+  if (snap.errors.length === adapters.length) {
+    console.error('[build] every rink failed; not writing a snapshot');
     process.exit(1);
   }
   await fs.mkdir(path.dirname(OUT_FILE), { recursive: true });
   await fs.writeFile(OUT_FILE, JSON.stringify(snap));
-  console.log(`[build] wrote ${path.relative(ROOT, OUT_FILE)}: ${snap.events.length} events from ${adapters.length} rinks, ${from}..${to}, ${Date.now() - started} ms`);
+  console.log(`[build] wrote ${path.relative(ROOT, OUT_FILE)}: ${snap.events.length} events from ${adapters.length - snap.errors.length}/${adapters.length} rinks, ${from}..${to}, ${Date.now() - started} ms`);
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await main();

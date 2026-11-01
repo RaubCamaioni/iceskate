@@ -77,6 +77,22 @@ a { color: var(--accent); }
     font-size: 1.08rem; font-weight: 700; background: var(--accent); border-color: var(--accent); color: #fff;
     margin-bottom: env(safe-area-inset-bottom, 0);
   }
+  /* No browser scrollbar on the drawer's scroller (it scrolls by touch) */
+  .sidebar .panels { scrollbar-width: none; }
+  .sidebar .panels::-webkit-scrollbar { display: none; }
+  /* Every rink is listed in the drawer; the "Show all" button is only for the desktop column */
+  .sidebar .rinklist li.more { display: grid; }
+  .sidebar .rinks-more { display: none; }
+  /* Thumb-sized controls: session and day chips, range buttons, rink rows and switches */
+  .sidebar .group { gap: 8px; }
+  .sidebar .chip, .sidebar .panel button:not(.tab):not(.done) { min-height: 46px; padding: 10px 16px; font-size: 1.02rem; }
+  .sidebar .rinklist li { padding: 10px 12px; font-size: .95rem; gap: 6px 12px; }
+  .sidebar .rinklist { gap: 8px; }
+  .sidebar .switch { font-size: 1.02rem; }
+  .sidebar .switch .track { width: 54px; height: 30px; }
+  .sidebar .switch .track::after { width: 24px; height: 24px; }
+  .sidebar .switch input:checked + .track::after { transform: translateX(24px); }
+  .sidebar .panel { padding: 12px 14px 14px; gap: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { .sidebar { transition: none; } }
 body.drawer-open { overflow: hidden; }

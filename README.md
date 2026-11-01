@@ -47,7 +47,7 @@ carries a red "Restrictions apply" tag after the drive time when the rink limits
 tapping it opens the parsed rule ("Only for: 18+ only", "Parent & tot", "Ages 12 and under"), the
 session name, the rink's own description and a link to the rink. Stick-and-puck shows a green
 "All ages" tag unless the rink says otherwise; a plain "Public skate" card is open to everyone,
-since restricted ones live under the Adult skate and Kids & family skate chips. Each card also shows the session's price, picked from the rink's `prices` list by name ("Cheapskate", "Friday Chill Out"), by weekday or weekend, or the plain category price (`public/pricing.js`, tested in `test/pricing.test.js`); hover it for the fine print. The badge and category rules live in `public/audience.js`, tested in `test/audience.test.js`; the Session panel has an expandable glossary of every session type and name. "Show map" reveals a
+since restricted ones live under the Adult skate and Kids & family skate chips. Tapping a card opens a details row with the rink's description, the facts and links, including the session's price when the rink publishes one, picked from its `prices` list by name ("Cheapskate", "Friday Chill Out"), by weekday or weekend, or the plain category price (`public/pricing.js`, tested in `test/pricing.test.js`). The badge and category rules live in `public/audience.js`, tested in `test/audience.test.js`; the Session panel has an expandable glossary of every session type and name. "Show map" reveals a
 Leaflet map (OpenStreetMap tiles, loaded from cdnjs) with every rink as a marker in its
 colour; a marker's popup has the drive time, directions, phone, website and a switch for
 its sessions. Geocoding uses

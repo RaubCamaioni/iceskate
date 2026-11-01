@@ -176,12 +176,6 @@ main { padding-bottom: 32px; }
 .who.open::before { content: "✓"; }
 .who.demo { font-size: .78rem; padding: 1px 8px; vertical-align: 1px; cursor: default; }
 .who[hidden] { display: none; }
-/* The session's price from the rink's list; hover for which price and the fine print */
-.fee {
-  display: inline-flex; align-items: center; font-size: .9rem; font-weight: 800; color: var(--text); white-space: nowrap;
-  background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px;
-}
-.fee[hidden] { display: none; }
 /* Popover opened by the tag */
 .who-pop {
   position: absolute; z-index: 1000; background: var(--surface); color: var(--text); border: 1px solid var(--line);
@@ -292,7 +286,6 @@ main { padding-bottom: 32px; }
   .details { padding: 8px 10px 10px; font-size: .82rem; }
   .body { padding: 6px 6px; gap: 5px; flex-wrap: wrap; overflow: hidden; align-content: center; }
   .who { font-size: .66rem; padding: 2px 7px; }
-  .fee { font-size: .7rem; padding: 2px 7px; }
   .drive { font-size: .7rem; padding: 2px 7px; }
   .time { padding: 2px 2px; margin: 0; }
   .right { gap: 6px; padding-right: 5px; }

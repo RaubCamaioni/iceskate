@@ -41,7 +41,7 @@ const catShort = { ...catLabel, hockey: 'Hockey', figure_skating: 'Figure skatin
 const catColor = (k) => getComputedStyle(document.documentElement).getPropertyValue(`--cat-${k}`).trim();
 const mapsUrl = (r) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.address ? `${r.name}, ${r.address}` : r.name)}`;
 
-let state = { days: 14, offRinks: [], categories: null, hidePast: false, origin: null }; // origin: { label, lat, lng }
+let state = { days: 14, offRinks: [], categories: null, hidePast: false, origin: null, showMap: false }; // origin: { label, lat, lng }
 let data = { rinks: [], events: [], errors: [] };
 let rinkInfo = {};
 let travel = {}; // slug -> { min, mi, mode: 'drive' | 'line' } from the chosen starting point
@@ -52,6 +52,7 @@ function loadState() {
   if (![1, 7, 14, 30].includes(state.days)) state.days = 14;
   if (!Array.isArray(state.offRinks)) state.offRinks = [];
   if (state.origin && !(Number.isFinite(state.origin.lat) && Number.isFinite(state.origin.lng))) state.origin = null;
+  state.showMap = Boolean(state.showMap);
 }
 function saveState() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch { /* ignore */ }
@@ -189,8 +190,73 @@ function useMyLocation() {
   );
 }
 
+// ---------------------------------------------------------------- map of rinks
+let map = null;
+let markers = new Map(); // slug -> circleMarker
+let originMarker = null;
+
+function toggleRink(slug) {
+  state.offRinks = state.offRinks.includes(slug) ? state.offRinks.filter((s) => s !== slug) : [...state.offRinks, slug];
+  saveState(); renderRinkRows(); renderList();
+}
+
+function popupHtml(r) {
+  const off = state.offRinks.includes(r.slug);
+  const t = travel[r.slug];
+  const drive = t ? `<div class="pop-drive">${t.mode === 'drive' ? `${fmtMin(t.min)} drive · ${t.mi} mi` : `${t.mi} mi away`}</div>` : '';
+  const addr = r.address ? `<div class="pop-row"><a href="${mapsUrl(r)}" target="_blank" rel="noopener" title="Directions">${escapeHtml(r.address)}</a></div>` : '';
+  const phone = r.phone ? `<div class="pop-row"><a href="tel:${r.phone.replace(/[^\d+]/g, '')}">${escapeHtml(r.phone)}</a></div>` : '';
+  const pay = r.onlinePay && r.registerUrl ? `<a href="${r.registerUrl}" target="_blank" rel="noopener">Pre-pay online</a>` : '';
+  return `<div class="pop-name">${escapeHtml(r.name)}</div>${drive}${addr}${phone}
+    <div class="pop-links"><a href="${r.website}" target="_blank" rel="noopener">Website</a>${pay}
+    <button type="button" class="chip${off ? '' : ' on'}" data-toggle="${r.slug}">${off ? 'Show sessions' : 'Showing sessions'}</button></div>`;
+}
+
+function renderMap() {
+  const el = $('#map');
+  const btn = $('#toggle-map');
+  btn.textContent = state.showMap ? 'Hide map' : 'Show map';
+  btn.classList.toggle('on', state.showMap);
+  btn.setAttribute('aria-pressed', String(state.showMap));
+  if (!state.showMap) { el.hidden = true; return; }
+  el.hidden = false;
+  if (typeof L === 'undefined') { el.textContent = 'The map library could not be loaded.'; return; }
+  if (!map) {
+    map = L.map(el, { scrollWheelZoom: false });
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
+    map.on('popupopen', (ev) => {
+      const b = ev.popup.getElement()?.querySelector('[data-toggle]');
+      if (b) b.addEventListener('click', () => { toggleRink(b.dataset.toggle); ev.popup.setContent(popupHtml(rinkInfo[b.dataset.toggle])); });
+    });
+  }
+  const pts = [];
+  for (const r of data.rinks) {
+    if (!Number.isFinite(r.lat) || !Number.isFinite(r.lng)) continue;
+    const off = state.offRinks.includes(r.slug);
+    const style = { radius: 10, color: '#fff', weight: 2, fillColor: r.color || '#888', fillOpacity: off ? 0.3 : 0.95, opacity: off ? 0.4 : 1 };
+    let m = markers.get(r.slug);
+    if (!m) {
+      m = L.circleMarker([r.lat, r.lng], style).addTo(map);
+      m.bindTooltip(r.shortName || r.name, { direction: 'top', offset: [0, -8] });
+      m.bindPopup(() => popupHtml(r), { maxWidth: 280 });
+      markers.set(r.slug, m);
+    } else m.setStyle(style);
+    pts.push([r.lat, r.lng]);
+  }
+  if (state.origin) {
+    const o = [state.origin.lat, state.origin.lng];
+    if (!originMarker) { originMarker = L.circleMarker(o, { radius: 7, color: '#fff', weight: 2, fillColor: '#e53935', fillOpacity: 1 }).addTo(map); originMarker.bindTooltip('Start', { direction: 'top', offset: [0, -6] }); }
+    else originMarker.setLatLng(o);
+    pts.push(o);
+  } else if (originMarker) { originMarker.remove(); originMarker = null; }
+  map.invalidateSize();
+  if (pts.length && !map._fitted) { map.fitBounds(pts, { padding: [28, 28] }); map._fitted = true; }
+  else if (state.origin && !map._fittedOrigin) { map.fitBounds(pts, { padding: [28, 28] }); map._fittedOrigin = true; }
+}
+
 // One row per rink in the Location card: a switch, the name, drive time, phone, address, and links.
 function renderRinkRows() {
+  renderMap();
   $('#sources').replaceChildren(...sortedRinks().map((r) => {
     const on = !state.offRinks.includes(r.slug);
     const li = document.createElement('li');
@@ -200,10 +266,7 @@ function renderRinkRows() {
     sw.innerHTML = `<input type="checkbox" role="switch" aria-label="Show ${escapeHtml(r.name)} sessions"><span class="track" aria-hidden="true"></span>`;
     const input = sw.querySelector('input');
     input.checked = on;
-    input.addEventListener('change', () => {
-      state.offRinks = input.checked ? state.offRinks.filter((s) => s !== r.slug) : [...new Set([...state.offRinks, r.slug])];
-      saveState(); renderRinkRows(); renderList();
-    });
+    input.addEventListener('change', () => toggleRink(r.slug));
     const name = document.createElement('span'); name.className = 'rl-name'; name.textContent = r.name;
     const info = document.createElement('span'); info.className = 'rl-info';
     const t = travel[r.slug];
@@ -385,6 +448,7 @@ function init() {
   for (const b of $$('.range button')) b.addEventListener('click', () => { state.days = Number(b.dataset.days); saveState(); load(); });
   $('#hide-past').addEventListener('change', (ev) => { state.hidePast = ev.target.checked; saveState(); renderList(); });
   $('#use-location').addEventListener('click', useMyLocation);
+  $('#toggle-map').addEventListener('click', () => { state.showMap = !state.showMap; saveState(); renderMap(); });
   $('#origin-form').addEventListener('submit', async (ev) => {
     ev.preventDefault();
     const q = $('#origin-input').value.trim();

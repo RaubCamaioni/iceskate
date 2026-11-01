@@ -1,7 +1,8 @@
 name: Build mobile apps
 
-# Builds the Android APK and the (unsigned) iOS app whenever the wrapper apps change.
-# Download them from the run's Artifacts section.
+# Builds the Android APK and the (unsigned) iOS app whenever the wrapper apps change, then
+# publishes both to the rolling "mobile-latest" GitHub Release so they have permanent download
+# links (run artifacts expire after 90 days and need a GitHub login).
 on:
   push:
     branches: [main]
@@ -9,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write   # the release job creates/replaces the mobile-latest release
 
 jobs:
   android:
@@ -64,3 +65,32 @@ jobs:
           name: NoVAIce-ios-unsigned-ipa
           path: mobile/ios/NoVAIce-unsigned.ipa
           if-no-files-found: error
+
+  release:
+    name: Publish to the Releases page
+    needs: [android, ios]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+      - name: Name the files for the release
+        run: |
+          mv dist/NoVAIce-android-debug-apk/app-debug.apk NoVAIce-android-debug.apk
+          mv dist/NoVAIce-ios-unsigned-ipa/NoVAIce-unsigned.ipa NoVAIce-ios-unsigned.ipa
+          ls -l NoVAIce-*
+      - name: Write the release notes
+        run: |
+          {
+            echo "Thin wrappers around https://raubcamaioni.github.io/iceskate/ - the site is the app, so these rarely need updating. Built from commit ${{ github.sha }}."
+            echo
+            echo "- **NoVAIce-android-debug.apk**: debug-signed. On the phone, open the file and allow installs from this source, or \`adb install NoVAIce-android-debug.apk\`."
+            echo "- **NoVAIce-ios-unsigned.ipa**: not signed (Apple requires your own Apple ID). Sign it with a sideloading tool such as AltStore or Sideloadly, or open \`mobile/ios\` in Xcode and run on your phone. See \`mobile/README.md\`."
+          } > notes.md
+      - name: Replace the mobile-latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete mobile-latest --cleanup-tag --yes || true
+          gh release create mobile-latest NoVAIce-android-debug.apk NoVAIce-ios-unsigned.ipa --title "Mobile apps (latest build)" --notes-file notes.md

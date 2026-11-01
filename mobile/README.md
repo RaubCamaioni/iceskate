@@ -17,13 +17,17 @@ Both apps:
 ## Getting the builds
 
 The GitHub Actions workflow `.github/workflows/mobile.yml` builds both apps on every push that
-touches `mobile/` (and on demand from the Actions tab). Open the run and download from its
-**Artifacts** section:
+touches `mobile/` (and on demand from the Actions tab), then publishes them to the rolling
+**mobile-latest** release on the repo's Releases page, so the download links never change and
+need no GitHub login:
 
-| Artifact | What it is | How to install |
+| File | What it is | How to install |
 |---|---|---|
-| `NoVAIce-android-debug-apk` | `app-debug.apk`, a debug-signed APK | Copy to the phone and open it (allow installs from unknown sources), or `adb install app-debug.apk` |
-| `NoVAIce-ios-unsigned-ipa` | `NoVAIce-unsigned.ipa`, built without a signing identity | Sign with your own Apple ID: open `mobile/ios` in Xcode (see below) and run on your phone, or sign the .ipa with a sideloading tool such as AltStore or Sideloadly |
+| [NoVAIce-android-debug.apk](https://github.com/RaubCamaioni/iceskate/releases/download/mobile-latest/NoVAIce-android-debug.apk) | debug-signed APK | Open the link on the phone and install it (allow installs from this source), or `adb install NoVAIce-android-debug.apk` |
+| [NoVAIce-ios-unsigned.ipa](https://github.com/RaubCamaioni/iceskate/releases/download/mobile-latest/NoVAIce-ios-unsigned.ipa) | built without a signing identity | Sign with your own Apple ID: open `mobile/ios` in Xcode (see below) and run on your phone, or sign the .ipa with a sideloading tool such as AltStore or Sideloadly |
+
+The same files are also attached to each run as artifacts (`NoVAIce-android-debug-apk`,
+`NoVAIce-ios-unsigned-ipa`), which expire after 90 days.
 
 Apple does not allow installing an unsigned app directly; signing needs an Apple ID (free for
 7-day installs on your own devices, or a paid developer account for TestFlight / App Store).

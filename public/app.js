@@ -194,7 +194,8 @@ function renderList() {
   list.replaceChildren();
   for (const err of data.errors) {
     const p = document.createElement('p'); p.className = 'error';
-    p.textContent = err.stale ? `${err.rink}: last refresh failed (${err.message}); showing the previous data.` : `Could not load ${err.rink}: ${err.message}`;
+    const who = rinkInfo[err.rink]?.name ?? err.rink;
+    p.textContent = err.stale ? `${who}: the last sync failed (${err.message}); showing its previous data.` : `${who} could not be loaded (${err.message}); its sessions are missing.`;
     list.append(p);
   }
   if (!shown.length) {
